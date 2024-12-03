@@ -1,9 +1,9 @@
 ---@type evergarden.types.colors
 _G.evergarden_colors = {
-  text = '#D5D6C8',
-  subtext1 = '#CCD4C1',
+  text = '#DDDECF',
+  subtext1 = '#CACCBE',
   subtext0 = '#94AAA0',
-  overlay2 = '#859289',
+  overlay2 = '#768C88',
   overlay1 = '#6E8585',
   overlay0 = '#5E6C70',
   surface2 = '#46565B',
