@@ -1,12 +1,5 @@
 local evergarden = {}
 
----@class evergarden.types.config
----@field transparent_background boolean
----@field contrast_dark 'hard'|'medium'|'soft'
----@field override_terminal boolean
----@field style evergarden.types.styleconfig
----@field overrides evergarden.types.hlgroups
-
 ---@type evergarden.types.config
 evergarden.default_config = {
   transparent_background = false,
