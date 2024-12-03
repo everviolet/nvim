@@ -7,46 +7,45 @@
 ---@field sign { highlight: boolean }
 
 ---@class evergarden.types.theme
----@field none evergarden.types.color
+---@field none string
 ---@field colors evergarden.types.colors
----@field base { fg: evergarden.types.color, bg: evergarden.types.color }
----@field bg evergarden.types.color
----@field fg evergarden.types.color
----@field bg0 evergarden.types.color
----@field bg1 evergarden.types.color
----@field bg2 evergarden.types.color
----@field bg3 evergarden.types.color
----@field fg0 evergarden.types.color
----@field fg1 evergarden.types.color
----@field fg2 evergarden.types.color
----@field red evergarden.types.color
----@field orange evergarden.types.color
----@field yellow evergarden.types.color
----@field green evergarden.types.color
----@field aqua evergarden.types.color
----@field skye evergarden.types.color
----@field blue evergarden.types.color
----@field purple evergarden.types.color
----@field pink evergarden.types.color
+---@field text string
+---@field subtext1 string
+---@field subtext0 string
+---@field overlay2 string
+---@field overlay1 string
+---@field overlay0 string
+---@field surface2 string
+---@field surface1 string
+---@field surface0 string
+---@field base string
+---@field mantle string
+---@field crust string
+---@field red string
+---@field orange string
+---@field yellow string
+---@field green string
+---@field aqua string
+---@field skye string
+---@field blue string
+---@field purple string
+---@field pink string
 ---@field syntax EvergardenSyntax
----@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: evergarden.types.color }
----@field diff { ['add'|'delete'|'change']: evergarden.types.color }
----@field style evergarden.types.styleconfig
----@field sign evergarden.types.color
----@field comment evergarden.types.color
----@field bg_accent evergarden.types.color
----@field fg_accent evergarden.types.color
+---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
+---@field diff { ['add'|'delete'|'change']: string }
+---@field sign string
+---@field comment string
 
 ---@class EvergardenSyntax
----@field keyword evergarden.types.color
----@field object evergarden.types.color
----@field type evergarden.types.color
----@field context evergarden.types.color
----@field constant evergarden.types.color
----@field call evergarden.types.color
----@field string evergarden.types.color
----@field macro evergarden.types.color
----@field annotation evergarden.types.color
+---@field keyword string
+---@field object string
+---@field type string
+---@field context string
+---@field constant string
+---@field call string
+---@field string string
+---@field macro string
+---@field annotation string
 
 local M = {}
 
@@ -54,38 +53,28 @@ local M = {}
 ---@param config evergarden.types.config
 ---@return evergarden.types.theme
 function M.setup(colors, config)
-  local theme = {}
+  ---@type evergarden.types.theme
+  local theme = vim.deepcopy(colors, true)
 
-  theme.none = { 'NONE', 0 }
+  theme.none = 'NONE'
   theme.colors = colors
 
-  theme.bg = theme.none
+  theme.base = theme.none
   if not config.transparent_background then
-    theme.bg = colors.bg0
+    theme.base = colors.base
     if config.contrast_dark == 'hard' then
-      theme.bg = colors.bg0_hard
+      theme.base = colors.mantle
     end
     if config.contrast_dark == 'soft' then
-      theme.bg = colors.bg0_soft
+      theme.base = colors.softbase
     end
   end
-  theme.base = { fg = colors.bg0, bg = theme.bg }
-  theme.fg = colors.fg
 
-  theme.bg0 = colors.bg0
-  theme.bg1 = colors.bg1
-  theme.bg2 = colors.bg2
-  theme.bg3 = colors.bg3
-
-  theme.fg0 = colors.grey0
-  theme.fg1 = colors.fg
-  theme.fg2 = colors.grey2
-
-  local sign_colors = config.style.sign.highlight and { hard = theme.bg1, medium = theme.bg2,  soft = theme.bg3 } or {}
+  local sign_colors = config.style.sign.highlight
+      and { hard = theme.base, medium = theme.surface0, soft = theme.surface1 }
+    or {}
   theme.sign = sign_colors[config.contrast_dark] or theme.none
-  theme.comment = theme.fg2
-  theme.bg_accent = theme.bg1
-  theme.fg_accent = colors.bg4
+  theme.comment = theme.subtext0
 
   theme.red = colors.red
   theme.orange = colors.orange
@@ -99,9 +88,9 @@ function M.setup(colors, config)
 
   theme.syntax = {
     keyword = theme.red,
-    object = theme.fg1,
+    object = theme.text,
     type = theme.yellow,
-    context = theme.fg0,
+    context = theme.overlay2,
     constant = theme.pink,
     call = theme.green,
     string = theme.green,
@@ -120,12 +109,6 @@ function M.setup(colors, config)
     delete = theme.red,
     change = theme.aqua,
   }
-
-  theme.style = {
-    search = { reverse = true },
-  }
-  theme.style = vim.tbl_deep_extend('force', theme.style, config.style)
-
   return theme
 end
 

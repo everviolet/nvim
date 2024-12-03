@@ -5,7 +5,7 @@ return function(theme, config)
   return {
     ['@tag.html'] = { theme.syntax.keyword },
     ['@tag.delimiter.html'] = { theme.syntax.context },
-    ['@tag.attribute.html'] = { theme.fg0 },
+    ['@tag.attribute.html'] = { theme.syntax.context },
     ['@string.html'] = { theme.blue },
   }
 end

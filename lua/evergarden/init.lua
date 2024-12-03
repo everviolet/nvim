@@ -42,12 +42,11 @@ local function set_hi(group, colors)
   ---@type vim.api.keyset.highlight
   local color = vim.deepcopy(colors)
 
-  color.fg = type(colors.fg) == 'table' and colors.fg[1] or colors.fg
-  color.bg = type(colors.bg) == 'table' and colors.bg[1] or colors.bg
-  color.ctermfg = type(colors.fg) == 'table' and colors.fg[2] or 'none'
-  color.ctermbg = type(colors.bg) == 'table' and colors.bg[2] or 'none'
+  color.fg = colors.fg
+  color.bg = colors.bg
   color[1] = nil
   color[2] = nil
+  ---@diagnostic disable-next-line: inject-field
   color.name = nil
 
   vim.api.nvim_set_hl(0, group, color)
@@ -57,13 +56,9 @@ end
 local function set_highlights(hlgroups)
   ---@type evergarden.types.colorspec
   local color = hlgroups.Normal
-  color.fg = color.fg or color[1] or 'none'
-  color.bg = color.bg or color[2] or 'none'
   local normal = {}
-  normal.fg = type(color.fg) == 'table' and color.fg[1] or color.fg
-  normal.bg = type(color.bg) == 'table' and color.bg[1] or color.bg
-  normal.ctermfg = type(color.fg) == 'table' and color.fg[2] or 'none'
-  normal.ctermbg = type(color.bg) == 'table' and color.bg[2] or 'none'
+  normal.fg = color.fg or color[1] or 'none'
+  normal.bg = color.bg or color[2] or 'none'
   vim.api.nvim_set_hl(0, 'Normal', normal)
   hlgroups.Normal = nil
   for group, colors in pairs(hlgroups) do
