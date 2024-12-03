@@ -13,6 +13,9 @@ evergarden.default_config = {
     comment = { italic = false },
     sign = { highlight = false },
   },
+  integrations = {
+    rainbow_delimiters = true,
+  },
   overrides = {},
 }
 

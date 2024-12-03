@@ -143,6 +143,25 @@ function M.setup(theme, config)
     hl_groups = vim.tbl_deep_extend('force', hl_groups, hl_imports)
   end)
 
+  local load_integration = function(name)
+    local ok, mod =
+      pcall(require, string.format('evergarden.hl.integrations.%s', name))
+    if ok then
+      local hls = mod.get(theme, config)
+      for hl_name, value in pairs(hls) do
+        hl_groups[hl_name] = value
+      end
+    end
+  end
+  for name, props in pairs(config.integrations) do
+    if
+      (type(props) == 'table' and props.enable)
+      or (type(props) == 'boolean' and props)
+    then
+      load_integration(name)
+    end
+  end
+
   hl_groups['@lsp.type.macro.rust'] = { theme.syntax.macro }
 
   -- fix lsp hover doc
