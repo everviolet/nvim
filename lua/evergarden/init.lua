@@ -14,6 +14,7 @@ evergarden.default_config = {
     sign = { highlight = false },
   },
   integrations = {
+    nvimtree = true,
     rainbow_delimiters = true,
   },
   overrides = {},

@@ -7,6 +7,7 @@
 ---@field overrides evergarden.types.hlgroups
 
 ---@class evergarden.types.config.integrations
+---@field nvimtree boolean
 ---@field rainbow_delimiters boolean
 
 ---@alias evergarden.types.colors.enum 'crust'|'softbase'|'mantle'|'base'|'surface0'|'surface1'|'surface2'|'overlay0'|'overlay1'|'overlay2'|'subtext0'|'subtext1'|'text'|'red'|'orange'|'yellow'|'green'|'aqua'|'blue'|'skye'|'purple'|'pink'
