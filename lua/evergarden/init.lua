@@ -14,8 +14,13 @@ evergarden.default_config = {
     sign = { highlight = false },
   },
   integrations = {
+    cmp = true,
+    gitsigns = true,
+    indent_blankline = true,
     nvimtree = true,
     rainbow_delimiters = true,
+    symbols_outline = true,
+    telescope = true,
   },
   overrides = {},
 }
