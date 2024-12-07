@@ -11,7 +11,7 @@ local evergarden = {}
 evergarden.normal = {
   a = { fg = theme.crust, bg = colors.normal },
   b = { bg = theme.surface0, fg = colors.normal },
-  c = { bg = theme.crust, fg = theme.overlay2 },
+  c = { bg = theme.base, fg = theme.overlay2 },
 }
 
 evergarden.insert = {
@@ -29,9 +29,9 @@ evergarden.visual = {
 evergarden.replace = evergarden.insert
 
 evergarden.inactive = {
-  a = { bg = theme.crust, fg = theme.overlay1 },
-  b = { bg = theme.crust, fg = theme.overlay1 },
-  c = { bg = theme.crust, fg = theme.overlay1 },
+  a = { bg = theme.base, fg = theme.overlay1 },
+  b = { bg = theme.base, fg = theme.overlay1 },
+  c = { bg = theme.base, fg = theme.overlay1 },
 }
 
 return evergarden
