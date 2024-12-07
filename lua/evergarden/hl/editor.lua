@@ -24,7 +24,7 @@ return function(theme, config)
     TabLine = { theme.comment },
     TabLineFill = { link = 'TabLine' },
     Title = { theme.comment },
-    NonText = { theme.overlay2 },
+    NonText = { theme.overlay0 },
     Folded = { theme.comment },
     FoldColumn = { theme.surface0 },
 
