@@ -68,15 +68,19 @@ return function(theme, config)
     LspDiagnosticsSignWarning = { link = 'DiagnosticSignWarn' },
     LspDiagnosticsSignInformation = { link = 'DiagnosticSignInfo' },
     LspDiagnosticsSignHint = { link = 'DiagnosticSignHint' },
-    LspReferenceText = { link = 'CurrentWord' },
-    LspReferenceRead = { link = 'CurrentWord' },
-    LspReferenceWrite = { link = 'CurrentWord' },
+
+    VirtualTextInfo = { theme.subtext0 },
+    LspReferenceText = { link = 'VirtualTextInfo' },
+    LspReferenceRead = { link = 'VirtualTextInfo' },
+    LspReferenceWrite = { link = 'VirtualTextInfo' },
     LspCodeLens = { link = 'VirtualTextInfo' },
-    LspCodeLensSeparator = { link = 'VirtualTextHint' },
+    LspCodeLensSeparator = { link = 'MsgSeparator' },
     LspSignatureActiveParameter = { link = 'Search' },
+
     healthError = { link = 'DiagnosticError' },
     healthSuccess = { link = 'DiagnosticOk' },
     healthWarning = { link = 'DiagnosticWarn' },
+
     DiagnosticDeprecated = {
       theme.diagnostic.warn,
       theme.none,
