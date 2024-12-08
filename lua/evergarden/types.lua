@@ -1,10 +1,10 @@
 ---@class evergarden.types.config
----@field transparent_background boolean
----@field contrast_dark 'hard'|'medium'|'soft'
----@field override_terminal boolean
----@field style evergarden.types.styleconfig
----@field integrations evergarden.types.config.integrations
----@field overrides evergarden.types.hlgroups
+---@field transparent_background? boolean
+---@field contrast_dark? 'hard'|'medium'|'soft'
+---@field override_terminal? boolean
+---@field style? evergarden.types.styleconfig
+---@field integrations? evergarden.types.config.integrations
+---@field overrides? evergarden.types.hlgroups
 
 ---@class evergarden.types.config.integrations
 ---@field cmp? boolean
