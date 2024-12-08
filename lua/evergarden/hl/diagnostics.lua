@@ -75,6 +75,7 @@ return function(theme, config)
     LspReferenceWrite = { link = 'VirtualTextInfo' },
     LspCodeLens = { link = 'VirtualTextInfo' },
     LspCodeLensSeparator = { link = 'MsgSeparator' },
+    LspInlayHint = { theme.subtext0 },
     LspSignatureActiveParameter = { link = 'Search' },
 
     healthError = { link = 'DiagnosticError' },
