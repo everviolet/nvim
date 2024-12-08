@@ -15,7 +15,7 @@ return function(theme, config)
     CursorLineNr = { theme.comment },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
-      config.transparent_background and theme.surface1 or theme.crust,
+      config.transparent_background and theme.surface0 or theme.mantle,
     },
     VertSplit = { link = 'WinSeparator' },
     TabLineSel = config.style.tabline.reverse
