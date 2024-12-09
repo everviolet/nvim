@@ -4,7 +4,7 @@ local M = {}
 ---@param _ evergarden.types.config
 M.get = function(theme, _)
   return {
-    ['CmpItemMenu'] = { theme.syntax.constant, italic = true },
+    CmpItemMenu = { theme.syntax.constant, style = { 'italic' } },
 
     ['CmpItemKindText'] = { theme.text },
     ['CmpItemKindMethod'] = { theme.syntax.constant },

@@ -19,27 +19,27 @@ return function(theme, config)
     DiagnosticUnderlineOk = {
       theme.diagnostic.ok,
       theme.none,
-      underline = true,
+      style = { 'underline' },
     },
     DiagnosticUnderlineError = {
       theme.diagnostic.error,
       theme.none,
-      underline = true,
+      style = { 'underline' },
     },
     DiagnosticUnderlineWarn = {
       theme.diagnostic.warn,
       theme.none,
-      underline = true,
+      style = { 'underline' },
     },
     DiagnosticUnderlineInfo = {
       theme.diagnostic.info,
       theme.none,
-      underline = true,
+      style = { 'underline' },
     },
     DiagnosticUnderlineHint = {
       theme.diagnostic.hint,
       theme.none,
-      underline = true,
+      style = { 'underline' },
     },
     DiagnosticSignOk = { theme.diagnostic.ok, theme.sign },
     DiagnosticSignError = { theme.diagnostic.error, theme.sign },
@@ -85,7 +85,7 @@ return function(theme, config)
     DiagnosticDeprecated = {
       theme.diagnostic.warn,
       theme.none,
-      strikethrough = true,
+      style = { 'strikethrough' },
     },
   }
 end

@@ -6,7 +6,10 @@ return function(theme, config)
     ['@attribute'] = { theme.purple },
     ['@boolean'] = { link = 'Boolean' },
     ['@character'] = { link = 'Character' },
-    ['@comment'] = { theme.comment, italic = config.style.comment.italic },
+    ['@comment'] = {
+      theme.comment,
+      style = config.style.comment.italic and { 'italic' },
+    },
     ['@conditional'] = { link = 'Conditional' },
     ['@constant'] = { theme.syntax.constant },
     ['@constant.builtin'] = { link = '@constant' },
@@ -23,7 +26,7 @@ return function(theme, config)
     ['@include'] = { link = 'Include' },
     ['@keyword'] = {
       theme.syntax.keyword,
-      italic = config.style.keyword.italic,
+      style = config.style.keyword.italic and { 'italic' },
     },
     ['@keyword.function'] = { link = '@keyword' },
     ['@keyword.operator'] = { theme.orange },
@@ -49,7 +52,10 @@ return function(theme, config)
     ['@symbol'] = { theme.text },
     ['@strike'] = { theme.overlay2 },
     ['@math'] = { theme.blue },
-    ['@type'] = { theme.syntax.type, italic = config.style.types.italic },
+    ['@type'] = {
+      theme.syntax.type,
+      style = config.style.types.italic and { 'italic' },
+    },
     ['@type.builtin'] = { link = '@type' },
     ['@type.qualifier'] = { link = '@keyword' },
     ['@uri'] = { theme.purple },
@@ -94,9 +100,9 @@ return function(theme, config)
 
     ['@nontext'] = { link = 'NonText' },
     ['@text'] = { theme.text },
-    ['@text.emphasis'] = { theme.orange, italic = true },
-    ['@markup.strong'] = { theme.orange, bold = true },
-    ['@markup.italic'] = { theme.orange, italic = true },
+    ['@text.emphasis'] = { theme.orange, style = { 'italic' } },
+    ['@markup.strong'] = { theme.orange, style = { 'bold' } },
+    ['@markup.italic'] = { theme.orange, style = { 'italic' } },
     ['@markup.heading'] = { link = '@text.title' }, -- headings, titles (including markers)
     ['@markup.quote'] = { link = '@comment' }, -- block quotes
     ['@markup.math'] = { link = '@markup.quote' }, -- math environments (e.g. `$ ... $` in LaTeX)

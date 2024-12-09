@@ -2,9 +2,9 @@
 ---@param config evergarden.types.config
 return function(theme, config)
   return {
-    TSStrong = { theme.none, theme.none, bold = true },
-    TSEmphasis = { theme.none, theme.none, italic = true },
-    TSUnderline = { theme.none, theme.none, underline = true },
+    TSStrong = { theme.none, theme.none, style = { 'bold' } },
+    TSEmphasis = { theme.none, theme.none, style = { 'italic' } },
+    TSUnderline = { theme.none, theme.none, style = { 'underline' } },
     TSNote = { link = '@comment.note' },
     TSWarning = { link = '@comment.warning' },
     TSDanger = { link = '@comment.warning' },

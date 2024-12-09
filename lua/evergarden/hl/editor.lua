@@ -48,8 +48,14 @@ return function(theme, config)
 
     Question = { theme.comment },
 
-    Search = { theme.orange, reverse = config.style.search.reverse },
-    CurSearch = { theme.orange, reverse = config.style.search.inc_reverse },
+    Search = {
+      theme.orange,
+      style = config.style.search.reverse and { 'reverse' },
+    },
+    CurSearch = {
+      theme.orange,
+      style = config.style.search.inc_reverse and { 'reverse' },
+    },
     IncSearch = { link = 'CurSearch' },
 
     Error = { theme.diagnostic.error },
@@ -69,7 +75,7 @@ return function(theme, config)
     PmenuSel = {
       theme.surface1,
       theme.green,
-      reverse = config.style.search.reverse,
+      style = config.style.search.reverse and { 'reverse' },
     },
     PmenuSbar = { theme.none, theme.surface1 },
     PmenuThumb = { theme.none, theme.overlay2 },

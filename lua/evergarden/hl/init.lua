@@ -1,8 +1,5 @@
 local M = {}
 
----@alias evergarden.types.colorspec { fg?: string, bg?: string, [1]: string, [2]: string, link: string, reverse: boolean }
----@alias evergarden.types.hlgroups { [string]: evergarden.types.colorspec }
-
 ---@param theme evergarden.types.theme
 ---@param config evergarden.types.config
 function M.setup(theme, config)
