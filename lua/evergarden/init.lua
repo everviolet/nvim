@@ -16,7 +16,7 @@ evergarden.default_config = {
   integrations = {
     cmp = true,
     gitsigns = true,
-    indent_blankline = true,
+    indent_blankline = { enable = true, scope_color = 'green' },
     nvimtree = true,
     rainbow_delimiters = true,
     symbols_outline = true,

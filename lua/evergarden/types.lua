@@ -9,7 +9,7 @@
 ---@class evergarden.types.config.integrations
 ---@field cmp? boolean
 ---@field gitsigns? boolean
----@field indent_blankline? boolean lukas-reineke/indent-blankline.nvim
+---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
 ---@field nvimtree? boolean
 ---@field rainbow_delimiters? boolean
 ---@field telescope? boolean
