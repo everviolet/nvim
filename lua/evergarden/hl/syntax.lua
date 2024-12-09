@@ -32,7 +32,7 @@ return function(theme, config)
     ['@method.call'] = { link = '@function.call' },
     ['@namespace'] = { link = '@namespace' },
     ['@module'] = { link = '@constant' },
-    ['@none'] = { theme.fg },
+    ['@none'] = { theme.text },
     ['@number'] = { link = 'Number' },
     ['@operator'] = { link = '@delimiter' },
     ['@parameter'] = { link = '@variable.parameter' },
@@ -78,7 +78,7 @@ return function(theme, config)
     PreProc = { link = '@annotation' },
     Include = { link = '@annotation' },
 
-    Conceal = { theme.fg_accent },
+    Conceal = { theme.overlay2 },
 
     -- lsp
     ['@lsp.type.comment'] = { link = '@comment' },
