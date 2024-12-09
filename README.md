@@ -70,17 +70,15 @@ Overrides can take all options passed to `vim.api.nvim_set_hl()`.
 require 'evergarden'.setup {
   overrides = {
     Normal = {
-      { '#fddce3', 8 }, -- GUI color and cterm color for 'fg'
-      { '#1d2021' },    -- GUI color for 'bg'
+      '#fddce3',
+      '#1d2021',
 
       -- Additional highlight options can be included here
-
-      bold = true,
-      italic = false,
+      style = { 'bold', 'italic' }
     },
     Keyword = {
-      fg = '#ce96de',         -- GUI color for 'fg'
-      bg = { '#ae45be', 5 },  -- GUI color and cterm color for 'bg'
+      fg = '#ce96de',
+      bg = '#ae45be',
     },
   },
 }
