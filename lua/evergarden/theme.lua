@@ -79,16 +79,6 @@ function M.setup(colors, config)
     or theme.none
   theme.comment = theme.overlay2
 
-  theme.red = colors.red
-  theme.orange = colors.orange
-  theme.yellow = colors.yellow
-  theme.green = colors.green
-  theme.aqua = colors.aqua
-  theme.skye = colors.skye
-  theme.blue = colors.blue
-  theme.purple = colors.purple
-  theme.pink = colors.pink
-
   theme.syntax = {
     keyword = theme.red,
     object = theme.text,
