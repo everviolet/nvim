@@ -47,6 +47,8 @@
 ---@field macro string
 ---@field annotation string
 
+local utils = require('evergarden.utils')
+
 local M = {}
 
 ---@param colors evergarden.types.colors
@@ -59,21 +61,22 @@ function M.setup(colors, config)
   theme.none = 'NONE'
   theme.colors = colors
 
-  theme.base = theme.none
-  if not config.transparent_background then
-    theme.base = colors.base
-    if config.variant == 'hard' then
-      theme.base = colors.mantle
-    end
-    if config.variant == 'soft' then
-      theme.base = colors.softbase
-    end
+  theme.base = utils.vary_color({
+    hard = colors.mantle,
+    medium = colors.base,
+    soft = colors.softbase,
+  })
+  if config.transparent_background then
+    theme.base = theme.none
   end
 
-  local sign_colors = config.style.sign.highlight
-      and { hard = theme.base, medium = theme.surface0, soft = theme.surface1 }
-    or {}
-  theme.sign = sign_colors[config.variant] or theme.none
+  theme.sign = config.style.sign.highlight
+      and utils.vary_color {
+        hard = theme.base,
+        medium = theme.surface0,
+        soft = theme.surface1,
+      }
+    or theme.none
   theme.comment = theme.overlay2
 
   theme.red = colors.red

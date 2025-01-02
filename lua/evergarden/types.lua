@@ -1,6 +1,8 @@
+---@alias evergarden.types.variant 'hard'|'medium'|'soft'
+
 ---@class evergarden.types.config
 ---@field transparent_background? boolean
----@field variant? 'hard'|'medium'|'soft'
+---@field variant? evergarden.types.variant
 ---@field override_terminal? boolean
 ---@field style? evergarden.types.styleconfig
 ---@field integrations? evergarden.types.config.integrations

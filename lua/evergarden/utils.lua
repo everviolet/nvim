@@ -45,4 +45,18 @@ function M.set_highlights(hlgroups)
   end
 end
 
+---@param props { evergarden.types }
+function M.vary_color(props)
+  if not props then
+    return
+  end
+  if props[evergarden_config.variant] then
+    return props[evergarden_config.variant]
+  elseif props.medium then
+    return props.medium
+  else
+    return nil
+  end
+end
+
 return M
