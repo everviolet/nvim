@@ -9,6 +9,7 @@
 ---@field overrides? evergarden.types.hlgroups|fun(): evergarden.types.hlgroups
 
 ---@class evergarden.types.config.integrations
+---@field blink_cmp? boolean Saghen/blink.cmp
 ---@field cmp? boolean
 ---@field gitsigns? boolean
 ---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim

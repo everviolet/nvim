@@ -15,6 +15,7 @@ evergarden.default_config = {
     sign = { highlight = false },
   },
   integrations = {
+    blink_cmp = true,
     cmp = true,
     gitsigns = true,
     indent_blankline = { enable = true, scope_color = 'green' },
