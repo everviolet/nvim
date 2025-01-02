@@ -34,6 +34,7 @@
 ---@field syntax EvergardenSyntax
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
+---@field surface string
 ---@field sign string
 ---@field comment string
 
@@ -64,17 +65,15 @@ function M.setup(colors, config)
 
   theme.base = utils.vary_color {
     hard = colors.mantle,
-    medium = colors.base,
     soft = colors.softbase,
-  }
+  } or colors.base
   if config.transparent_background then
     theme.base = theme.none
   end
 
   theme.surface = utils.vary_color {
     hard = colors.base,
-    medium = colors.surface0,
-  }
+  } or colors.surface0
   theme.sign = config.style.sign.highlight and theme.surface or theme.none
   theme.comment = theme.overlay2
 

@@ -6,7 +6,7 @@
 ---@field override_terminal? boolean
 ---@field style? evergarden.types.styleconfig
 ---@field integrations? evergarden.types.config.integrations
----@field overrides? evergarden.types.hlgroups
+---@field overrides? evergarden.types.hlgroups|fun(): evergarden.types.hlgroups
 
 ---@class evergarden.types.config.integrations
 ---@field cmp? boolean
