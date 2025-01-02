@@ -47,7 +47,7 @@
 ---@field macro string
 ---@field annotation string
 
-local utils = require('evergarden.utils')
+local utils = require 'evergarden.utils'
 
 local M = {}
 
@@ -61,11 +61,11 @@ function M.setup(colors, config)
   theme.none = 'NONE'
   theme.colors = colors
 
-  theme.base = utils.vary_color({
+  theme.base = utils.vary_color {
     hard = colors.mantle,
     medium = colors.base,
     soft = colors.softbase,
-  })
+  }
   if config.transparent_background then
     theme.base = theme.none
   end
