@@ -76,7 +76,7 @@ return function(theme, config)
       style = config.style.search,
     },
     PmenuSbar = { theme.none, theme.surface1 },
-    PmenuThumb = { theme.none, theme.overlay2 },
+    PmenuThumb = { theme.none, theme.overlay0 },
 
     -- Diffs
     DiffAdd = { theme.diff.add, theme.none },
