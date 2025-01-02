@@ -84,8 +84,6 @@ return function(theme, config)
     PreProc = { link = '@annotation' },
     Include = { link = '@annotation' },
 
-    Conceal = { theme.overlay2 },
-
     -- lsp
     ['@lsp.type.comment'] = { link = '@comment' },
     ['@lsp.type.namespace'] = { link = '@namespace' },
