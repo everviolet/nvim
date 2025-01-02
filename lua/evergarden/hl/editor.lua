@@ -21,7 +21,7 @@ return function(theme, config)
     TabLineSel = { theme.green, style = config.style.tabline },
     TabLine = { theme.comment },
     TabLineFill = { link = 'TabLine' },
-    Title = { theme.comment },
+    Title = { theme.subtext0 },
     NonText = { theme.overlay0 },
     Folded = { theme.comment },
     FoldColumn = { theme.surface },
