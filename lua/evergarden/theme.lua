@@ -74,7 +74,7 @@ function M.setup(colors, config)
       and { hard = theme.base, medium = theme.surface0, soft = theme.surface1 }
     or {}
   theme.sign = sign_colors[config.variant] or theme.none
-  theme.comment = theme.subtext0
+  theme.comment = theme.overlay2
 
   theme.red = colors.red
   theme.orange = colors.orange
