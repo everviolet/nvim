@@ -70,14 +70,14 @@ function M.setup(colors, config)
     theme.base = theme.none
   end
 
-  theme.sign = config.style.sign.highlight
+  theme.surface = config.style.sign.highlight
       and utils.vary_color {
         hard = theme.base,
         medium = theme.surface0,
-        soft = theme.surface1,
       }
     or theme.none
   theme.comment = theme.overlay2
+  theme.sign = theme.surface
 
   theme.syntax = {
     keyword = theme.red,
