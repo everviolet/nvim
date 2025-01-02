@@ -12,19 +12,19 @@ return function(theme, config)
     Visual = { theme.none, theme.surface1 },
 
     LineNr = { theme.surface1 },
-    CursorLineNr = { theme.comment },
+    CursorLineNr = { theme.overlay1 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
       config.transparent_background and theme.mantle or theme.surface,
     },
     VertSplit = { link = 'WinSeparator' },
     TabLineSel = { theme.green, style = config.style.tabline },
-    TabLine = { theme.comment },
+    TabLine = { theme.overlay1 },
     TabLineFill = { link = 'TabLine' },
     Title = { theme.subtext0 },
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
-    Folded = { theme.comment },
+    Folded = { theme.overlay1 },
     FoldColumn = { theme.surface },
 
     NormalFloat = { theme.text, theme.surface },
@@ -45,7 +45,7 @@ return function(theme, config)
     InfoFloat = { theme.diagnostic.info, theme.surface },
     HintFloat = { theme.diagnostic.hint, theme.surface },
 
-    Question = { theme.comment },
+    Question = { theme.subtext0 },
 
     Search = {
       theme.orange,
@@ -60,7 +60,7 @@ return function(theme, config)
     Error = { theme.diagnostic.error },
     ErrorMsg = { link = 'Error' },
     WarningMsg = { theme.diagnostic.warn },
-    MoreMsg = { theme.comment },
+    MoreMsg = { theme.subtext0 },
     ModeMsg = { theme.surface1, theme.none },
 
     ColorColumn = { theme.none, theme.surface },

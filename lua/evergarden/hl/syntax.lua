@@ -108,8 +108,8 @@ return function(theme, config)
     ['@markup.link'] = { link = '@constant' }, -- text references, footnotes, citations, etc.
     ['@markup.link.label'] = { link = '@markup.italic' }, -- link, reference descriptions
     ['@markup.link.url'] = { link = '@nontext' }, -- URL-style links
-    ['@markup.raw'] = { link = '@comment' }, -- literal or verbatim text (e.g. inline code)
-    ['@markup.raw.block'] = { theme.comment }, -- literal or verbatim text as a stand-alone block
+    ['@markup.raw'] = { theme.overlay1 }, -- literal or verbatim text (e.g. inline code)
+    ['@markup.raw.block'] = { theme.overlay1, theme.surface }, -- literal or verbatim text as a stand-alone block
     ['@markup.list'] = { link = '@delimiter' }, -- list markers
     ['@markup.list.checked'] = { link = '@string' }, -- checked todo-style list markers
     ['@markup.list.unchecked'] = { link = '@punctuation.delimiter' }, -- unchecked todo-style list markers
