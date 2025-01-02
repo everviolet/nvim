@@ -4,11 +4,11 @@ local M = {}
 ---@param _ evergarden.types.config
 M.get = function(theme, _)
   return {
-    ['TelescopeNormal'] = { theme.syntax.context },
-    ['TelescopePromptPrefix'] = { link = 'Constant' },
-    ['TelescopePromptNormal'] = { 'none', 'none' },
-    ['TelescopeSelection'] = { 'none', theme.surface0 },
-    ['TelescopeSelectionCaret'] = { link = 'TelescopeNormal' },
+    ['TelescopeNormal'] = { theme.subtext1 },
+    ['TelescopePromptPrefix'] = { theme.pink },
+    ['TelescopePromptNormal'] = { link = 'TelescopeNormal' },
+    ['TelescopeSelection'] = { theme.none, theme.surface1 },
+    ['TelescopeSelectionCaret'] = { theme.yellow, theme.surface1 },
     ['TelescopeMatching'] = { link = 'Search' },
     ['TelescopeTitle'] = { link = 'FloatTitle' },
     ['TelescopeBorder'] = { link = 'FloatBorder' },
