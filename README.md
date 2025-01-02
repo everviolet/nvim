@@ -26,7 +26,7 @@ return {
   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
   opts = {
     transparent_background = true,
-    contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+    variant = 'medium', -- 'hard'|'medium'|'soft'
     overrides = { }, -- add custom overrides
   }
 }
@@ -43,7 +43,7 @@ Plug 'comfysage/evergarden'
 ```lua
 require 'evergarden'.setup {
   transparent_background = false,
-  contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+  variant = 'medium', -- 'hard'|'medium'|'soft'
   override_terminal = true,
   style = {
     tabline = { reverse = true, color = 'green' },

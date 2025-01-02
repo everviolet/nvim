@@ -62,10 +62,10 @@ function M.setup(colors, config)
   theme.base = theme.none
   if not config.transparent_background then
     theme.base = colors.base
-    if config.contrast_dark == 'hard' then
+    if config.variant == 'hard' then
       theme.base = colors.mantle
     end
-    if config.contrast_dark == 'soft' then
+    if config.variant == 'soft' then
       theme.base = colors.softbase
     end
   end
@@ -73,7 +73,7 @@ function M.setup(colors, config)
   local sign_colors = config.style.sign.highlight
       and { hard = theme.base, medium = theme.surface0, soft = theme.surface1 }
     or {}
-  theme.sign = sign_colors[config.contrast_dark] or theme.none
+  theme.sign = sign_colors[config.variant] or theme.none
   theme.comment = theme.subtext0
 
   theme.red = colors.red

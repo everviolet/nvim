@@ -3,7 +3,7 @@ local evergarden = {}
 ---@type evergarden.types.config
 evergarden.default_config = {
   transparent_background = false,
-  contrast_dark = 'medium',
+  variant = 'medium',
   override_terminal = true,
   style = {
     tabline = { reverse = true, color = 'green' },
