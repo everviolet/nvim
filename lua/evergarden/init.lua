@@ -22,6 +22,7 @@ evergarden.default_config = {
     rainbow_delimiters = true,
     symbols_outline = true,
     telescope = true,
+    which_key = true,
   },
   overrides = {},
 }
