@@ -6,11 +6,12 @@ evergarden.default_config = {
   variant = 'medium',
   override_terminal = true,
   style = {
-    tabline = { reverse = true, color = 'green' },
-    search = { reverse = false, inc_reverse = true },
-    types = { italic = true },
-    keyword = { italic = true },
-    comment = { italic = false },
+    tabline = { 'reverse' },
+    search = { 'italic' },
+    incsearch = { 'reverse' },
+    types = { 'italic' },
+    keyword = { 'italic' },
+    comment = { 'italic' },
     sign = { highlight = false },
   },
   integrations = {

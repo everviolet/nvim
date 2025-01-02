@@ -8,7 +8,7 @@ return function(theme, config)
     ['@character'] = { link = 'Character' },
     ['@comment'] = {
       theme.comment,
-      style = config.style.comment.italic and { 'italic' },
+      style = config.style.comment,
     },
     ['@conditional'] = { link = 'Conditional' },
     ['@constant'] = { theme.syntax.constant },
@@ -26,7 +26,7 @@ return function(theme, config)
     ['@include'] = { link = 'Include' },
     ['@keyword'] = {
       theme.syntax.keyword,
-      style = config.style.keyword.italic and { 'italic' },
+      style = config.style.keyword,
     },
     ['@keyword.function'] = { link = '@keyword' },
     ['@keyword.operator'] = { theme.orange },
@@ -54,7 +54,7 @@ return function(theme, config)
     ['@math'] = { theme.blue },
     ['@type'] = {
       theme.syntax.type,
-      style = config.style.types.italic and { 'italic' },
+      style = config.style.types,
     },
     ['@type.builtin'] = { link = '@type' },
     ['@type.qualifier'] = { link = '@keyword' },

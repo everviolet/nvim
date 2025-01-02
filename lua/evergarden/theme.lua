@@ -1,9 +1,10 @@
 ---@class evergarden.types.styleconfig
----@field tabline { reverse: boolean, color: evergarden.types.colors.enum }
----@field search { reverse: boolean, inc_reverse: boolean }
----@field types { italic: boolean }
----@field keyword { italic: boolean }
----@field comment { italic: boolean }
+---@field tabline evergarden.types.styleopt
+---@field search evergarden.types.styleopt
+---@field incsearch evergarden.types.styleopt
+---@field types evergarden.types.styleopt
+---@field keyword evergarden.types.styleopt
+---@field comment evergarden.types.styleopt
 ---@field sign { highlight: boolean }
 
 ---@class evergarden.types.theme

@@ -18,9 +18,7 @@ return function(theme, config)
       config.transparent_background and theme.mantle or theme.surface,
     },
     VertSplit = { link = 'WinSeparator' },
-    TabLineSel = config.style.tabline.reverse
-        and { theme.base, theme.colors[config.style.tabline.color] }
-      or { theme.colors[config.style.tabline.color] },
+    TabLineSel = { theme.green, style = config.style.tabline },
     TabLine = { theme.comment },
     TabLineFill = { link = 'TabLine' },
     Title = { theme.comment },
@@ -50,11 +48,11 @@ return function(theme, config)
 
     Search = {
       theme.orange,
-      style = config.style.search.reverse and { 'reverse' },
+      style = config.style.search,
     },
     CurSearch = {
       theme.orange,
-      style = config.style.search.inc_reverse and { 'reverse' },
+      style = config.style.incsearch,
     },
     IncSearch = { link = 'CurSearch' },
 
@@ -75,7 +73,7 @@ return function(theme, config)
     PmenuSel = {
       theme.surface1,
       theme.green,
-      style = config.style.search.reverse and { 'reverse' },
+      style = config.style.search,
     },
     PmenuSbar = { theme.none, theme.surface1 },
     PmenuThumb = { theme.none, theme.overlay2 },
