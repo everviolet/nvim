@@ -76,7 +76,7 @@ Overrides can take all options passed to `vim.api.nvim_set_hl()`.
 > [!note]
 >
 > - Ensure that `fg` (foreground color) and `bg` (background color) are correctly positioned as the first and second elements in the table, respectively. The `fg` and `bg` fields can also be refered to directly.
-> - Confirm that `fg` and `bg` are strings or arrays, with the first element representing the GUI color, and the second element representing the CTERM (Color Terminal) color, if specified.
+> - Confirm that `fg` and `bg` are strings, starting with a hash (`#`).
 
 ```lua
 require 'evergarden'.setup {
