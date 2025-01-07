@@ -103,15 +103,15 @@ require 'evergarden'.setup {
 - Support for transparent background.
 - Supported plugins: [blink_cmp][] [cmp][] [gitsigns][] [indent_blankline][] [nvimtree][] [rainbow_delimiters][] [symbols_outline][] [telescope][] [which_key][].
 
-[blink_cmp]: Saghen/blink.cmp
-[cmp]: hrsh7th/nvim-cmp
-[gitsigns]: lewis6991/gitsigns.nvim
-[indent_blankline]: lukas-reineke/indent-blankline.nvim
-[nvimtree]: nvim-tree/nvim-tree.lua
-[rainbow_delimiters]: hiphish/rainbow-delimiters.nvim
-[symbols_outline]: simrat39/symbols-outline.nvim
-[telescope]: nvim-telescope/telescope.nvim
-[which_key]: folke/which-key.nvim
+[blink_cmp]: https://github.com/Saghen/blink.cmp
+[cmp]: https://github.com/hrsh7th/nvim-cmp
+[gitsigns]: https://github.com/lewis6991/gitsigns.nvim
+[indent_blankline]: https://github.com/lukas-reineke/indent-blankline.nvim
+[nvimtree]: https://github.com/nvim-tree/nvim-tree.lua
+[rainbow_delimiters]: https://github.com/hiphish/rainbow-delimiters.nvim
+[symbols_outline]: https://github.com/simrat39/symbols-outline.nvim
+[telescope]: https://github.com/nvim-telescope/telescope.nvim
+[which_key]: https://github.com/folke/which-key.nvim
 
 ![telescope preview](./images/asset.telescope.png)
 
