@@ -4,17 +4,17 @@ return function(theme, colors)
   vim.g.terminal_color_0 = colors.base
   vim.g.terminal_color_8 = colors.surface0
   vim.g.terminal_color_1 = colors.red
-  vim.g.terminal_color_9 = colors.orange
+  vim.g.terminal_color_9 = colors.red
   vim.g.terminal_color_2 = colors.green
-  vim.g.terminal_color_10 = colors.surface1
+  vim.g.terminal_color_10 = colors.green
   vim.g.terminal_color_3 = colors.yellow
-  vim.g.terminal_color_11 = colors.surface2
+  vim.g.terminal_color_11 = colors.yellow
   vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_12 = colors.overlay1
+  vim.g.terminal_color_12 = colors.blue
   vim.g.terminal_color_5 = colors.pink
-  vim.g.terminal_color_13 = colors.subtext1
+  vim.g.terminal_color_13 = colors.pink
   vim.g.terminal_color_6 = colors.aqua
-  vim.g.terminal_color_14 = colors.overlay0
+  vim.g.terminal_color_14 = colors.aqua
   vim.g.terminal_color_7 = colors.text
-  vim.g.terminal_color_15 = theme.overlay2
+  vim.g.terminal_color_15 = theme.subtext0
 end
