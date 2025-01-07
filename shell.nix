@@ -1,21 +1,26 @@
 {
-  self,
-  pkgs,
-  whiskers,
+  inputs,
+  lib,
+  stdenv,
+  mkShellNoCC,
+  writeShellApplication,
+  writeTextFile,
   ...
 }:
 let
-  inherit (pkgs.lib) mapAttrsToList;
-  whiskers-palette = pkgs.writeTextFile {
+  inherit (lib) mapAttrsToList;
+
+  whiskers-palette = writeTextFile {
     name = "evergarden-whiskers";
     text = builtins.toJSON {
-      all = self.toCatppuccinPalette self.palette;
+      all = inputs.self.toCatppuccinPalette inputs.self.palette;
     };
   };
-  generate = pkgs.writeShellApplication {
+
+  generate = writeShellApplication {
     name = "generate";
     runtimeInputs = [
-      whiskers.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.whiskers.packages.${stdenv.hostPlatform.system}.default
     ];
     text = builtins.concatStringsSep "\n" (
       mapAttrsToList
@@ -23,7 +28,7 @@ let
           whiskers --flavor mocha --color-overrides ${whiskers-palette} --overrides '{ "accent": { "hex": "${v}", "name": "${n}" } }' "$@"
         '')
         {
-          inherit (self.palette)
+          inherit (inputs.self.palette)
             red
             orange
             yellow
@@ -37,7 +42,8 @@ let
         }
     );
   };
-  generate-all = pkgs.writeShellApplication {
+
+  generate-all = writeShellApplication {
     name = "generate-all";
     runtimeInputs = [
       generate
@@ -49,7 +55,8 @@ let
       done
     '';
   };
-  generate-new = pkgs.writeShellApplication {
+
+  generate-new = writeShellApplication {
     name = "generate-new";
     runtimeInputs = [
       generate
@@ -68,11 +75,10 @@ let
     '';
   };
 in
-pkgs.mkShellNoCC {
+mkShellNoCC {
   packages = [
-    pkgs.fd
-    pkgs.fzf
-    whiskers.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.whiskers.packages.${stdenv.hostPlatform.system}.default
+
     generate
     generate-new
     generate-all

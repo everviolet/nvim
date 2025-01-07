@@ -4,13 +4,13 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     whiskers.url = "github:catppuccin/whiskers";
+    catwalk.url = "github:catppuccin/catwalk";
   };
 
   outputs =
     {
-      self,
       nixpkgs,
-      whiskers,
+      ...
     }@inputs:
     let
       forAllSystems =
@@ -96,7 +96,7 @@
       };
 
       devShells = forAllSystems (pkgs: {
-        default = pkgs.callPackage ./shell.nix inputs;
+        default = pkgs.callPackage ./shell.nix { inherit inputs; };
       });
     };
 }
