@@ -1,4 +1,4 @@
-![preview__lua](./images/asset.lua.png)
+![preview__lua](./images/neovim/preview.webp)
 
 <h1 align="center">
     evergarden
@@ -12,9 +12,11 @@ evergarden was designed as a cozy theme with a focus on readability and visual c
 
 |        |                                                     |
 | :----: | :-------------------------------------------------: |
-|  hard  | ![preview-hard__rust](./images/asset.hard.rust.png) |
-| medium |      ![preview-rust](./images/asset.rust.png)       |
-|  soft  | ![preview-soft__rust](./images/asset.soft.rust.png) |
+|  hard  | ![preview-hard](./images/neovim/hard.png) |
+| medium |      ![preview-medium](./images/neovim/medium.png)       |
+|  soft  | ![preview-soft](./images/neovim/soft.png) |
+
+###### [more screenshots](#screenshots)
 
 ## Installation
 
@@ -95,6 +97,12 @@ require 'evergarden'.setup {
   },
 }
 ```
+
+## Screenshots
+
+![preview__rust](./images/neovim/asset.rust.png)
+
+![preview__lua](./images/neovim/asset.lua.png)
 
 ## Features
 
