@@ -3,8 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    whiskers.url = "github:catppuccin/whiskers";
-    catwalk.url = "github:catppuccin/catwalk";
   };
 
   outputs =

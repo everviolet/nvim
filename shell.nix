@@ -1,10 +1,15 @@
 {
   inputs,
   lib,
-  stdenv,
   mkShellNoCC,
+
   writeShellApplication,
   writeTextFile,
+
+  catppuccin-catwalk,
+  catppuccin-whiskers,
+  fd,
+  libwebp,
   ...
 }:
 let
@@ -20,7 +25,7 @@ let
   generate = writeShellApplication {
     name = "generate";
     runtimeInputs = [
-      inputs.whiskers.packages.${stdenv.hostPlatform.system}.default
+      catppuccin-whiskers
     ];
     text = builtins.concatStringsSep "\n" (
       mapAttrsToList
@@ -74,13 +79,50 @@ let
       done
     '';
   };
+
+  convert-screenshots = writeShellApplication {
+    name = "convert-screenshots";
+    runtimeInputs = [
+      fd
+      libwebp
+    ];
+    text = ''
+      for item in $(fd --exact-depth 2 -t file ".png" images/); do
+        filename="''${item%.png}.webp"
+        cwebp -q 100 "$item" -o "$filename"
+      done
+    '';
+  };
+
+  generate-screenshots = writeShellApplication {
+    name = "generate-screenshots";
+    runtimeInputs = [
+      catppuccin-catwalk
+      fd
+    ];
+    text = ''
+      for item in $(fd --exact-depth 1 -t directory '''''' images/); do
+        name="''${item##*/}"
+        out="''${item}preview.webp"
+        if [[ ! -f "$out" ]]; then
+          >&2 echo "creating preview for $name -> $out"
+          catwalk -C "$item" hard.webp medium.webp medium.webp soft.webp --output preview.webp
+        fi
+      done
+    '';
+  };
 in
 mkShellNoCC {
   packages = [
-    inputs.whiskers.packages.${stdenv.hostPlatform.system}.default
+    catppuccin-catwalk
+    catppuccin-whiskers
 
     generate
     generate-new
     generate-all
+    generate-screenshots
+    convert-screenshots
+
+    libwebp
   ];
 }
