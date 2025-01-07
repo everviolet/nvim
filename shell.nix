@@ -29,7 +29,7 @@ let
             yellow
             green
             aqua
-            sky
+            skye
             blue
             purple
             pink

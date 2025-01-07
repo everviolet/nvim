@@ -25,7 +25,7 @@
         yellow = "DBBC7F";
         green = "B2C98F";
         aqua = "93C9A1";
-        sky = "97C9C3";
+        skye = "97C9C3";
         blue = "9BB5CF";
         purple = "D6A0D1";
         pink = "E3A8D1";
@@ -70,7 +70,6 @@
           red
           yellow
           green
-          sky
           blue
           text
           subtext1
@@ -91,6 +90,7 @@
         maroon = palette.red;
         peach = palette.orange;
         teal = palette.aqua;
+        sky = palette.skye;
         sapphire = palette.blue;
         lavender = palette.purple;
       };
