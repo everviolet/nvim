@@ -10,13 +10,13 @@
 
 ---@class evergarden.types.config.integrations
 ---@field blink_cmp? boolean Saghen/blink.cmp
----@field cmp? boolean
----@field gitsigns? boolean
+---@field cmp? boolean hrsh7th/nvim-cmp
+---@field gitsigns? boolean lewis6991/gitsigns.nvim
 ---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
----@field nvimtree? boolean
----@field rainbow_delimiters? boolean
+---@field nvimtree? boolean nvim-tree/nvim-tree.lua
+---@field rainbow_delimiters? boolean hiphish/rainbow-delimiters.nvim
 ---@field symbols_outline? boolean simrat39/symbols-outline.nvim
----@field telescope? boolean
+---@field telescope? boolean nvim-telescope/telescope.nvim
 ---@field which_key? boolean folke/which-key.nvim
 
 ---@alias evergarden.types.colors.enum 'crust'|'softbase'|'mantle'|'base'|'surface0'|'surface1'|'surface2'|'overlay0'|'overlay1'|'overlay2'|'subtext0'|'subtext1'|'text'|'red'|'orange'|'yellow'|'green'|'aqua'|'blue'|'skye'|'purple'|'pink'
