@@ -1,0 +1,33 @@
+---
+whiskers:
+  version: 2.0.0
+  matrix:
+    - variant: ["hard", "medium", "soft"]
+  filename: "extras/tmux/themes/evergarden-{{variant}}-{{accent.name}}.conf"
+---
+{% set bg = object(hard=mantle, medium=base, soft=surface0) %}
+## name: evergarden{% if variant != "medium" %}-{{variant}}{% endif %}-{{accent.name}}
+## author: comfysage
+## license: GPL-3.0
+## blurb: a comfy colorscheme for cozy morning coding
+
+# vim:set ft=tmux:
+
+set -ogq @thm_crust "#{{crust.hex}}"
+set -ogq @thm_base "#{{bg[variant].hex}}"
+set -ogq @thm_surface0 "#{{surface0.hex}}"
+set -ogq @thm_surface1 "#{{surface1.hex}}"
+set -ogq @thm_surface2 "#{{surface2.hex}}"
+set -ogq @thm_overlay0 "#{{overlay0.hex}}"
+set -ogq @thm_overlay1 "#{{overlay1.hex}}"
+set -ogq @thm_overlay2 "#{{overlay2.hex}}"
+set -ogq @thm_text "#{{text.hex}}"
+set -ogq @thm_red "#{{red.hex}}"
+set -ogq @thm_orange "#{{peach.hex}}"
+set -ogq @thm_yellow "#{{yellow.hex}}"
+set -ogq @thm_green "#{{green.hex}}"
+set -ogq @thm_aqua "#{{teal.hex}}"
+set -ogq @thm_skye "#{{sky.hex}}"
+set -ogq @thm_blue "#{{blue.hex}}"
+set -ogq @thm_purple "#{{lavender.hex}}"
+set -ogq @thm_pink "#{{pink.hex}}"

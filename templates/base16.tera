@@ -1,0 +1,32 @@
+---
+whiskers:
+  version: 2.0.0
+  matrix:
+    - variant: ["hard", "medium", "soft"]
+  filename: "extras/base16/evergarden-{{variant}}.yaml"
+---
+{% set bg = object(hard=mantle, medium=base, soft=surface0) %}
+## name: evergarden{% if variant != "medium" %}-{{variant}}{% endif %}
+## author: comfysage
+## license: GPL-3.0
+## blurb: a comfy colorscheme for cozy morning coding
+
+scheme: "evergarden{% if variant != "medium" %}-{{variant}}{% endif %}"
+author: "https://github.com/comfysage"
+
+base00: "{{bg[variant].hex}}"
+base01: "{{red.hex}}"
+base02: "{{green.hex}}"
+base03: "{{yellow.hex}}"
+base04: "{{blue.hex}}"
+base05: "{{pink.hex}}"
+base06: "{{teal.hex}}"
+base07: "{{text.hex}}"
+base08: "{{surface0.hex}}"
+base09: "{{red.hex}}"
+base0A: "{{green.hex}}"
+base0B: "{{yellow.hex}}"
+base0C: "{{blue.hex}}"
+base0D: "{{pink.hex}}"
+base0E: "{{teal.hex}}"
+base0F: "{{subtext0.hex}}"
