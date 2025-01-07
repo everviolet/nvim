@@ -86,24 +86,33 @@ require 'evergarden'.setup {
 
 ## Features
 
-- Lots of style-customization options (contrast, color invertion etc.)
+- Lots of style-customization options (background variants, color invertion, italics etc.)
 - Support for Treesitter highlighting.
 - Support for transparent background.
-- Supported plugins: [GitGutter][], [Telescope][].
+- Supported plugins: [blink_cmp][] [cmp][] [gitsigns][] [indent_blankline][] [nvimtree][] [rainbow_delimiters][] [symbols_outline][] [telescope][] [which_key][].
 
-  [gitgutter]: https://github.com/airblade/vim-gitgutter
-  [telescope]: https://github.com/nvim-telescope/telescope
+[blink_cmp]: Saghen/blink.cmp
+[cmp]: hrsh7th/nvim-cmp
+[gitsigns]: lewis6991/gitsigns.nvim
+[indent_blankline]: lukas-reineke/indent-blankline.nvim
+[nvimtree]: nvim-tree/nvim-tree.lua
+[rainbow_delimiters]: hiphish/rainbow-delimiters.nvim
+[symbols_outline]: simrat39/symbols-outline.nvim
+[telescope]: nvim-telescope/telescope.nvim
+[which_key]: folke/which-key.nvim
 
 ![telescope preview](./images/asset.telescope.png)
 
 ## :sparkles: Extras
 
-- [kitty theme](./extras/kitty)
+- [alacritty](./extras/alacritty)
 - [base16-scheme](./extras/base16)
+- [kitty theme](./extras/kitty)
 - [scss](./extras/scss/evergarden.scss)
+- [tmux](./extras/tmux)
 - [discord theme](https://github.com/comfysage/evg-discord)
 - [userstyles](https://github.com/comfysage/userstyles)
 
 ## License
 
-[MIT/X11](https://en.wikipedia.org/wiki/MIT_License)
+[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
