@@ -1,13 +1,24 @@
 {
   description = "evergarden theme";
 
-  inputs = { };
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    whiskers.url = "github:catppuccin/whiskers";
+  };
 
   outputs =
     {
       self,
+      nixpkgs,
+      whiskers,
     }@inputs:
     let
+      forAllSystems =
+        function:
+        nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (
+          system: function nixpkgs.legacyPackages.${system}
+        );
+
       palette = {
         red = "E67E80";
         orange = "E69875";
@@ -30,6 +41,7 @@
         base = "232A2E";
         mantle = "1C2225";
         crust = "171C1F";
+        softbase = "2B3538";
       };
     in
     {
@@ -82,5 +94,9 @@
         sapphire = palette.blue;
         lavender = palette.purple;
       };
+
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.callPackage ./shell.nix inputs;
+      });
     };
 }
