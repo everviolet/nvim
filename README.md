@@ -127,6 +127,7 @@ require 'evergarden'.setup {
 
 - [alacritty](./extras/alacritty)
 - [base16-scheme](./extras/base16)
+- [iterm](./extras/iterm)
 - [kitty theme](./extras/kitty)
 - [scss](./extras/scss/evergarden.scss)
 - [tmux](./extras/tmux)
