@@ -21,7 +21,7 @@ function evergarden.load(config)
     cfg = require('evergarden.config').get()
   end
 
-  local colors = require('evergarden.colors').get()
+  local colors = require('evergarden.colors').get(cfg)
   local theme = require('evergarden.theme').setup(colors, cfg)
   local hlgroups = require('evergarden.hl.init').setup(theme, cfg)
 

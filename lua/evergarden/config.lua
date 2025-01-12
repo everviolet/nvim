@@ -26,6 +26,7 @@ M.default = {
     which_key = true,
   },
   overrides = {},
+  color_overrides = {},
 }
 
 ---@type evergarden.types.config

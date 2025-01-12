@@ -26,9 +26,11 @@ M.colors = {
   pink = '#E3A8D1',
 }
 
+---@param cfg? evergarden.types.config
 ---@return evergarden.types.colors
-function M.get()
-  return M.colors
+function M.get(cfg)
+  cfg = cfg or require('evergarden.config').get()
+  return vim.tbl_deep_extend('force', M.colors, cfg.color_overrides)
 end
 
 return M
