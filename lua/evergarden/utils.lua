@@ -52,8 +52,9 @@ function M.vary_color(props)
   if not props then
     return
   end
-  if props[evergarden_config.variant] then
-    return props[evergarden_config.variant]
+  local cfg = require('evergarden.config').get()
+  if props[cfg.variant] then
+    return props[cfg.variant]
   elseif props.medium then
     return props.medium
   else

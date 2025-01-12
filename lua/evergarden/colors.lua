@@ -1,5 +1,7 @@
+local M = {}
+
 ---@type evergarden.types.colors
-_G.evergarden_colors = {
+M.colors = {
   text = '#DDDECF',
   subtext1 = '#CACCBE',
   subtext0 = '#94AAA0',
@@ -24,18 +26,9 @@ _G.evergarden_colors = {
   pink = '#E3A8D1',
 }
 
-local M = {}
-
-function M.colors()
-  return _G.evergarden_colors
-end
-
----@param config evergarden.types.config?
----@return evergarden.types.theme
-function M.setup(config)
-  ---@type evergarden.types.config
-  config = vim.tbl_extend('force', _G.evergarden_config, config or {})
-  return require('evergarden.theme').setup(M.colors(), config)
+---@return evergarden.types.colors
+function M.get()
+  return M.colors
 end
 
 return M

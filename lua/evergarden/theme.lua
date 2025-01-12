@@ -53,10 +53,16 @@ local utils = require 'evergarden.utils'
 
 local M = {}
 
----@param colors evergarden.types.colors
----@param config evergarden.types.config
+---@param colors? evergarden.types.colors
+---@param config? evergarden.types.config
 ---@return evergarden.types.theme
 function M.setup(colors, config)
+  if not colors then
+    colors = require('evergarden.colors').get()
+  end
+  if not config then
+    config = require('evergarden.config').get()
+  end
   ---@type evergarden.types.theme
   local theme = vim.deepcopy(colors, true)
 

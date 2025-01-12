@@ -1,4 +1,4 @@
-local theme = require('evergarden.colors').setup()
+local theme = require('evergarden.theme').setup()
 
 local colors = {
   normal = theme.green,
