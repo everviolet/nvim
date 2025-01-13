@@ -8,9 +8,9 @@ M.get = function(theme, _)
 
     WhichKeySeparator = { theme.overlay0 }, -- the separator between the key and its description
     WhichKeyGroup = { theme.subtext0 }, -- group name
-    WhichKeyDesc =  { theme.subtext0 }, -- description
+    WhichKeyDesc = { theme.subtext0 }, -- description
     WhichKeyNormal = { link = 'NormalFloat' }, -- Normal in th which-key window
-    WhichKeyTitle = { link = 'FloatTitle'}, -- Title of the which-key window
+    WhichKeyTitle = { link = 'FloatTitle' }, -- Title of the which-key window
     WhichKeyBorder = { link = 'FloatBorder' }, -- Border of the which-key window
     WhichKeyValue = { theme.overlay0 }, -- values by plugins (like marks, registers, etc)
     WhichKeyIcon = { link = '@markup.link' }, -- icons
