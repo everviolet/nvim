@@ -42,7 +42,7 @@ M.get = function(theme, config)
 
     NeoTreeFileNameOpened = { fg = colors.folder },
     NeoTreeDimText = { fg = colors.folder },
-    NeoTreeFilterTerm = { style = { 'bold' } },
+    NeoTreeFilterTerm = { fg = theme.green, style = { 'bold' } },
     NeoTreeTabActive = {
       fg = theme.orange,
       bg = config.transparent_background and theme.none or theme.mantle,
