@@ -1,1 +1,1 @@
-require 'evergarden'.load {}
+require('evergarden').load()
