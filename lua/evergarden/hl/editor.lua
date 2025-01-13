@@ -99,5 +99,9 @@ return function(theme, config)
     SpellBad = { theme.aqua },
     SpellLocal = { theme.aqua },
     SpellRare = { theme.purple },
+
+    --WinBar
+    WinBar = { fg = theme.text },
+    WinBarNC = { link = 'WinBar' },
   }
 end
