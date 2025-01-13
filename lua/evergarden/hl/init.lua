@@ -78,7 +78,11 @@ function M.setup(theme, config)
     require 'evergarden.hl.terminal'(theme, theme.colors)
   end
 
-  for hl, override in pairs(config.overrides or {}) do
+  local overrides = config.overrides or {}
+  if type(overrides) == 'function' then
+    overrides = overrides(theme.colors)
+  end
+  for hl, override in pairs(overrides) do
     if hl_groups[hl] and not vim.tbl_isempty(override) then
       hl_groups[hl].link = nil
     end
