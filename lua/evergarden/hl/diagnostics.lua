@@ -71,11 +71,11 @@ return function(theme, config)
 
     VirtualTextInfo = { theme.subtext0 },
     LspReferenceText = { bg = theme.surface0 },
-    LspReferenceRead = { link = "LspReferenceText" },
-    LspReferenceWrite = { link = "LspReferenceText" },
+    LspReferenceRead = { link = 'LspReferenceText' },
+    LspReferenceWrite = { link = 'LspReferenceText' },
     LspCodeLens = { link = 'VirtualTextInfo' },
     LspCodeLensSeparator = { link = 'MsgSeparator' },
-    LspInlayHint = { theme.subtext0 },
+    LspInlayHint = { theme.overlay1 },
     LspSignatureActiveParameter = { link = 'Search' },
 
     healthError = { link = 'DiagnosticError' },

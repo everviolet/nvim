@@ -7,7 +7,7 @@
 ---@field style? evergarden.types.styleconfig
 ---@field integrations? evergarden.types.config.integrations
 ---@field color_overrides? evergarden.types.colors
----@field overrides? evergarden.types.hlgroups|fun(): evergarden.types.hlgroups
+---@field overrides? evergarden.types.hlgroups|fun(colors: evergarden.types.colors): evergarden.types.hlgroups
 
 ---@class evergarden.types.config.integrations
 ---@field blink_cmp? boolean Saghen/blink.cmp
