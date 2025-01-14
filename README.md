@@ -109,7 +109,7 @@ require 'evergarden'.setup {
 - Lots of style-customization options (background variants, color invertion, italics etc.)
 - Support for Treesitter highlighting.
 - Support for transparent background.
-- Supported plugins: [blink_cmp][] [cmp][] [gitsigns][] [indent_blankline][] [nvimtree][] [rainbow_delimiters][] [symbols_outline][] [telescope][] [which_key][].
+- Supported plugins: [blink_cmp][] [cmp][] [gitsigns][] [indent_blankline][] [nvimtree][] [rainbow_delimiters][] [symbols_outline][] [telescope][] [which_key][] [neotree][].
 
 [blink_cmp]: https://github.com/Saghen/blink.cmp
 [cmp]: https://github.com/hrsh7th/nvim-cmp
@@ -120,6 +120,7 @@ require 'evergarden'.setup {
 [symbols_outline]: https://github.com/simrat39/symbols-outline.nvim
 [telescope]: https://github.com/nvim-telescope/telescope.nvim
 [which_key]: https://github.com/folke/which-key.nvim
+[neotree]: https://github.com/nvim-neo-tree/neo-tree.nvim
 
 ![telescope preview](./images/asset.telescope.png)
 

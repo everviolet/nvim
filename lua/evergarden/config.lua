@@ -24,6 +24,7 @@ M.default = {
     symbols_outline = true,
     telescope = true,
     which_key = true,
+    neotree = true,
   },
   overrides = {},
   color_overrides = {},
