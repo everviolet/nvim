@@ -34,6 +34,7 @@
 ---@field syntax EvergardenSyntax
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
+---@field git { ['staged'|'unstaged'|'ignored'|'untracked']: string }
 ---@field surface string
 ---@field sign string
 ---@field comment string
@@ -105,6 +106,12 @@ function M.setup(colors, config)
     add = theme.green,
     delete = theme.red,
     change = theme.aqua,
+  }
+  theme.git = {
+    staged = theme.green,
+    unstaged = theme.skye,
+    ignored = theme.overlay0,
+    untracked = theme.subtext1,
   }
   return theme
 end
