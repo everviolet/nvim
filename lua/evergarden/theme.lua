@@ -32,7 +32,7 @@
 ---@field purple string
 ---@field pink string
 ---@field accent string
----@field syntax EvergardenSyntax
+---@field syntax evergarden.types.syntax
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
 ---@field git { ['staged'|'unstaged'|'ignored'|'untracked']: string }
@@ -40,7 +40,7 @@
 ---@field sign string
 ---@field comment string
 
----@class EvergardenSyntax
+---@class evergarden.types.syntax
 ---@field keyword string
 ---@field object string
 ---@field type string
