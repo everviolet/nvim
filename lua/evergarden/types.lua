@@ -3,6 +3,7 @@
 ---@class evergarden.types.config
 ---@field transparent_background? boolean
 ---@field variant? evergarden.types.variant
+---@field accent? evergarden.types.colors.enum
 ---@field override_terminal? boolean
 ---@field style? evergarden.types.styleconfig
 ---@field integrations? evergarden.types.config.integrations

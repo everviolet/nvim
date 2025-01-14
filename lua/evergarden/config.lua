@@ -4,6 +4,7 @@ local M = {}
 M.default = {
   transparent_background = false,
   variant = 'medium',
+  accent = 'green',
   override_terminal = true,
   style = {
     tabline = { 'reverse' },

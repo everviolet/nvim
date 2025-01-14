@@ -18,7 +18,7 @@ return function(theme, config)
       config.transparent_background and theme.mantle or theme.surface,
     },
     VertSplit = { link = 'WinSeparator' },
-    TabLineSel = { theme.green, style = config.style.tabline },
+    TabLineSel = { theme.accent, style = config.style.tabline },
     TabLine = { theme.overlay1 },
     TabLineFill = { link = 'TabLine' },
     Title = { theme.subtext0 },
@@ -73,7 +73,7 @@ return function(theme, config)
     Pmenu = { theme.text, theme.surface },
     PmenuSel = {
       theme.surface1,
-      theme.green,
+      theme.accent,
       style = config.style.search,
     },
     PmenuSbar = { theme.none, theme.surface1 },

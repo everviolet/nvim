@@ -31,6 +31,7 @@
 ---@field blue string
 ---@field purple string
 ---@field pink string
+---@field accent string
 ---@field syntax EvergardenSyntax
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
@@ -78,6 +79,7 @@ function M.setup(colors, config)
     theme.base = theme.none
   end
 
+  theme.accent = theme.colors[config.accent] or theme.green
   theme.surface = utils.vary_color {
     hard = colors.base,
   } or colors.surface0
