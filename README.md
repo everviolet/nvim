@@ -10,11 +10,11 @@ evergarden is inspired by the [everforest colorscheme](https://github.com/sainnh
 
 evergarden was designed as a cozy theme with a focus on readability and visual comfort.
 
-|        |                                               |
-| :----: | :-------------------------------------------: |
-|  hard  |   ![preview-hard](./images/neovim/hard.png)   |
-| medium | ![preview-medium](./images/neovim/medium.png) |
-|  soft  |   ![preview-soft](./images/neovim/soft.png)   |
+|        |                                                     |
+| :----: | :-------------------------------------------------: |
+| hard   | ![preview-hard](./images/neovim/hard.png)           |
+| medium | ![preview-medium](./images/neovim/medium.png)       |
+| soft   | ![preview-soft](./images/neovim/soft.png)           |
 
 ###### [more screenshots](#screenshots)
 
