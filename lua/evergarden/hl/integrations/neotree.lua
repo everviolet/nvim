@@ -35,9 +35,10 @@ M.get = function(theme, config)
 
     NeoTreeFloatBorder = { link = 'FloatBorder' },
     NeoTreeFloatTitle = { link = 'FloatTitle' },
+
     NeoTreeTitleBar = {
       fg = theme.subtext1,
-      bg = config.transparent_background and theme.none or theme.mantle,
+      style = { 'bold' },
     },
 
     NeoTreeFileNameOpened = { fg = colors.folder },
