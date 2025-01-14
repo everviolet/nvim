@@ -100,8 +100,8 @@ return function(theme, config)
     SpellLocal = { theme.aqua },
     SpellRare = { theme.purple },
 
-    --WinBar
-    WinBar = { fg = theme.text },
+    -- WinBar
+    WinBar = { fg = theme.subtext0 },
     WinBarNC = { link = 'WinBar' },
   }
 end
