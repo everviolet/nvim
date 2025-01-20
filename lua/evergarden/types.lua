@@ -16,6 +16,7 @@
 ---@field gitsigns? boolean lewis6991/gitsigns.nvim
 ---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
 ---@field mini_files? boolean echasnovski/mini.files
+---@field mini_pick? boolean echasnovski/mini.pick
 ---@field neotree? boolean nvim-neo-tree/neo-tree.nvim
 ---@field nvimtree? boolean nvim-tree/nvim-tree.lua
 ---@field rainbow_delimiters? boolean hiphish/rainbow-delimiters.nvim
