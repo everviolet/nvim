@@ -21,6 +21,7 @@ M.default = {
     gitsigns = true,
     indent_blankline = { enable = true, scope_color = 'green' },
     mini_files = true,
+    mini_pick = true,
     nvimtree = true,
     rainbow_delimiters = true,
     symbols_outline = true,
