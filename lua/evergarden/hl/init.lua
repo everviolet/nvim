@@ -2,9 +2,45 @@ local M = {}
 
 ---@param theme evergarden.types.theme
 ---@param config evergarden.types.config
+---@return evergarden.types.hlgroups.OL
 function M.setup(theme, config)
-  ---@type evergarden.types.hlgroups
+  ---@type evergarden.types.hlgroups.OL
   local hl_groups = {}
+
+  local function load_hl(module_base, lst)
+    local overlays = vim
+      .iter(ipairs(lst))
+      :map(function(_, mod)
+        local mod_path = module_base:format(mod)
+        local ok, result = pcall(require, mod_path)
+        if not ok then
+          return error(
+            string.format('could not import hl groups from %s', mod_path)
+          )
+        end
+
+        ---@type fun(theme, config): evergarden.types.hlgroups.OL
+        local cb
+        if type(result) == 'table' then
+          if result.get and type(result.get) == 'function' then
+            cb = result.get
+          else
+            return result
+          end
+        elseif type(result) == 'function' then
+          cb = result
+        end
+
+        ---@diagnostic disable-next-line: redefined-local
+        local ok, result = pcall(cb, theme, config)
+        if not ok then
+          return
+        end
+        return result
+      end)
+      :totable()
+    table.insert(hl_groups, overlays)
+  end
 
   local accents = {
     RedAccent = { theme.red, '#453539' },
@@ -18,61 +54,35 @@ function M.setup(theme, config)
     PinkAccent = { theme.pink, '#453547' },
   }
 
-  hl_groups = vim.tbl_extend('force', hl_groups, accents)
+  table.insert(hl_groups, accents)
 
-  vim
-    .iter(ipairs { 'editor', 'syntax', 'treesitter', 'diagnostics' })
-    :each(function(_, mod)
-      local ok, hl_fn = pcall(require, ('evergarden.hl.%s'):format(mod))
-      if not ok then
-        return
-      end
-      ---@diagnostic disable-next-line: redefined-local
-      local ok, hl_imports = pcall(hl_fn, theme, config)
-      if not ok then
-        return
-      end
-      hl_groups = vim.tbl_extend('force', hl_groups, hl_imports)
-    end)
+  load_hl(
+    'evergarden.hl.%s',
+    { 'editor', 'syntax', 'treesitter', 'diagnostics' }
+  )
+  load_hl('evergarden.hl.ft.%s', {
+    'lua',
+    'html',
+    'css',
+    'help',
+    'markdown',
+    'rust',
+    'typescript',
+  })
 
-  vim
-    .iter(ipairs {
-      'lua',
-      'html',
-      'scss',
-      'help',
-      'markdown',
-      'rust',
-      'typescript',
-    })
-    :each(function(_, ft)
-      local ok, hl_ft_fn = pcall(require, ('evergarden.hl.ft.%s'):format(ft))
-      if not ok then
-        return
-      end
-      ---@diagnostic disable-next-line: redefined-local
-      local ok, hl_imports = pcall(hl_ft_fn, theme, config)
-      if not ok then
-        return
-      end
-      hl_groups = vim.tbl_extend('force', hl_groups, hl_imports)
-    end)
-
-  local load_integration = function(name)
-    local ok, mod =
-      pcall(require, string.format('evergarden.hl.integrations.%s', name))
-    if ok then
-      hl_groups = vim.tbl_extend('force', hl_groups, mod.get(theme, config))
-    end
-  end
-  for name, props in pairs(config.integrations) do
-    if
-      (type(props) == 'table' and props.enable)
-      or (type(props) == 'boolean' and props)
-    then
-      load_integration(name)
-    end
-  end
+  load_hl(
+    'evergarden.hl.integrations.%s',
+    vim
+      .iter(pairs(config.integrations))
+      :filter(function(_, props)
+        return (type(props) == 'table' and props.enable)
+          or (type(props) == 'boolean' and props)
+      end)
+      :map(function(name, _)
+        return name
+      end)
+      :totable()
+  )
 
   if config.override_terminal then
     require 'evergarden.hl.terminal'(theme, theme.colors)
@@ -80,14 +90,9 @@ function M.setup(theme, config)
 
   local overrides = config.overrides or {}
   if type(overrides) == 'function' then
-    overrides = overrides(theme.colors)
+    overrides = overrides(theme.colors) --[[@as evergarden.types.hlgroups.OL]]
   end
-  for hl, override in pairs(overrides) do
-    if hl_groups[hl] and not vim.tbl_isempty(override) then
-      hl_groups[hl].link = nil
-    end
-    hl_groups[hl] = vim.tbl_deep_extend('force', hl_groups[hl] or {}, override)
-  end
+  table.insert(hl_groups, overrides)
 
   return hl_groups
 end
