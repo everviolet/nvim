@@ -20,8 +20,10 @@ M.default = {
     cmp = true,
     gitsigns = true,
     indent_blankline = { enable = true, scope_color = 'green' },
-    mini_files = true,
-    mini_pick = true,
+    mini = {
+      files = true,
+      pick = true,
+    },
     nvimtree = true,
     rainbow_delimiters = true,
     symbols_outline = true,

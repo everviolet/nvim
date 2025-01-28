@@ -15,14 +15,17 @@
 ---@field cmp? boolean hrsh7th/nvim-cmp
 ---@field gitsigns? boolean lewis6991/gitsigns.nvim
 ---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
----@field mini_files? boolean echasnovski/mini.files
----@field mini_pick? boolean echasnovski/mini.pick
+---@field mini? evergarden.types.config.integrations.mini echasnovski/mini.nvim
 ---@field neotree? boolean nvim-neo-tree/neo-tree.nvim
 ---@field nvimtree? boolean nvim-tree/nvim-tree.lua
 ---@field rainbow_delimiters? boolean hiphish/rainbow-delimiters.nvim
 ---@field symbols_outline? boolean simrat39/symbols-outline.nvim
 ---@field telescope? boolean nvim-telescope/telescope.nvim
 ---@field which_key? boolean folke/which-key.nvim
+
+---@class evergarden.types.config.integrations.mini
+---@field files boolean
+---@field pick boolean
 
 ---@alias evergarden.types.colors.enum 'crust'|'softbase'|'mantle'|'base'|'surface0'|'surface1'|'surface2'|'overlay0'|'overlay1'|'overlay2'|'subtext0'|'subtext1'|'text'|'red'|'orange'|'yellow'|'green'|'aqua'|'blue'|'skye'|'purple'|'pink'
 ---@alias evergarden.types.colors { [evergarden.types.colors.enum]: string }
@@ -40,3 +43,4 @@
 ---@alias evergarden.types.styleopt.enum 'bold'|'standout'|'underline'|'undercurl'|'underdouble'|'underdotted'|'underdashed'|'strikethrough'|'italic'|'reverse'|'nocombine'
 
 ---@alias evergarden.types.hlgroups { [string]: evergarden.types.colorspec }
+---@alias evergarden.types.hlgroups.OL { [integer]: evergarden.types.hlgroups.OL, [string]: evergarden.types.colorspec }
