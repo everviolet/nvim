@@ -24,8 +24,29 @@
 ---@field which_key? boolean folke/which-key.nvim
 
 ---@class evergarden.types.config.integrations.mini
+---@field enable boolean
+---@field animate boolean
+---@field clue boolean
+---@field completion boolean
+---@field cursorword boolean
+---@field deps boolean
+---@field diff boolean
 ---@field files boolean
+---@field hipatterns boolean
+---@field icons boolean
+---@field indentscope boolean
+---@field jump boolean
+---@field jump2d boolean
+---@field map boolean
+---@field notify boolean
+---@field operators boolean
 ---@field pick boolean
+---@field starters boolean
+---@field statusline boolean
+---@field surround boolean
+---@field tabline boolean
+---@field test boolean
+---@field trailspace boolean
 
 ---@alias evergarden.types.colors.enum 'crust'|'softbase'|'mantle'|'base'|'surface0'|'surface1'|'surface2'|'overlay0'|'overlay1'|'overlay2'|'subtext0'|'subtext1'|'text'|'red'|'orange'|'yellow'|'green'|'aqua'|'blue'|'skye'|'purple'|'pink'
 ---@alias evergarden.types.colors { [evergarden.types.colors.enum]: string }
