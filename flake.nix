@@ -7,9 +7,9 @@
 
   outputs =
     {
+      self,
       nixpkgs,
-      ...
-    }@inputs:
+    }:
     let
       forAllSystems =
         function:
@@ -21,7 +21,7 @@
       lib = import ./nix/lib { inherit (nixpkgs) lib; };
 
       devShells = forAllSystems (pkgs: {
-        default = pkgs.callPackage ./shell.nix { inherit inputs; };
+        default = pkgs.callPackage ./nix/shell.nix { evgLib = self.lib.evergarden; };
       });
     };
 }
