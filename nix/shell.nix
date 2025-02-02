@@ -1,5 +1,6 @@
 {
-  inputs,
+  evgLib ? (import ./nix/lib/default.nix { inherit lib; }).evergarden,
+
   lib,
   mkShellNoCC,
 
@@ -18,7 +19,7 @@ let
   whiskers-palette = writeTextFile {
     name = "evergarden-whiskers";
     text = builtins.toJSON {
-      all = inputs.self.toCatppuccinPalette inputs.self.palette;
+      all = evgLib.toCatppuccinPalette evgLib.palette;
     };
   };
 
@@ -33,7 +34,7 @@ let
           whiskers --flavor mocha --color-overrides ${whiskers-palette} --overrides '{ "accent": { "hex": "${v}", "name": "${n}" } }' "$@"
         '')
         {
-          inherit (inputs.self.palette)
+          inherit (evgLib.palette)
             red
             orange
             yellow
