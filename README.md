@@ -18,6 +18,8 @@ evergarden was designed as a cozy theme with a focus on readability and visual c
 
 ###### [more screenshots](#screenshots)
 
+###### font in screenshots is [maple mono](https://github.com/subframe7536/maple-font)
+
 ## Installation
 
 using [lazy.nvim](https://github.com/folke/lazy.nvim):
