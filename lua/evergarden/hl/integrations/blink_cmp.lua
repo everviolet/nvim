@@ -11,6 +11,11 @@ M.get = function(theme, _)
     BlinkCmpLabelDetail = { theme.overlay1 },
     BlinkCmpLabelDescription = { theme.overlay1 },
 
+    BlinkCmpMenuBorder = { link = 'FloatBorder' },
+    BlinkCmpDocBorder = { link = 'FloatBorder' },
+    BlinkCmpDocSeparator = { link = 'FloatBorder' },
+    BlinkCmpSignatureHelpBorder = { link = 'FloatBorder' },
+
     BlinkCmpSource = { theme.pink },
 
     BlinkCmpKind = { theme.text },
