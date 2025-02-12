@@ -74,11 +74,15 @@ function M.setup(theme, config)
     'evergarden.hl.integrations.%s',
     vim
       .iter(pairs(config.integrations))
-      :filter(function(_, props)
-        return (type(props) == 'table' and props.enable)
-          or (type(props) == 'boolean' and props)
-      end)
-      :map(function(name, _)
+      :map(function(name, props)
+        if
+          not (
+            (type(props) == 'table' and props.enable)
+            or (type(props) == 'boolean' and props)
+          )
+        then
+          return
+        end
         return name
       end)
       :totable()
