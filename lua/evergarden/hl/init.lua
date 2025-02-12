@@ -7,40 +7,10 @@ function M.setup(theme, config)
   ---@type evergarden.types.hlgroups.OL
   local hl_groups = {}
 
-  local function load_hl(module_base, lst)
-    local overlays = vim
-      .iter(ipairs(lst))
-      :map(function(_, mod)
-        local mod_path = module_base:format(mod)
-        local ok, result = pcall(require, mod_path)
-        if not ok then
-          return error(
-            string.format('could not import hl groups from %s', mod_path)
-          )
-        end
-
-        ---@type fun(theme, config): evergarden.types.hlgroups.OL
-        local cb
-        if type(result) == 'table' then
-          if result.get and type(result.get) == 'function' then
-            cb = result.get
-          else
-            return result
-          end
-        elseif type(result) == 'function' then
-          cb = result
-        end
-
-        ---@diagnostic disable-next-line: redefined-local
-        local ok, result = pcall(cb, theme, config)
-        if not ok then
-          return
-        end
-        return result
-      end)
-      :totable()
-    table.insert(hl_groups, overlays)
-  end
+  local load_hl = require('evergarden.utils').make_hl_loader(
+    hl_groups,
+    { theme = theme, config = config }
+  )
 
   local accents = {
     RedAccent = { theme.red, '#453539' },

@@ -93,4 +93,47 @@ function M.vary_color(props)
   end
 end
 
+---@param hls evergarden.types.hlgroups.OL
+---@param props { theme: evergarden.types.theme, config: evergarden.types.config }
+---@return fun(modbase: string, lst: string[])
+function M.make_hl_loader(hls, props)
+  local theme, config = props.theme, props.config
+  vim.validate('theme', theme, 'table')
+  vim.validate('theme', config, 'table')
+  return function(modbase, lst)
+    local overlays = vim
+      .iter(ipairs(lst))
+      :map(function(_, mod)
+        local mod_path = modbase:format(mod)
+        local ok, result = pcall(require, mod_path)
+        if not ok then
+          return error(
+            string.format('could not import hl groups from %s', mod_path)
+          )
+        end
+
+        ---@type fun(theme, config): evergarden.types.hlgroups.OL
+        local cb
+        if type(result) == 'table' then
+          if result.get and type(result.get) == 'function' then
+            cb = result.get
+          else
+            return result
+          end
+        elseif type(result) == 'function' then
+          cb = result
+        end
+
+        ---@diagnostic disable-next-line: redefined-local
+        local ok, result = pcall(cb, theme, config)
+        if not ok then
+          return
+        end
+        return result
+      end)
+      :totable()
+    table.insert(hls, overlays)
+  end
+end
+
 return M
