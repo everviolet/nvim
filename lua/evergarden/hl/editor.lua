@@ -1,3 +1,5 @@
+local utils = require 'evergarden.utils'
+
 ---@param theme evergarden.types.theme
 ---@param config evergarden.types.config
 return function(theme, config)
@@ -47,15 +49,21 @@ return function(theme, config)
 
     Question = { theme.subtext0 },
 
-    Search = {
+    Search = utils.vary_reverse(
+      utils.blend(theme.editor.search, theme.base, 0.4),
+      theme.crust,
+      config.style.search
+    ),
+    CurSearch = utils.vary_reverse(
+      theme.editor.search,
+      theme.crust,
+      config.style.search
+    ),
+    IncSearch = utils.vary_reverse(
       theme.orange,
-      style = config.style.search,
-    },
-    CurSearch = {
-      theme.orange,
-      style = config.style.incsearch,
-    },
-    IncSearch = { link = 'CurSearch' },
+      theme.crust,
+      config.style.incsearch
+    ),
 
     Error = { theme.diagnostic.error },
     ErrorMsg = { link = 'Error' },
