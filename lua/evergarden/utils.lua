@@ -1,5 +1,13 @@
 local M = {}
 
+---@param min number
+---@param max number
+---@param v number
+---@return number
+local function clamp(min, max, v)
+  return math.max(min, math.min(max, v))
+end
+
 ---@param group string
 ---@param colors evergarden.types.colorspec
 local function set_hl(group, colors)
@@ -104,6 +112,45 @@ function M.vary_reverse(fg, bg, style)
   else
     return { fg, style = style }
   end
+end
+
+---@param hex_str string hexadecimal value of a color
+local hex_to_rgb = function(hex_str)
+  local hex = '[abcdef0-9][abcdef0-9]'
+  local pat = '^#(' .. hex .. ')(' .. hex .. ')(' .. hex .. ')$'
+  hex_str = string.lower(hex_str)
+
+  assert(
+    string.find(hex_str, pat) ~= nil,
+    'hex_to_rgb: invalid hex_str: ' .. tostring(hex_str)
+  )
+
+  local red, green, blue = string.match(hex_str, pat)
+  return { tonumber(red, 16), tonumber(green, 16), tonumber(blue, 16) }
+end
+
+--- adapted from @catppuccin/nvim https://github.com/catppuccin/nvim/blob/5b5e3aef9ad7af84f463d17b5479f06b87d5c429/lua/catppuccin/utils/colors.lua#L24
+---@param fg string
+---@param bg string
+---@param alpha number amount of fg to mix in (0.0 is only bg)
+---@return string
+function M.blend(fg, bg, alpha)
+  ---@diagnostic disable-next-line: cast-local-type
+  bg = hex_to_rgb(bg)
+  ---@diagnostic disable-next-line: cast-local-type
+  fg = hex_to_rgb(fg)
+
+  local blendChannel = function(i)
+    local ret = math.floor((alpha * fg[i] + ((1 - alpha) * bg[i])) + 0.5)
+    return clamp(0, 255, ret)
+  end
+
+  return string.format(
+    '#%02X%02X%02X',
+    blendChannel(1),
+    blendChannel(2),
+    blendChannel(3)
+  )
 end
 
 ---@param hls evergarden.types.hlgroups.OL
