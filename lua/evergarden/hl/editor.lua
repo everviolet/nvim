@@ -71,6 +71,8 @@ return function(theme, config)
 
     -- Completion Menu
     Pmenu = { theme.text, theme.surface },
+    PmenuKind = { theme.subtext0, theme.surface },
+    PmenuExtra = { theme.pink, theme.surface },
     PmenuSel = {
       theme.crust,
       theme.accent,
