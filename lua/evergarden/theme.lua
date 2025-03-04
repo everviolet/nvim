@@ -32,6 +32,7 @@
 ---@field purple string
 ---@field pink string
 ---@field accent string
+---@field editor evergarden.types.editor
 ---@field syntax evergarden.types.syntax
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
@@ -39,6 +40,9 @@
 ---@field surface string
 ---@field sign string
 ---@field comment string
+
+---@class evergarden.types.editor
+---@field search string
 
 ---@class evergarden.types.syntax
 ---@field keyword string
@@ -86,6 +90,9 @@ function M.setup(colors, config)
   theme.sign = config.style.sign.highlight and theme.surface or theme.none
   theme.comment = theme.overlay2
 
+  theme.editor = {
+    search = theme.skye,
+  }
   theme.syntax = {
     keyword = theme.red,
     object = theme.text,
