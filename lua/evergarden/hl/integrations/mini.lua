@@ -32,7 +32,7 @@ M.get = function(theme, config)
 
   if cfg.completion then
     table.insert(hlgroups, {
-      MiniCompletionActiveParameter = { link = 'Search' },
+      MiniCompletionActiveParameter = { link = 'LspSignatureActiveParameter' },
     })
   end
 
