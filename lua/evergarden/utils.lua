@@ -93,6 +93,19 @@ function M.vary_color(props)
   end
 end
 
+---@generic T
+---@param fg T
+---@param bg T
+---@param style evergarden.types.styleopt
+---@return evergarden.types.colorspec
+function M.vary_reverse(fg, bg, style)
+  if vim.tbl_contains(style, 'reverse') then
+    return { fg, bg, style = style }
+  else
+    return { fg, style = style }
+  end
+end
+
 ---@param hls evergarden.types.hlgroups.OL
 ---@param props { theme: evergarden.types.theme, config: evergarden.types.config }
 ---@return fun(modbase: string, lst: string[])
