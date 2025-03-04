@@ -95,10 +95,10 @@ return function(theme, config)
     Changed = { link = '@diff.change' },
 
     -- Spell
-    SpellCap = { theme.green },
-    SpellBad = { theme.aqua },
-    SpellLocal = { theme.aqua },
-    SpellRare = { theme.purple },
+    SpellBad = { theme.red, style = { 'italic' } },
+    SpellCap = { theme.aqua, style = { 'italic' } },
+    SpellLocal = { theme.aqua, style = { 'italic' } },
+    SpellRare = { theme.aqua, style = { 'italic' } },
 
     -- WinBar
     WinBar = { theme.subtext0 },
