@@ -30,7 +30,7 @@ return function(theme, config)
     NormalFloat = { theme.text, theme.surface },
     FloatBorder = { theme.surface1 },
     StatusLine = { theme.overlay2, theme.none },
-    StatusLineNC = { theme.overlay2, theme.surface },
+    StatusLineNC = { theme.overlay1, theme.surface },
     FloatShadow = { theme.none, theme.none },
     FloatShadowThrough = { theme.none, theme.none },
 
@@ -101,7 +101,7 @@ return function(theme, config)
     SpellRare = { theme.purple },
 
     -- WinBar
-    WinBar = { fg = theme.subtext0 },
-    WinBarNC = { link = 'WinBar' },
+    WinBar = { theme.subtext0 },
+    WinBarNC = { theme.overlay2 },
   }
 end
