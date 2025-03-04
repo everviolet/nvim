@@ -72,9 +72,8 @@ return function(theme, config)
     -- Completion Menu
     Pmenu = { theme.text, theme.surface },
     PmenuSel = {
-      theme.surface1,
+      theme.crust,
       theme.accent,
-      style = config.style.search,
     },
     PmenuSbar = { theme.none, theme.surface1 },
     PmenuThumb = { theme.none, theme.overlay0 },
