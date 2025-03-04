@@ -1,21 +1,39 @@
+local utils = require 'evergarden.utils'
+
 ---@param theme evergarden.types.theme
 ---@param config evergarden.types.config
 return function(theme, config)
   return {
+    DiagnosticOk = { link = 'OkText' },
+    DiagnosticError = { link = 'ErrorText' },
+    DiagnosticWarn = { link = 'WarningText' },
+    DiagnosticInfo = { link = 'InfoText' },
+    DiagnosticHint = { link = 'HintText' },
+    DiagnosticFloatingOk = { link = 'OkFloat' },
     DiagnosticFloatingError = { link = 'ErrorFloat' },
     DiagnosticFloatingWarn = { link = 'WarningFloat' },
     DiagnosticFloatingInfo = { link = 'InfoFloat' },
     DiagnosticFloatingHint = { link = 'HintFloat' },
-    DiagnosticFloatingOk = { link = 'OkFloat' },
-    DiagnosticOk = { theme.diagnostic.ok },
-    DiagnosticError = { theme.diagnostic.error },
-    DiagnosticWarn = { theme.diagnostic.warn },
-    DiagnosticInfo = { theme.diagnostic.info },
-    DiagnosticHint = { theme.diagnostic.hint },
-    DiagnosticVirtualTextError = { link = 'DiagnosticError' },
-    DiagnosticVirtualTextWarn = { link = 'DiagnosticWarn' },
-    DiagnosticVirtualTextInfo = { link = 'DiagnosticInfo' },
-    DiagnosticVirtualTextHint = { link = 'DiagnosticHint' },
+    DiagnosticVirtualTextOk = {
+      theme.diagnostic.ok,
+      utils.blend(theme.diagnostic.ok, theme.base, 0.1),
+    },
+    DiagnosticVirtualTextError = {
+      theme.diagnostic.error,
+      utils.blend(theme.diagnostic.error, theme.base, 0.1),
+    },
+    DiagnosticVirtualTextWarn = {
+      theme.diagnostic.warn,
+      utils.blend(theme.diagnostic.warn, theme.base, 0.1),
+    },
+    DiagnosticVirtualTextInfo = {
+      theme.diagnostic.info,
+      utils.blend(theme.diagnostic.info, theme.base, 0.1),
+    },
+    DiagnosticVirtualTextHint = {
+      theme.diagnostic.hint,
+      utils.blend(theme.diagnostic.hint, theme.base, 0.1),
+    },
     DiagnosticUnderlineOk = {
       theme.diagnostic.ok,
       theme.none,
