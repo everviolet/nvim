@@ -30,7 +30,7 @@ return {
   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
   opts = {
     transparent_background = true,
-    variant = 'medium', -- 'hard'|'medium'|'soft'
+    variant = 'fall', -- 'winter'|'fall'|'spring'
     overrides = { }, -- add custom overrides
   }
 }
@@ -47,7 +47,7 @@ Plug 'comfysage/evergarden'
 ```lua
 require 'evergarden'.setup {
   transparent_background = false,
-  variant = 'medium', -- 'hard'|'medium'|'soft'
+  variant = 'fall', -- 'winter'|'fall'|'spring'
   override_terminal = true,
   style = {
     tabline = { 'reverse' },

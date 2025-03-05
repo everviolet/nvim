@@ -7,9 +7,9 @@ return function(theme, config)
     Normal = { theme.text, theme.base },
 
     Cursor = { theme.yellow },
-    CursorLine = { theme.none, theme.surface },
-    CursorColumn = { theme.none, theme.surface },
-    QuickFixLine = { theme.none, theme.surface },
+    CursorLine = { theme.none, theme.surface0 },
+    CursorColumn = { theme.none, theme.surface0 },
+    QuickFixLine = { theme.none, theme.surface0 },
 
     Visual = { theme.none, theme.surface1 },
 
@@ -17,7 +17,7 @@ return function(theme, config)
     CursorLineNr = { theme.overlay1 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
-      config.transparent_background and theme.mantle or theme.surface,
+      config.transparent_background and theme.mantle or theme.surface0,
     },
     VertSplit = { link = 'WinSeparator' },
     TabLineSel = { theme.accent, style = config.style.tabline },
@@ -27,12 +27,12 @@ return function(theme, config)
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
     Folded = { theme.overlay1 },
-    FoldColumn = { theme.surface },
+    FoldColumn = { theme.surface0 },
 
-    NormalFloat = { theme.text, theme.surface },
+    NormalFloat = { theme.text, theme.surface0 },
     FloatBorder = { theme.surface1 },
     StatusLine = { theme.overlay2, theme.none },
-    StatusLineNC = { theme.overlay1, theme.surface },
+    StatusLineNC = { theme.overlay1, theme.surface0 },
     FloatShadow = { theme.none, theme.none },
     FloatShadowThrough = { theme.none, theme.none },
 
@@ -41,11 +41,11 @@ return function(theme, config)
     WarningText = { theme.diagnostic.warn },
     InfoText = { theme.diagnostic.info },
     HintText = { theme.diagnostic.hint },
-    OkFloat = { theme.diagnostic.ok, theme.surface },
-    ErrorFloat = { theme.diagnostic.error, theme.surface },
-    WarningFloat = { theme.diagnostic.warn, theme.surface },
-    InfoFloat = { theme.diagnostic.info, theme.surface },
-    HintFloat = { theme.diagnostic.hint, theme.surface },
+    OkFloat = { theme.diagnostic.ok, theme.surface0 },
+    ErrorFloat = { theme.diagnostic.error, theme.surface0 },
+    WarningFloat = { theme.diagnostic.warn, theme.surface0 },
+    InfoFloat = { theme.diagnostic.info, theme.surface0 },
+    HintFloat = { theme.diagnostic.hint, theme.surface0 },
 
     Question = { theme.subtext0 },
 
@@ -71,16 +71,16 @@ return function(theme, config)
     MoreMsg = { theme.subtext0 },
     ModeMsg = { theme.surface1, theme.none },
 
-    ColorColumn = { theme.none, theme.surface },
+    ColorColumn = { theme.none, theme.surface0 },
 
     Directory = { theme.overlay2 },
 
     Underlined = { theme.none, theme.none },
 
     -- Completion Menu
-    Pmenu = { theme.text, theme.surface },
-    PmenuKind = { theme.subtext0, theme.surface },
-    PmenuExtra = { theme.pink, theme.surface },
+    Pmenu = { theme.text, theme.surface0 },
+    PmenuKind = { theme.subtext0, theme.surface0 },
+    PmenuExtra = { theme.pink, theme.surface0 },
     PmenuSel = {
       theme.crust,
       theme.accent,

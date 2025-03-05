@@ -3,7 +3,7 @@ local M = {}
 ---@type evergarden.types.config
 M.default = {
   transparent_background = false,
-  variant = 'medium',
+  variant = 'fall',
   accent = 'green',
   override_terminal = true,
   style = {

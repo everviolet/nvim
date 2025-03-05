@@ -174,12 +174,12 @@ M.get = function(theme, config)
       MiniPickIconDirectory = { theme.overlay2 }, -- default icon for directory.
       MiniPickIconFile = { theme.subtext1 }, -- default icon for file.
       MiniPickHeader = { theme.subtext0 }, -- headers in info buffer and previews.
-      MiniPickMatchCurrent = { theme.none, theme.surface }, -- current matched item.
-      MiniPickMatchMarked = { theme.yellow, theme.surface }, -- marked matched items.
+      MiniPickMatchCurrent = { theme.none, theme.surface0 }, -- current matched item.
+      MiniPickMatchMarked = { theme.yellow, theme.surface0 }, -- marked matched items.
       MiniPickMatchRanges = { link = 'IncSearch' }, -- ranges matching query elements.
       MiniPickNormal = { theme.subtext1 }, -- basic foreground/background highlighting.
-      MiniPickPreviewLine = { theme.none, theme.surface }, -- target line in preview.
-      MiniPickPreviewRegion = { theme.none, theme.surface }, -- target region in preview.
+      MiniPickPreviewLine = { theme.none, theme.surface0 }, -- target line in preview.
+      MiniPickPreviewRegion = { theme.none, theme.surface0 }, -- target region in preview.
       MiniPickPrompt = { theme.pink }, -- prompt.
     })
   end

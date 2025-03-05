@@ -37,7 +37,6 @@
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
 ---@field git { ['staged'|'unstaged'|'ignored'|'untracked']: string }
----@field surface string
 ---@field sign string
 ---@field comment string
 
@@ -63,11 +62,11 @@ local M = {}
 ---@param config? evergarden.types.config
 ---@return evergarden.types.theme
 function M.setup(colors, config)
-  if not colors then
-    colors = require('evergarden.colors').get()
-  end
   if not config then
     config = require('evergarden.config').get()
+  end
+  if not colors then
+    colors = require('evergarden.colors').get(config)
   end
   ---@type evergarden.types.theme
   local theme = vim.deepcopy(colors, true)
@@ -75,19 +74,12 @@ function M.setup(colors, config)
   theme.none = 'NONE'
   theme.colors = colors
 
-  theme.base = utils.vary_color {
-    hard = colors.mantle,
-    soft = colors.softbase,
-  } or colors.base
   if config.transparent_background then
     theme.base = theme.none
   end
 
   theme.accent = theme.colors[config.accent] or theme.green
-  theme.surface = utils.vary_color {
-    hard = colors.base,
-  } or colors.surface0
-  theme.sign = config.style.sign.highlight and theme.surface or theme.none
+  theme.sign = config.style.sign.highlight and theme.surface0 or theme.none
   theme.comment = theme.overlay2
 
   theme.editor = {

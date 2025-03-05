@@ -1,4 +1,4 @@
----@alias evergarden.types.variant 'hard'|'medium'|'soft'
+---@alias evergarden.types.variant 'winter'|'fall'|'spring'
 
 ---@class evergarden.types.config
 ---@field transparent_background? boolean
