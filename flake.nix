@@ -1,5 +1,5 @@
 {
-  description = "evergarden theme";
+  description = "evergarden theme for neovim";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -18,10 +18,8 @@
         );
     in
     {
-      lib = import ./nix/lib { inherit (nixpkgs) lib; };
-
       devShells = forAllSystems (pkgs: {
-        default = pkgs.callPackage ./nix/shell.nix { evgLib = self.lib.evergarden; };
+        default = pkgs.callPackage ./nix/shell.nix { };
       });
     };
 }
