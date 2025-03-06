@@ -9,7 +9,14 @@ M.default = {
   editor = {
     transparent_background = false,
     override_terminal = true,
-    sign = { highlight = false },
+    sign = { color = 'none' },
+    float = {
+      color = 'mantle',
+      invert_border = false,
+    },
+    completion = {
+      color = 'surface0',
+    },
   },
   style = {
     tabline = { 'reverse' },
@@ -22,6 +29,7 @@ M.default = {
   integrations = {
     blink_cmp = true,
     cmp = true,
+    fzf_lua = true,
     gitsigns = true,
     indent_blankline = { enable = true, scope_color = 'green' },
     mini = {

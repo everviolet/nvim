@@ -17,7 +17,7 @@ return function(theme, config)
     CursorLineNr = { theme.overlay1 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
-      config.transparent_background and theme.mantle or theme.surface0,
+      config.editor.transparent_background and theme.mantle or theme.surface0,
     },
     VertSplit = { link = 'WinSeparator' },
     TabLineSel = { theme.accent, style = config.style.tabline },
@@ -29,8 +29,24 @@ return function(theme, config)
     Folded = { theme.overlay1 },
     FoldColumn = { theme.surface0 },
 
-    NormalFloat = { theme.text, theme.surface0 },
-    FloatBorder = { theme.surface1 },
+    NormalFloat = {
+      theme.text,
+      theme.editor.float,
+    },
+    FloatBorder = utils.vary_reverse(
+      theme.surface0,
+      theme.editor.float,
+      config.editor.float.invert_border and { 'reverse' } or {},
+      theme.editor.float,
+      theme.none
+    ),
+    FloatTitle = utils.vary_reverse(
+      theme.overlay2,
+      theme.editor.float,
+      config.editor.float.invert_border and { 'reverse' } or {},
+      theme.overlay2,
+      theme.none
+    ),
     StatusLine = { theme.overlay2, theme.none },
     StatusLineNC = { theme.overlay1, theme.surface0 },
     FloatShadow = { theme.none, theme.none },
@@ -78,7 +94,14 @@ return function(theme, config)
     Underlined = { theme.none, theme.none },
 
     -- Completion Menu
-    Pmenu = { theme.text, theme.surface0 },
+    Pmenu = { theme.overlay2, theme.editor.completion },
+    PmenuBorder = utils.vary_reverse(
+      theme.surface0,
+      theme.editor.completion,
+      config.editor.float.invert_border and { 'reverse' } or {},
+      theme.editor.completion,
+      theme.none
+    ),
     PmenuKind = { theme.subtext0, theme.surface0 },
     PmenuExtra = { theme.pink, theme.surface0 },
     PmenuSel = {

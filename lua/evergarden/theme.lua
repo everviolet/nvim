@@ -41,6 +41,8 @@
 
 ---@class evergarden.types.editor
 ---@field search string
+---@field float string
+---@field completion string
 
 ---@class evergarden.types.syntax
 ---@field keyword string
@@ -78,11 +80,13 @@ function M.setup(colors, config)
   end
 
   theme.accent = theme.colors[config.theme.accent] or theme.green
-  theme.sign = config.editor.sign.highlight and theme.surface0 or theme.none
+  theme.sign = theme.colors[config.editor.sign.color] or theme.none
   theme.comment = theme.overlay2
 
   theme.editor = {
     search = theme.skye,
+    float = theme.colors[config.editor.float.color] or theme.none,
+    completion = theme.colors[config.editor.completion.color] or theme.none,
   }
   theme.syntax = {
     keyword = theme.red,

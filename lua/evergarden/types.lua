@@ -15,11 +15,14 @@
 ---@class evergarden.types.config.editor
 ---@field transparent_background? boolean
 ---@field override_terminal? boolean
----@field sign { highlight: boolean }
+---@field sign? { color: evergarden.types.colors.enum|'none' }
+---@field float? { color: evergarden.types.colors.enum|'none', invert_border: boolean }
+---@field completion? { color: evergarden.types.colors.enum|'none' }
 
 ---@class evergarden.types.config.integrations
 ---@field blink_cmp? boolean Saghen/blink.cmp
 ---@field cmp? boolean hrsh7th/nvim-cmp
+---@field fzf_lua? boolean ibhagwan/fzf-lua
 ---@field gitsigns? boolean lewis6991/gitsigns.nvim
 ---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
 ---@field mini? evergarden.types.config.integrations.mini echasnovski/mini.nvim
