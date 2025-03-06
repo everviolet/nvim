@@ -105,12 +105,19 @@ end
 ---@param fg T
 ---@param bg T
 ---@param style evergarden.types.styleopt
+---@param rfg? T
+---@param rbg? T
 ---@return evergarden.types.colorspec
-function M.vary_reverse(fg, bg, style)
-  if vim.tbl_contains(style, 'reverse') then
-    return { fg, bg, style = style }
+function M.vary_reverse(fg, bg, style, rfg, rbg)
+  local index, _ = vim.iter(ipairs(style)):find(function(_, v)
+    return v == 'reverse'
+  end)
+  if index then
+    style = vim.deepcopy(style)
+    table.remove(style, index)
+    return { rfg or bg, rbg or fg, style = style }
   else
-    return { fg, style = style }
+    return { fg, bg, style = style }
   end
 end
 
