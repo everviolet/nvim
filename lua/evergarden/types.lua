@@ -1,14 +1,21 @@
 ---@alias evergarden.types.variant 'winter'|'fall'|'spring'
 
 ---@class evergarden.types.config
----@field transparent_background? boolean
----@field variant? evergarden.types.variant
----@field accent? evergarden.types.colors.enum
----@field override_terminal? boolean
+---@field theme evergarden.types.config.theme
+---@field editor evergarden.types.config.editor
 ---@field style? evergarden.types.styleconfig
 ---@field integrations? evergarden.types.config.integrations
 ---@field color_overrides? evergarden.types.colors
 ---@field overrides? evergarden.types.hlgroups|fun(colors: evergarden.types.colors): evergarden.types.hlgroups
+
+---@class evergarden.types.config.theme
+---@field variant? evergarden.types.variant
+---@field accent? evergarden.types.colors.enum
+
+---@class evergarden.types.config.editor
+---@field transparent_background? boolean
+---@field override_terminal? boolean
+---@field sign { highlight: boolean }
 
 ---@class evergarden.types.config.integrations
 ---@field blink_cmp? boolean Saghen/blink.cmp

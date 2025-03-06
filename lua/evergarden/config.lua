@@ -2,10 +2,15 @@ local M = {}
 
 ---@type evergarden.types.config
 M.default = {
-  transparent_background = false,
-  variant = 'fall',
-  accent = 'green',
-  override_terminal = true,
+  theme = {
+    variant = 'fall',
+    accent = 'green',
+  },
+  editor = {
+    transparent_background = false,
+    override_terminal = true,
+    sign = { highlight = false },
+  },
   style = {
     tabline = { 'reverse' },
     search = { 'italic', 'reverse' },
@@ -13,7 +18,6 @@ M.default = {
     types = { 'italic' },
     keyword = { 'italic' },
     comment = { 'italic' },
-    sign = { highlight = false },
   },
   integrations = {
     blink_cmp = true,
@@ -57,6 +61,7 @@ M.default = {
 }
 
 ---@type evergarden.types.config
+---@diagnostic disable-next-line: missing-fields
 M.config = {}
 
 ---@return evergarden.types.config

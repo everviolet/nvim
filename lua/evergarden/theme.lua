@@ -5,7 +5,6 @@
 ---@field types evergarden.types.styleopt
 ---@field keyword evergarden.types.styleopt
 ---@field comment evergarden.types.styleopt
----@field sign { highlight: boolean }
 
 ---@class evergarden.types.theme
 ---@field none string
@@ -74,12 +73,12 @@ function M.setup(colors, config)
   theme.none = 'NONE'
   theme.colors = colors
 
-  if config.transparent_background then
+  if config.editor.transparent_background then
     theme.base = theme.none
   end
 
-  theme.accent = theme.colors[config.accent] or theme.green
-  theme.sign = config.style.sign.highlight and theme.surface0 or theme.none
+  theme.accent = theme.colors[config.theme.accent] or theme.green
+  theme.sign = config.editor.sign.highlight and theme.surface0 or theme.none
   theme.comment = theme.overlay2
 
   theme.editor = {
