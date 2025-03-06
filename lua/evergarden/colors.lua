@@ -33,6 +33,7 @@ M.fall = {
 M.winter = {
   surface0 = M.fall.base,
   base = '#1D2428',
+  mantle = '#191E21',
 }
 
 ---@type evergarden.types.colors
