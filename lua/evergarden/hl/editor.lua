@@ -57,11 +57,11 @@ return function(theme, config)
     WarningText = { theme.diagnostic.warn },
     InfoText = { theme.diagnostic.info },
     HintText = { theme.diagnostic.hint },
-    OkFloat = { theme.diagnostic.ok, theme.surface0 },
-    ErrorFloat = { theme.diagnostic.error, theme.surface0 },
-    WarningFloat = { theme.diagnostic.warn, theme.surface0 },
-    InfoFloat = { theme.diagnostic.info, theme.surface0 },
-    HintFloat = { theme.diagnostic.hint, theme.surface0 },
+    OkFloat = { theme.diagnostic.ok, theme.editor.float },
+    ErrorFloat = { theme.diagnostic.error, theme.editor.float },
+    WarningFloat = { theme.diagnostic.warn, theme.editor.float },
+    InfoFloat = { theme.diagnostic.info, theme.editor.float },
+    HintFloat = { theme.diagnostic.hint, theme.editor.float },
 
     Question = { theme.subtext0 },
 
