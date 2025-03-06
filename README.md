@@ -128,12 +128,12 @@ require 'evergarden'.setup {
 
 ## :sparkles: Extras
 
-- [alacritty](./extras/alacritty)
-- [base16-scheme](./extras/base16)
-- [iterm](./extras/iterm)
-- [kitty theme](./extras/kitty)
-- [scss](./extras/scss/evergarden.scss)
-- [tmux](./extras/tmux)
+- [alacritty](https://github.com/everviolet/ports/tree/main/ports/alacritty)
+- [base16-scheme](https://github.com/everviolet/ports/tree/main/ports/base16)
+- [iterm](https://github.com/everviolet/ports/tree/main/ports/iterm)
+- [kitty theme](https://github.com/everviolet/ports/tree/main/ports/kitty)
+- [scss](https://github.com/everviolet/ports/tree/main/ports/scss/evergarden.scss)
+- [tmux](https://github.com/everviolet/ports/tree/main/ports/tmux)
 - [discord theme](https://github.com/comfysage/evg-discord)
 - [userstyles](https://github.com/comfysage/userstyles)
 
