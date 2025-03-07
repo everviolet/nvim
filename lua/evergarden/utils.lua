@@ -165,8 +165,12 @@ end
 ---@return fun(modbase: string, lst: string[])
 function M.make_hl_loader(hls, props)
   local theme, config = props.theme, props.config
-  vim.validate('theme', theme, 'table')
-  vim.validate('theme', config, 'table')
+  if not theme or type(theme) ~= 'table' then
+    error 'property of theme passed to make_hl_loader() was expected to be a table of theme options'
+  end
+  if not config or type(config) ~= 'table' then
+    error 'property of config passed to make_hl_loader() was expected to be a table of config options'
+  end
   return function(modbase, lst)
     local overlays = vim
       .iter(ipairs(lst))
