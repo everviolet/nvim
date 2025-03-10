@@ -1,4 +1,4 @@
-![preview__lua](./images/neovim/preview.webp)
+![preview of theme](./images/preview.webp)
 
 <h1 align="center">
     evergarden
@@ -12,9 +12,9 @@ evergarden was designed as a cozy theme with a focus on readability and visual c
 
 |        |                                                     |
 | :----: | :-------------------------------------------------: |
-| hard   | ![preview-hard](./images/neovim/hard.png)           |
-| medium | ![preview-medium](./images/neovim/medium.png)       |
-| soft   | ![preview-soft](./images/neovim/soft.png)           |
+| hard   | ![preview-hard](./images/hard.png)           |
+| medium | ![preview-medium](./images/medium.png)       |
+| soft   | ![preview-soft](./images/soft.png)           |
 
 ###### [more screenshots](#screenshots)
 
@@ -161,9 +161,9 @@ require 'evergarden'.setup {
 
 ## Screenshots
 
-![preview__rust](./images/neovim/asset.rust.png)
+![preview__rust](./images/asset.rust.png)
 
-![preview__lua](./images/neovim/asset.lua.png)
+![preview__lua](./images/asset.lua.png)
 
 ## Features
 
@@ -182,8 +182,6 @@ require 'evergarden'.setup {
 [telescope]: https://github.com/nvim-telescope/telescope.nvim
 [which_key]: https://github.com/folke/which-key.nvim
 [neotree]: https://github.com/nvim-neo-tree/neo-tree.nvim
-
-![telescope preview](./images/asset.telescope.png)
 
 ## :sparkles: Extras
 
