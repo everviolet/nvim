@@ -1,8 +1,17 @@
-![preview of theme](./images/preview.webp)
+<h3 align="center">
+	<img src="https://github.com/everviolet/.github/raw/main/assets/logo-circle.png" width="100" alt="Logo"/><br/>
+	Evergarden for <a href="https://github.com/neovim/neovim">Neovim</a>
+</h3>
 
-<h1 align="center">
-    evergarden
-</h1>
+<p align="center">
+	<a href="https://github.com/comfysage/evergarden/stargazers"><img src="https://img.shields.io/github/stars/comfysage/evergarden?style=for-the-badge&colorA=313B40&colorB=DBBC7F"></a>
+	<a href="https://github.com/comfysage/evergarden/issues"><img src="https://img.shields.io/github/issues/comfysage/evergarden?style=for-the-badge&colorA=313B40&colorB=E69875"></a>
+	<a href="https://github.com/comfysage/evergarden/contributors"><img src="https://img.shields.io/github/contributors/comfysage/evergarden?style=for-the-badge&colorA=313B40&colorB=97C9C3"></a>
+</p>
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/preview.webp"/>
+</p>
 
 evergarden is a comfy neovim colorscheme for cozy morning coding.
 
@@ -10,13 +19,26 @@ evergarden is inspired by the [everforest colorscheme](https://github.com/sainnh
 
 evergarden was designed as a cozy theme with a focus on readability and visual comfort.
 
-|        |                                                     |
-| :----: | :-------------------------------------------------: |
-| hard   | ![preview-hard](./images/hard.png)           |
-| medium | ![preview-medium](./images/medium.png)       |
-| soft   | ![preview-soft](./images/soft.png)           |
+### Previews
 
-###### [more screenshots](#screenshots)
+<details>
+<summary>Winter</summary>
+<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/hard.webp"/>
+</details>
+<details>
+<summary>Fall</summary>
+<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/medium.webp"/>
+</details>
+<details>
+<summary>Spring</summary>
+<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/soft.webp"/>
+</details>
+
+<details>
+<summary>more screenshots</summary>
+<a alt="preview__rust" href="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.rust.png"></a>
+<a alt="preview__lua" href="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.lua.png"></a>
+</details>
 
 ###### font in screenshots is [maple mono](https://github.com/subframe7536/maple-font)
 
@@ -158,12 +180,6 @@ require 'evergarden'.setup {
   },
 }
 ```
-
-## Screenshots
-
-![preview__rust](./images/asset.rust.png)
-
-![preview__lua](./images/asset.lua.png)
 
 ## Features
 
