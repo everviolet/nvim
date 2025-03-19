@@ -43,7 +43,13 @@ local function set_hl(group, colors)
 
   color = vim.tbl_extend('force', color, styles)
 
-  vim.api.nvim_set_hl(0, group, color)
+  local ok, result = pcall(vim.api.nvim_set_hl, 0, group, color)
+  if not ok then
+    vim.notify(
+      ('error while setting highlight (%s):\n\t%s'):format(group, result),
+      vim.log.levels.ERROR
+    )
+  end
 end
 
 ---@param hlgroups evergarden.types.hlgroups.OL
