@@ -3,12 +3,12 @@
 ---@return evergarden.types.hlgroups
 return function(theme, config)
   return {
-    ['markdownH1'] = { link = '@text.title.1' },
-    ['markdownH2'] = { link = '@text.title.2' },
-    ['markdownH3'] = { link = '@text.title.3' },
-    ['markdownH4'] = { link = '@text.title.4' },
-    ['markdownH5'] = { link = '@text.title.5' },
-    ['markdownH6'] = { link = '@text.title.6' },
+    ['markdownH1'] = { link = '@markup.heading.1' },
+    ['markdownH2'] = { link = '@markup.heading.2' },
+    ['markdownH3'] = { link = '@markup.heading.3' },
+    ['markdownH4'] = { link = '@markup.heading.4' },
+    ['markdownH5'] = { link = '@markup.heading.5' },
+    ['markdownH6'] = { link = '@markup.heading.6' },
 
     -- markdown
     ['markdownBold'] = { link = '@markup.strong' },
