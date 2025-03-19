@@ -23,21 +23,21 @@ evergarden was designed as a cozy theme with a focus on readability and visual c
 
 <details>
 <summary>Winter</summary>
-<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/hard.webp"/>
+<img alt="winter variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/hard.webp"/>
 </details>
 <details>
 <summary>Fall</summary>
-<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/medium.webp"/>
+<img alt="fall variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/medium.webp"/>
 </details>
 <details>
 <summary>Spring</summary>
-<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/soft.webp"/>
+<img alt="spring variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/soft.webp"/>
 </details>
 
 <details>
 <summary>more screenshots</summary>
-<a alt="preview__rust" href="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.rust.png"></a>
-<a alt="preview__lua" href="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.lua.png"></a>
+<img alt="preview__rust" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.rust.png"/>
+<img alt="preview__lua" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.lua.png"/>
 </details>
 
 ###### font in screenshots is [maple mono](https://github.com/subframe7536/maple-font)
