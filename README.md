@@ -160,11 +160,18 @@ require 'evergarden'.setup {
 
 ### Overrides
 
-Overrides can take all options passed to `vim.api.nvim_set_hl()`.
+Overrides can take a few options:
+- `fg`: foreground color (e.g., `"#fddce3"`)
+- `bg`: background color (e.g., `"#1d2021"`)
+- `style`: styles for highlight (e.g., `{ 'bold', 'italic' }`)
+
+Foreground and background colors can also be written with a shorthand: `{ '#<fg>', '#<bg>' }`.
 
 > [!note]
 >
-> - Ensure that `fg` (foreground color) and `bg` (background color) are correctly positioned as the first and second elements in the table, respectively. The `fg` and `bg` fields can also be refered to directly.
+> - Ensure that `fg` (foreground color) and `bg` (background color) are
+>   correctly positioned as the first and second elements in the table,
+>   respectively. The `fg` and `bg` fields can also be refered to directly.
 > - Confirm that `fg` and `bg` are strings, starting with a hash (`#`).
 
 ```lua
