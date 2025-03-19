@@ -170,18 +170,20 @@ require 'evergarden'.setup {
 - Lots of style-customization options (background variants, color invertion, italics etc.)
 - Support for Treesitter highlighting.
 - Support for transparent background.
-- Supported plugins: [blink_cmp][] [cmp][] [gitsigns][] [indent_blankline][] [nvimtree][] [rainbow_delimiters][] [symbols_outline][] [telescope][] [which_key][] [neotree][].
+- Supported plugins: [blink_cmp][] [cmp][] [fzf_lua][] [gitsigns][] [indent_blankline][] [mini][] [neotree][] [nvimtree][] [rainbow_delimiters][] [symbols_outline][] [telescope][] [which_key][].
 
 [blink_cmp]: https://github.com/Saghen/blink.cmp
 [cmp]: https://github.com/hrsh7th/nvim-cmp
+[fzf_lua]: https://github.com/ibhagwan/fzf-lua
 [gitsigns]: https://github.com/lewis6991/gitsigns.nvim
 [indent_blankline]: https://github.com/lukas-reineke/indent-blankline.nvim
+[mini]: https://github.com/echasnovski/mini.nvim
+[neotree]: https://github.com/nvim-neo-tree/neo-tree.nvim
 [nvimtree]: https://github.com/nvim-tree/nvim-tree.lua
 [rainbow_delimiters]: https://github.com/hiphish/rainbow-delimiters.nvim
 [symbols_outline]: https://github.com/simrat39/symbols-outline.nvim
 [telescope]: https://github.com/nvim-telescope/telescope.nvim
 [which_key]: https://github.com/folke/which-key.nvim
-[neotree]: https://github.com/nvim-neo-tree/neo-tree.nvim
 
 ## :sparkles: Extras
 
