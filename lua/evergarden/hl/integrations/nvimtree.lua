@@ -12,14 +12,15 @@ M.get = function(theme, config)
     NvimTreeFolderIcon = { fg = colors.folder },
     NvimTreeNormal = {
       fg = theme.subtext1,
-      bg = config.transparent_background and theme.none or theme.mantle,
+      bg = config.editor.transparent_background and theme.none or theme.mantle,
     },
     NvimTreeOpenedFolderName = { fg = colors.folder },
     NvimTreeEmptyFolderName = { fg = theme.overlay0 },
     NvimTreeIndentMarker = { fg = theme.overlay0 },
     NvimTreeWinSeparator = {
-      fg = config.transparent_background and theme.surface1 or theme.base,
-      bg = config.transparent_background and theme.none or theme.base,
+      fg = config.editor.transparent_background and theme.surface1
+        or theme.base,
+      bg = config.editor.transparent_background and theme.none or theme.base,
     },
     NvimTreeRootFolder = { fg = theme.pink },
     NvimTreeSymlink = { fg = theme.pink },

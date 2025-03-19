@@ -9,7 +9,11 @@ end
 plenary.reload_module 'evergarden'
 plenary.reload_module('lualine.themes.evergarden', true)
 
-require('evergarden').setup()
+require('evergarden').setup {
+  editor = {
+    transparent_background = true,
+  },
+}
 
 require('evergarden').load()
 

@@ -1,12 +1,15 @@
+local config = require 'evergarden.config'
+
 local evergarden = {}
 
----@param config? evergarden.types.config|table
-function evergarden.setup(config)
-  require('evergarden.config').set(config or {})
+---@param cfg? evergarden.types.config|table
+function evergarden.setup(cfg)
+  cfg = cfg or {}
+  config.set(config.override(cfg))
 end
 
----@param config? evergarden.types.config|table
-function evergarden.load(config)
+---@param cfg? evergarden.types.config|table
+function evergarden.load(cfg)
   if vim.g.colors_name then
     vim.cmd 'hi clear'
   end
@@ -14,11 +17,10 @@ function evergarden.load(config)
   vim.g.colors_name = 'evergarden'
   vim.o.termguicolors = true
 
-  local cfg
-  if config then
-    cfg = require('evergarden.config').override(config or {})
+  if cfg then
+    cfg = config.override(cfg or {})
   else
-    cfg = require('evergarden.config').get()
+    cfg = config.get()
   end
 
   local colors = require('evergarden.colors').get(cfg)

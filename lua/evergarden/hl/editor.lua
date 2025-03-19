@@ -4,7 +4,10 @@ local utils = require 'evergarden.utils'
 ---@param config evergarden.types.config
 return function(theme, config)
   return {
-    Normal = { theme.text, theme.base },
+    Normal = {
+      theme.text,
+      config.editor.transparent_background and theme.none or theme.base,
+    },
 
     Cursor = { theme.yellow },
     CursorLine = { theme.none, theme.surface0 },

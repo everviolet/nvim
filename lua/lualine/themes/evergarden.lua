@@ -1,4 +1,5 @@
 local theme = require('evergarden.theme').setup()
+local config = require('evergarden.config').get()
 
 local colors = {
   normal = theme.accent,
@@ -11,7 +12,10 @@ local evergarden = {}
 evergarden.normal = {
   a = { fg = theme.crust, bg = colors.normal },
   b = { bg = theme.surface0, fg = colors.normal },
-  c = { bg = theme.base, fg = theme.overlay2 },
+  c = {
+    bg = config.editor.transparent_background and theme.none or theme.base,
+    fg = theme.overlay2,
+  },
 }
 
 evergarden.insert = {
@@ -31,7 +35,10 @@ evergarden.replace = evergarden.insert
 evergarden.inactive = {
   a = { bg = theme.base, fg = theme.overlay1 },
   b = { bg = theme.base, fg = theme.overlay1 },
-  c = { bg = theme.base, fg = theme.overlay1 },
+  c = {
+    bg = config.editor.transparent_background and theme.none or theme.base,
+    fg = theme.overlay1,
+  },
 }
 
 return evergarden

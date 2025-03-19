@@ -255,7 +255,7 @@ M.get = function(theme, config)
       },
       MiniTablineHidden = {
         theme.text,
-        config.transparent_background and theme.none or theme.mantle,
+        config.editor.transparent_background and theme.none or theme.mantle,
       },
       MiniTablineModifiedCurrent = {
         theme.diagnostic.warn,

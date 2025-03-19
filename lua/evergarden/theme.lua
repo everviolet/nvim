@@ -75,10 +75,6 @@ function M.setup(colors, config)
   theme.none = 'NONE'
   theme.colors = colors
 
-  if config.editor.transparent_background then
-    theme.base = theme.none
-  end
-
   theme.accent = theme.colors[config.theme.accent] or theme.green
   theme.sign = theme.colors[config.editor.sign.color] or theme.none
   theme.comment = theme.overlay2
