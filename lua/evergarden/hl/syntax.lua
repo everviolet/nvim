@@ -122,9 +122,9 @@ return function(theme, config)
     Boolean = { link = '@boolean' },
     Number = { link = '@number' },
     Float = { link = '@number.float' },
-    Conditional = { '@keyword.conditional' },
-    Exception = { '@keyword.exception' },
-    Repeat = { '@keyword.repeat' },
+    Conditional = { link = '@keyword.conditional' },
+    Exception = { link = '@keyword.exception' },
+    Repeat = { link = '@keyword.repeat' },
 
     Comment = { link = '@comment' },
     Special = { link = '@string.special' },
