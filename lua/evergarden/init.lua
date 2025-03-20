@@ -23,15 +23,14 @@ function evergarden.load(cfg)
     cfg = config.get()
   end
 
-  local colors = require('evergarden.colors').get(cfg)
-  local theme = require('evergarden.theme').setup(colors, cfg)
-  local hlgroups = require('evergarden.hl.init').setup(theme, cfg)
+  local theme = require('evergarden.theme').setup(cfg)
+  local hlgroups = require('evergarden.hl').setup(theme, cfg)
 
   require('evergarden.utils').set_highlights(hlgroups)
 end
 
 function evergarden.colors()
-  return require('evergarden.colors').colors()
+  return require('evergarden.colors').get()
 end
 
 return evergarden

@@ -55,20 +55,14 @@
 ---@field macro string
 ---@field annotation string
 
-local utils = require 'evergarden.utils'
-
 local M = {}
 
----@param colors? evergarden.types.colors
 ---@param config? evergarden.types.config
+---@param colors? evergarden.types.colors
 ---@return evergarden.types.theme
-function M.setup(colors, config)
-  if not config then
-    config = require('evergarden.config').get()
-  end
-  if not colors then
-    colors = require('evergarden.colors').get(config)
-  end
+function M.setup(config, colors)
+  config = config or require('evergarden.config').get()
+  colors = colors or require('evergarden.colors').get(config)
   ---@type evergarden.types.theme
   local theme = vim.deepcopy(colors, true)
 
