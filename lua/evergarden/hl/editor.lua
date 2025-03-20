@@ -16,7 +16,7 @@ return function(theme, config)
 
     Visual = { theme.none, theme.surface1 },
 
-    LineNr = { theme.surface2 },
+    LineNr = { theme.surface1 },
     CursorLineNr = { theme.overlay1 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
