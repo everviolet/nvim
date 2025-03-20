@@ -39,4 +39,12 @@ end
 
 -- tests
 
+require('evergarden').load {}
+assert_hl(nil, 'fg', '#DDDECF')
+assert_hl(nil, 'bg', '#232A2E')
+require('evergarden').load { theme = { variant = 'winter' } }
+assert_hl(nil, 'bg', '#1D2428')
+require('evergarden').load { theme = { variant = 'spring' } }
+assert_hl(nil, 'bg', '#2B3538')
+
 vim.notify '== OK == tests passed succesfully'
