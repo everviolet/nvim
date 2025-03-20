@@ -58,7 +58,7 @@ function M.setup(theme, config)
       :totable()
   )
 
-  if config.override_terminal then
+  if config.editor.override_terminal then
     require 'evergarden.hl.terminal'(theme, theme.colors)
   end
 
