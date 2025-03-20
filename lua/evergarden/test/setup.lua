@@ -1,6 +1,6 @@
 require('evergarden').setup {
   theme = {
-    variant = 'spring',
+    variant = 'fall',
   },
   editor = {
     transparent_background = false,

@@ -42,4 +42,17 @@ M.fixup = function()
   vim.api.nvim_exec_autocmds('ColorScheme', {})
 end
 
+M.hotreload = function(testname)
+  vim.api.nvim_create_autocmd('BufWritePost', {
+    pattern = 'lua/evergarden/*.lua',
+    group = vim.api.nvim_create_augroup(
+      'evergarden:hotreload',
+      { clear = true }
+    ),
+    callback = function()
+      M.run(testname)
+    end,
+  })
+end
+
 return M
