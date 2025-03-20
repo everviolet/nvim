@@ -37,6 +37,7 @@ function M.setup(theme, config)
     'css',
     'help',
     'markdown',
+    'nix',
     'rust',
     'typescript',
   })
