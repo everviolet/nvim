@@ -48,9 +48,9 @@ M.spring = {
 function M.get(cfg)
   cfg = cfg or require('evergarden.config').get()
   local shades = M.fall
-  if cfg.variant == 'winter' then
+  if cfg.theme.variant == 'winter' then
     shades = vim.tbl_extend('force', shades, M.winter)
-  elseif cfg.variant == 'spring' then
+  elseif cfg.theme.variant == 'spring' then
     shades = vim.tbl_extend('force', shades, M.spring)
   end
   local colors = vim.tbl_extend('force', M.colors, shades)
