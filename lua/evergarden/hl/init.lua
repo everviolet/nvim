@@ -33,6 +33,7 @@ function M.setup(theme, config)
   load_hl('evergarden.hl.ft.%s', {
     'lua',
     'html',
+    'bash',
     'css',
     'help',
     'markdown',
