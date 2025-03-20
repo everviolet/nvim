@@ -16,8 +16,8 @@ M.colors = {
 ---@type evergarden.types.colors
 M.fall = {
   text = '#DDDECF',
-  subtext1 = '#B9CEC4',
-  subtext0 = '#A1BBB0',
+  subtext1 = '#C1D9CE',
+  subtext0 = '#ADC9BC',
   overlay2 = '#839E9A',
   overlay1 = '#6F8788',
   overlay0 = '#58686D',
