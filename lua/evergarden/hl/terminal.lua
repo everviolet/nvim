@@ -1,20 +1,21 @@
----@param theme evergarden.types.theme
----@param colors evergarden.types.colors
-return function(theme, colors)
-  vim.g.terminal_color_0 = colors.base
-  vim.g.terminal_color_8 = colors.surface0
-  vim.g.terminal_color_1 = colors.red
-  vim.g.terminal_color_9 = colors.red
-  vim.g.terminal_color_2 = colors.green
-  vim.g.terminal_color_10 = colors.green
-  vim.g.terminal_color_3 = colors.yellow
-  vim.g.terminal_color_11 = colors.yellow
-  vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_12 = colors.blue
-  vim.g.terminal_color_5 = colors.pink
-  vim.g.terminal_color_13 = colors.pink
-  vim.g.terminal_color_6 = colors.aqua
-  vim.g.terminal_color_14 = colors.aqua
-  vim.g.terminal_color_7 = colors.text
+---@param theme? evergarden.types.theme
+return function(theme)
+  theme = theme or require('evergarden.theme').setup()
+
+  vim.g.terminal_color_0 = theme.base
+  vim.g.terminal_color_1 = theme.red
+  vim.g.terminal_color_2 = theme.green
+  vim.g.terminal_color_3 = theme.yellow
+  vim.g.terminal_color_4 = theme.blue
+  vim.g.terminal_color_5 = theme.pink
+  vim.g.terminal_color_6 = theme.aqua
+  vim.g.terminal_color_7 = theme.text
+  vim.g.terminal_color_8 = theme.surface0
+  vim.g.terminal_color_9 = theme.red
+  vim.g.terminal_color_10 = theme.green
+  vim.g.terminal_color_11 = theme.yellow
+  vim.g.terminal_color_12 = theme.blue
+  vim.g.terminal_color_13 = theme.pink
+  vim.g.terminal_color_14 = theme.aqua
   vim.g.terminal_color_15 = theme.subtext0
 end
