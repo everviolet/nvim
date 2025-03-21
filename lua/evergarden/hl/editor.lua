@@ -14,7 +14,10 @@ return function(theme, config)
     CursorColumn = { theme.none, theme.surface0 },
     QuickFixLine = { theme.none, theme.surface0 },
 
-    Visual = { theme.none, theme.surface1 },
+    Visual = {
+      theme.none,
+      utils.vary_color({ summer = theme.surface0 }, theme.surface1),
+    },
 
     LineNr = { theme.surface1 },
     CursorLineNr = { theme.overlay1 },
@@ -70,17 +73,17 @@ return function(theme, config)
 
     Search = utils.vary_reverse(
       utils.blend(theme.editor.search, theme.base, 0.4),
-      theme.crust,
+      utils.vary_color({ summer = theme.text }, theme.crust),
       config.style.search
     ),
     CurSearch = utils.vary_reverse(
       theme.editor.search,
-      theme.crust,
+      utils.vary_color({ summer = theme.text }, theme.crust),
       config.style.search
     ),
     IncSearch = utils.vary_reverse(
       theme.orange,
-      theme.crust,
+      utils.vary_color({ summer = theme.text }, theme.crust),
       config.style.incsearch
     ),
 
