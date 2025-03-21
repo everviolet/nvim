@@ -1,4 +1,4 @@
----@alias evergarden.types.variant 'winter'|'fall'|'spring'
+---@alias evergarden.types.variant 'winter'|'fall'|'spring'|'summer'
 
 ---@class evergarden.types.config
 ---@field theme evergarden.types.config.theme

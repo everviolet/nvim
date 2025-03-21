@@ -37,6 +37,10 @@ comfort.
 <summary>Spring</summary>
 <img alt="spring variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/soft.webp"/>
 </details>
+<details>
+<summary>Summer</summary>
+<img alt="summer variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/summer.webp"/>
+</details>
 
 <details>
 <summary>more screenshots</summary>
@@ -56,7 +60,7 @@ return {
   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
   opts = {
     theme = {
-      variant = 'fall', -- 'winter'|'fall'|'spring'
+      variant = 'fall', -- 'winter'|'fall'|'spring'|'summer'
       accent = 'green',
     },
     editor = {
@@ -85,7 +89,7 @@ Plug 'comfysage/evergarden'
 ```lua
 require 'evergarden'.setup {
   theme = {
-    variant = 'fall', -- 'winter'|'fall'|'spring'
+    variant = 'fall', -- 'winter'|'fall'|'spring'|'summer'
     accent = 'green',
   },
   editor = {
@@ -161,6 +165,7 @@ require 'evergarden'.setup {
 ### Overrides
 
 Overrides can take a few options:
+
 - `fg`: foreground color (e.g., `"#fddce3"`)
 - `bg`: background color (e.g., `"#1d2021"`)
 - `style`: styles for highlight (e.g., `{ 'bold', 'italic' }`)

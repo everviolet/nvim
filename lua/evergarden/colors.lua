@@ -43,6 +43,31 @@ M.spring = {
   crust = M.fall.mantle,
 }
 
+---@type evergarden.types.colors
+M.summer = {
+  red = '#C0696B',
+  orange = '#CA8C70',
+  yellow = '#CBAE75',
+  green = '#A9BE88',
+  aqua = '#91BB9C',
+  skye = '#8FBAB5',
+  blue = '#8CA4BB',
+  purple = '#B19AC6',
+  pink = '#D0A3C3',
+  text = '#171C1F',
+  subtext1 = '#415055',
+  subtext0 = '#526469',
+  overlay2 = '#63787D',
+  overlay1 = '#758A90',
+  overlay0 = '#879DA4',
+  surface2 = '#9CB2B8',
+  surface1 = '#B4C6CC',
+  surface0 = '#CED9E0',
+  base = '#E9EBF0',
+  mantle = '#E1E5ED',
+  crust = '#D6DBE9',
+}
+
 ---@param cfg? evergarden.types.config
 ---@return evergarden.types.colors
 function M.get_shades(cfg)
@@ -52,6 +77,8 @@ function M.get_shades(cfg)
     shades = vim.tbl_extend('force', shades, M.winter)
   elseif cfg.theme.variant == 'spring' then
     shades = vim.tbl_extend('force', shades, M.spring)
+  elseif cfg.theme.variant == 'summer' then
+    shades = vim.tbl_extend('force', shades, M.summer)
   end
   return shades
 end
