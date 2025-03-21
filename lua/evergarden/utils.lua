@@ -92,19 +92,14 @@ end
 
 ---@generic T
 ---@param props { [evergarden.types.variant]: T }
+---@param default T
 ---@return T?
-function M.vary_color(props)
+function M.vary_color(props, default)
   if not props then
     return
   end
   local cfg = require('evergarden.config').get()
-  if props[cfg.variant] then
-    return props[cfg.variant]
-  elseif props.medium then
-    return props.medium
-  else
-    return nil
-  end
+  return props[cfg.theme.variant] or default
 end
 
 ---@generic T
