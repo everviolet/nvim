@@ -23,6 +23,12 @@ function evergarden.load(cfg)
     cfg = config.get()
   end
 
+  if cfg.theme.variant == 'summer' then
+    vim.go.background = 'light'
+  else
+    vim.go.background = 'dark'
+  end
+
   local theme = require('evergarden.theme').setup(cfg)
   local hlgroups = require('evergarden.hl').setup(theme, cfg)
 
