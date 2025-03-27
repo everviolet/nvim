@@ -91,15 +91,15 @@ function M.set_highlights(hlgroups)
 end
 
 ---@generic T
+---@param config evergarden.types.config
 ---@param props { [evergarden.types.variant]: T }
 ---@param default T
 ---@return T?
-function M.vary_color(props, default)
-  if not props then
+function M.vary_color(config, props, default)
+  if not config or not props then
     return
   end
-  local cfg = require('evergarden.config').get()
-  return props[cfg.theme.variant] or default
+  return props[config.theme.variant] or default
 end
 
 ---@generic T

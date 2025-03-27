@@ -16,7 +16,7 @@ return function(theme, config)
 
     Visual = {
       theme.none,
-      utils.vary_color({ summer = theme.surface0 }, theme.surface1),
+      utils.vary_color(config, { summer = theme.surface0 }, theme.surface1),
     },
 
     LineNr = { theme.surface1 },
@@ -73,17 +73,17 @@ return function(theme, config)
 
     Search = utils.vary_reverse(
       utils.blend(theme.editor.search, theme.base, 0.4),
-      utils.vary_color({ summer = theme.text }, theme.crust),
+      utils.vary_color(config, { summer = theme.text }, theme.crust),
       config.style.search
     ),
     CurSearch = utils.vary_reverse(
       theme.editor.search,
-      utils.vary_color({ summer = theme.text }, theme.crust),
+      utils.vary_color(config, { summer = theme.text }, theme.crust),
       config.style.search
     ),
     IncSearch = utils.vary_reverse(
       theme.orange,
-      utils.vary_color({ summer = theme.text }, theme.crust),
+      utils.vary_color(config, { summer = theme.text }, theme.crust),
       config.style.incsearch
     ),
 
