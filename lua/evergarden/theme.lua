@@ -87,7 +87,7 @@ function M.setup(config, colors)
     call = theme.green,
     string = theme.green,
     macro = theme.orange,
-    annotation = theme.red,
+    annotation = theme.pink,
   }
   theme.diagnostic = {
     ok = theme.green,
