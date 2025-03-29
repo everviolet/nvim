@@ -67,7 +67,7 @@ return function(theme, config)
     ['@punctuation.special'] = { link = '@string.special' },
 
     -- variables
-    ['@variable'] = { theme.syntax.object },
+    ['@variable'] = { theme.syntax.identifier },
     ['@variable.builtin'] = { link = '@constant' },
     ['@variable.parameter'] = { link = '@variable' },
     ['@variable.member'] = { link = '@variable' },

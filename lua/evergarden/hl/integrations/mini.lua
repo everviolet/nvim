@@ -76,7 +76,7 @@ M.get = function(theme, config)
       MiniFilesCursorLine = { link = 'CursorLine' },
 
       MiniFilesDirectory = { link = 'Directory' },
-      MiniFilesFile = { theme.syntax.object },
+      MiniFilesFile = { theme.syntax.identifier },
 
       MiniFilesBorder = { link = 'FloatBorder' },
       MiniFilesBorderModified = { theme.diagnostic.warn },
