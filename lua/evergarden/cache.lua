@@ -1,0 +1,114 @@
+--- *evergarden.cache*
+--- ==================
+---@module 'evergarden.cache'
+
+local cache = {}
+
+cache.dir = vim.fs.joinpath(vim.fn.stdpath 'cache', 'evergarden')
+
+cache.path = {
+  config = vim.fs.joinpath(cache.dir, 'config'),
+  colors = vim.fs.joinpath(cache.dir, 'colors'),
+}
+
+cache.colors = {}
+
+---@param cfg? evergarden.types.config
+---@return number
+function cache.cached_cfg(cfg)
+  cfg = cfg or require('evergarden.config').get()
+  return require('evergarden.utils').hash(cfg)
+end
+
+---@param cfg? evergarden.types.config
+---@return boolean
+function cache.needs_compile(cfg)
+  cfg = cfg or require('evergarden.config').get()
+
+  local cached = nil
+  local file = io.open(cache.path.config, 'rb')
+  if not file then
+    cached = 0
+  else
+    cached = file:read 'n'
+    file:close()
+  end
+
+  local hash = cache.cached_cfg(cfg)
+
+  return cached ~= hash
+end
+
+function cache.clear()
+  cache.colors = {}
+end
+
+---@return string
+function cache.fold()
+  return [[
+return string.dump(function()
+vim.g.colors_name = "evergarden"
+]] .. table.concat(cache.colors, '\n') .. [[
+end, true)]]
+end
+
+---@param group string
+---@param color vim.api.keyset.highlight
+function cache.add(group, color)
+  local line =
+    string.format('vim.api.nvim_set_hl(0, %q, %s)', group, vim.inspect(color))
+  table.insert(cache.colors, line)
+end
+
+---@param cfg? evergarden.types.config
+---@return any? error
+function cache.write(cfg)
+  cfg = cfg or require('evergarden.config').get()
+
+  if vim.fn.isdirectory(cache.dir) == 0 then
+    vim.fn.mkdir(cache.dir, 'p')
+  end
+
+  local file = io.open(cache.path.config, 'wb')
+  if not file then
+    return error(string.format('could not open file: %s', cache.path.config))
+  end
+  file:write(cache.cached_cfg(cfg))
+  file:close()
+
+  file = io.open(cache.path.colors, 'w')
+  if not file then
+    return error(string.format('could not open file: %s', cache.path.colors))
+  end
+
+  local lines = cache.fold()
+  file:write(lines)
+  file:close()
+end
+
+--- load the cache file
+--- -> string.dump(f)
+--- load the string dumped function
+--- -> f
+--- load the highlights (f)
+---
+---@return any? error
+function cache.load()
+  local fn = loadfile(cache.path.colors)
+  ---@diagnostic disable-next-line: param-type-mismatch
+  local ok_loadfile, result_loadfile = pcall(fn)
+  if not ok_loadfile then
+    return error(string.format('error while loading cache: %s', result_loadfile))
+  end
+  local ok_loadstring, result_loadstring = pcall(loadstring, result_loadfile)
+  if not ok_loadstring then
+    return error(string.format('error while loading cache: %s', result_loadstring))
+  end
+  ---@diagnostic disable-next-line: param-type-mismatch
+  local ok_loadhl, result = pcall(result_loadstring)
+  if not ok_loadhl then
+    return error(string.format('error while loading cache: %s', result))
+  end
+end
+
+return cache

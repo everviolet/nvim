@@ -5,6 +5,7 @@
 ---@class evergarden.types.config
 ---@field theme evergarden.types.config.theme -- |evergarden.config.theme|
 ---@field editor evergarden.types.config.editor -- |evergarden.config.editor|
+---@field cache? boolean -- |evergarden.cache|
 ---@field style? evergarden.types.styleconfig -- |evergarden.styleconfig|
 ---@field integrations? evergarden.types.config.integrations -- |evergarden.integrations|
 ---@field color_overrides? evergarden.types.colors
@@ -204,6 +205,7 @@ M.default = {
   },
   overrides = {},
   color_overrides = {},
+  cache = true,
 }
 --minidoc_afterlines_end
 

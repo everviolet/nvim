@@ -39,7 +39,20 @@ function evergarden.load(cfg)
   local theme = require('evergarden.theme').setup(cfg)
   local hlgroups = require('evergarden.hl').setup(theme, cfg)
 
-  require('evergarden.utils').set_highlights(hlgroups)
+  local cache = cfg.cache or false
+  if cache then
+    local needs_compile = require('evergarden.cache').needs_compile(cfg)
+    if not needs_compile then
+      return require('evergarden.cache').load()
+    end
+    require('evergarden.cache').clear()
+  end
+
+  require('evergarden.utils').set_highlights(hlgroups, cache)
+
+  if cache then
+    require('evergarden.cache').write(cfg)
+  end
 end
 
 function evergarden.colors()
