@@ -56,7 +56,6 @@ return function(theme, config)
     ['@none'] = { theme.text },
 
     ['@attribute'] = { theme.purple },
-    ['@property'] = { link = '@variable.member' },
 
     ['@operator'] = { theme.syntax.context },
 
@@ -70,7 +69,8 @@ return function(theme, config)
     ['@variable'] = { theme.syntax.identifier },
     ['@variable.builtin'] = { link = '@constant' },
     ['@variable.parameter'] = { link = '@variable' },
-    ['@variable.member'] = { link = '@variable' },
+    ['@variable.member'] = { theme.syntax.property },
+    ['@property'] = { link = '@variable.member' },
 
     -- types
     ['@type'] = {

@@ -47,6 +47,7 @@
 ---@class evergarden.types.syntax
 ---@field keyword string
 ---@field identifier string
+---@field property string
 ---@field type string
 ---@field context string
 ---@field constant string
@@ -81,6 +82,7 @@ function M.setup(config, colors)
   theme.syntax = {
     keyword = theme.red,
     identifier = theme.text,
+    property = theme.skye,
     type = theme.yellow,
     context = theme.overlay2,
     constant = theme.pink,
