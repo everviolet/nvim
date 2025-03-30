@@ -82,7 +82,7 @@ return function(theme, config)
     ['@string.documentation'] = { theme.skye }, -- docstrings
     ['@string.special'] = { theme.aqua },
     ['@string.special.path'] = { link = '@string.special.url' }, -- filenames
-    ['@string.special.url'] = { link = '@uri' }, -- URIs (e.g. hyperlinks)
+    ['@string.special.url'] = { theme.blue }, -- URIs (e.g. hyperlinks)
     ['@string.special.symbol'] = { link = '@string.special' }, -- symbols/atoms
     ['@string.escape'] = { theme.yellow },
     ['@string.regexp'] = { link = '@string.escape' },
@@ -99,7 +99,7 @@ return function(theme, config)
     -- style
     ['@strike'] = { theme.overlay2 },
     ['@math'] = { theme.blue },
-    ['@uri'] = { theme.purple },
+    ['@uri'] = { link = '@string.special.url' },
 
     -- tags
     ['@tag'] = { link = '@punctuation.delimiter' }, -- XML-style tag names (e.g. in XML, HTML, etc.)
