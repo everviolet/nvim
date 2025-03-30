@@ -14,7 +14,7 @@ M.get = function(theme, _)
 
     CmpItemKindText = { theme.text },
     CmpItemKindMethod = { theme.syntax.constant },
-    CmpItemKindFunction = { theme.syntax.call },
+    CmpItemKindFunction = { theme.syntax.func },
     CmpItemKindConstructor = { theme.syntax.type },
     CmpItemKindField = { theme.syntax.identifier },
     CmpItemKindVariable = { theme.syntax.identifier },

@@ -50,7 +50,7 @@
 ---@field type string
 ---@field context string
 ---@field constant string
----@field call string
+---@field func string
 ---@field string string
 ---@field macro string
 ---@field annotation string
@@ -84,7 +84,7 @@ function M.setup(config, colors)
     type = theme.yellow,
     context = theme.overlay2,
     constant = theme.pink,
-    call = theme.green,
+    func = theme.green,
     string = theme.green,
     macro = theme.orange,
     annotation = theme.pink,
