@@ -163,13 +163,13 @@ return function(theme, config)
     ['@markup.list.unchecked'] = { link = '@punctuation.delimiter' }, -- unchecked todo-style list markers
 
     -- headings, titles (including markers)
-    ['@markup.heading'] = { theme.purple },
-    ['@markup.heading.1'] = { theme.purple },
-    ['@markup.heading.2'] = { theme.orange },
-    ['@markup.heading.3'] = { theme.green },
-    ['@markup.heading.4'] = { link = '@markup.heading.1' },
-    ['@markup.heading.5'] = { link = '@markup.heading.2' },
-    ['@markup.heading.6'] = { link = 'NonText' },
+    ['@markup.heading'] = { link = '@markup.heading.1' },
+    ['@markup.heading.1'] = { link = 'rainbow.1' },
+    ['@markup.heading.2'] = { link = 'rainbow.2' },
+    ['@markup.heading.3'] = { link = 'rainbow.3' },
+    ['@markup.heading.4'] = { link = 'rainbow.4' },
+    ['@markup.heading.5'] = { link = 'rainbow.5' },
+    ['@markup.heading.6'] = { link = 'rainbow.6' },
 
     -- diffs
     ['@diff.add'] = { theme.diff.add },
@@ -178,6 +178,13 @@ return function(theme, config)
     ['@diff.plus'] = { link = '@diff.add' },
     ['@diff.minus'] = { link = '@diff.delete' },
     ['@diff.delta'] = { link = '@diff.change' },
+
+    ['rainbow.1'] = { theme.red },
+    ['rainbow.2'] = { theme.orange },
+    ['rainbow.3'] = { theme.yellow },
+    ['rainbow.4'] = { theme.green },
+    ['rainbow.5'] = { theme.aqua },
+    ['rainbow.6'] = { theme.blue },
 
     -- legacy
     ['@parameter'] = { link = '@variable.parameter' },
