@@ -52,8 +52,6 @@ return function(theme, config)
 
     -- TODO:
     ['@module'] = { link = '@constant' },
-    ['@none'] = { theme.text },
-
     ['@attribute'] = { theme.purple },
 
     ['@operator'] = { theme.syntax.context },
@@ -150,7 +148,6 @@ return function(theme, config)
     ['@comment.warning'] = { theme.diagnostic.warn },
     ['@comment.error'] = { theme.diagnostic.error },
 
-    ['@nontext'] = { link = 'NonText' },
     ['@markup'] = { theme.text },
     ['@markup.strong'] = { theme.orange, style = { 'bold' } },
     ['@markup.italic'] = { theme.orange, style = { 'italic' } },
