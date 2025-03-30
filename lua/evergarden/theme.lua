@@ -24,6 +24,7 @@
 ---@field red string
 ---@field orange string
 ---@field yellow string
+---@field lime string
 ---@field green string
 ---@field aqua string
 ---@field skye string
@@ -88,7 +89,7 @@ function M.setup(config, colors)
     context = theme.overlay2,
     constant = theme.pink,
     func = theme.green,
-    string = theme.green,
+    string = theme.lime,
     macro = theme.orange,
     annotation = theme.cherry,
   }
