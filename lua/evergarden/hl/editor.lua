@@ -32,7 +32,7 @@ return function(theme, config)
     Title = { theme.subtext0 },
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
-    Folded = { theme.overlay1 },
+    Folded = { bg = theme.surface2 },
     FoldColumn = { theme.surface0 },
 
     NormalFloat = {
