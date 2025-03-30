@@ -29,6 +29,7 @@
 ---@field neotree? boolean nvim-neo-tree/neo-tree.nvim
 ---@field nvimtree? boolean nvim-tree/nvim-tree.lua
 ---@field rainbow_delimiters? boolean hiphish/rainbow-delimiters.nvim
+---@field semantic_tokens? boolean
 ---@field symbols_outline? boolean simrat39/symbols-outline.nvim
 ---@field telescope? boolean nvim-telescope/telescope.nvim
 ---@field which_key? boolean folke/which-key.nvim

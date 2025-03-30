@@ -59,6 +59,7 @@ M.default = {
     },
     nvimtree = true,
     rainbow_delimiters = true,
+    semantic_tokens = true,
     symbols_outline = true,
     telescope = true,
     which_key = true,

@@ -136,11 +136,6 @@ return function(theme, config)
     Define = { link = '@keyword.directive.define' },
     Include = { link = '@keyword.import' },
 
-    -- lsp
-    ['@lsp.type.comment'] = { link = '@comment' },
-    ['@lsp.type.namespace'] = { link = '@module' },
-    ['@lsp.type.keyword'] = { link = '@keyword' },
-
     -- text
     ['@comment.todo'] = { theme.aqua },
     ['@comment.note'] = { theme.blue },
