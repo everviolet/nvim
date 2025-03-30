@@ -80,10 +80,10 @@ return function(theme, config)
     -- strings
     ['@string'] = { theme.syntax.string },
     ['@string.documentation'] = { theme.skye }, -- docstrings
-    ['@string.special'] = { link = '@punctuation.special' },
+    ['@string.special'] = { theme.aqua },
     ['@string.special.path'] = { link = '@string.special' }, -- filenames
     ['@string.special.url'] = { link = '@uri' }, -- URIs (e.g. hyperlinks)
-    ['@string.special.symbol'] = { theme.subtext0 },
+    ['@string.special.symbol'] = { link = '@string.special' }, -- symbols/atoms
     ['@string.escape'] = { theme.yellow },
     ['@string.regexp'] = { link = '@string.escape' },
     ['@character'] = { link = '@string' }, -- char literal
