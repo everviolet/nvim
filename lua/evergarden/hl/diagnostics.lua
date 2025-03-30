@@ -94,7 +94,7 @@ return function(theme, config)
     LspCodeLens = { link = 'VirtualTextInfo' },
     LspCodeLensSeparator = { link = 'MsgSeparator' },
     LspInlayHint = { theme.overlay1 },
-    LspSignatureActiveParameter = { theme.accent },
+    LspSignatureActiveParameter = { bg = theme.surface1 },
 
     healthError = { link = 'DiagnosticError' },
     healthSuccess = { link = 'DiagnosticOk' },
