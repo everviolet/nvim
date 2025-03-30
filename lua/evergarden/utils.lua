@@ -10,7 +10,7 @@ end
 
 ---@param group string
 ---@param colors evergarden.types.colorspec
-local function set_hl(group, colors)
+function M.set_hl(group, colors)
   if type(colors) ~= 'table' or vim.tbl_isempty(colors) then
     return
   end
@@ -53,41 +53,8 @@ local function set_hl(group, colors)
 end
 
 ---@param hlgroups evergarden.types.hlgroups.OL
----@return evergarden.types.hlgroups
-function M.fold_groups(hlgroups)
-  if #hlgroups == 0 then
-    return hlgroups
-  end
-
-  local basegroups = vim.iter(pairs(hlgroups)):fold({}, function(acc, name, hl)
-    if type(name) == 'string' then
-      acc[name] = hl
-    end
-    return acc
-  end)
-
-  local folded = vim
-    .iter(ipairs(hlgroups))
-    :fold(basegroups, function(acc, _, groups)
-      return vim.tbl_extend('force', acc, M.fold_groups(groups))
-    end)
-  return folded
-end
-
----@param hlgroups evergarden.types.hlgroups.OL
 function M.set_highlights(hlgroups)
-  local groups = M.fold_groups(hlgroups)
-  ---@type evergarden.types.colorspec
-  local color = groups.Normal
-  if not color then
-    return
-  end
-  set_hl('Normal', color)
-  groups.Normal = nil
-
-  for group, colors in pairs(groups) do
-    set_hl(group, colors)
-  end
+  require('evergarden.overlay'):new(hlgroups):set()
 end
 
 ---@generic T
