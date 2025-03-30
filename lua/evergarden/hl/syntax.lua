@@ -17,6 +17,7 @@ return function(theme, config)
     ['@function.call'] = { link = '@function' },
     ['@function.builtin'] = { link = '@constant' },
     ['@function.macro'] = { theme.syntax.macro },
+    ['@constructor'] = { link = '@function' },
 
     -- methods
     ['@function.method'] = { link = '@function' }, -- method definitions
@@ -48,8 +49,6 @@ return function(theme, config)
     ['@keyword.directive'] = { link = '@annotation' },
     ['@keyword.directive.define'] = { link = '@annotation' },
     ['@keyword.export'] = { theme.overlay1 },
-
-    ['@constructor'] = { theme.green },
 
     -- TODO:
     ['@module'] = { link = '@constant' },
