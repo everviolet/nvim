@@ -4,7 +4,7 @@ local M = {}
 ---@param _ evergarden.types.config
 M.get = function(theme, _)
   return {
-    ['FocusedSymbol'] = { theme.syntax.call },
+    ['FocusedSymbol'] = { theme.accent },
   }
 end
 
