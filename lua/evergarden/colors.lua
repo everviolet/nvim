@@ -11,6 +11,7 @@ M.colors = {
   blue = '#9BB5CF',
   purple = '#C8AFE0',
   pink = '#EBB9DD',
+  cherry = '#F0C9DF',
 }
 
 ---@type evergarden.types.colors
@@ -54,6 +55,7 @@ M.summer = {
   blue = '#8CA4BB',
   purple = '#B19AC6',
   pink = '#D0A3C3',
+  cherry = '#DBB5CA',
   text = '#171C1F',
   subtext1 = '#415055',
   subtext0 = '#526469',

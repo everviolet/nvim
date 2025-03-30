@@ -49,10 +49,10 @@ return function(theme, config)
     ['@keyword.directive'] = { link = '@annotation' },
     ['@keyword.directive.define'] = { link = '@annotation' },
     ['@keyword.export'] = { theme.overlay1 },
+    ['@attribute'] = { theme.cherry },
 
     -- TODO:
     ['@module'] = { link = '@constant' },
-    ['@attribute'] = { theme.purple },
 
     ['@operator'] = { theme.syntax.context },
 

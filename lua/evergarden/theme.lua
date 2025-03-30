@@ -30,6 +30,7 @@
 ---@field blue string
 ---@field purple string
 ---@field pink string
+---@field cherry string
 ---@field accent string
 ---@field editor evergarden.types.editor
 ---@field syntax evergarden.types.syntax
@@ -89,7 +90,7 @@ function M.setup(config, colors)
     func = theme.green,
     string = theme.green,
     macro = theme.orange,
-    annotation = theme.pink,
+    annotation = theme.cherry,
   }
   theme.diagnostic = {
     ok = theme.green,
