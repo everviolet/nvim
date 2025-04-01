@@ -12,20 +12,6 @@ function M.setup(theme, config)
     { theme = theme, config = config }
   )
 
-  local accents = {
-    RedAccent = { theme.red, '#453539' },
-    OrangeAccent = { theme.orange, '#4A453E' },
-    YellowAccent = { theme.yellow, '#4A4941' },
-    GreenAccent = { theme.green, '#384239' },
-    AquaAccent = { theme.aqua, '#344240' },
-    SkyeAccent = { theme.skye, '#313F42' },
-    BlueAccent = { theme.blue, '#363A47' },
-    PurpleAccent = { theme.purple, '#43374A' },
-    PinkAccent = { theme.pink, '#453547' },
-  }
-
-  table.insert(hl_groups, accents)
-
   load_hl(
     'evergarden.hl.%s',
     { 'editor', 'syntax', 'treesitter', 'diagnostics' }
