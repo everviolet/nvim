@@ -176,7 +176,7 @@ Foreground and background colors can also be written with a shorthand: `{ '#<fg>
 >
 > - Ensure that `fg` (foreground color) and `bg` (background color) are
 >   correctly positioned as the first and second elements in the table,
->   respectively. The `fg` and `bg` fields can also be refered to directly.
+>   respectively. The `fg` and `bg` fields can also be referred to directly.
 > - Confirm that `fg` and `bg` are strings, starting with a hash (`#`).
 
 ```lua
