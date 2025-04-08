@@ -2,23 +2,23 @@ local M = {}
 
 ---@type evergarden.types.colors
 M.colors = {
-  red = '#E67E80',
-  orange = '#E69F7F',
-  yellow = '#E1C182',
-  lime = '#CBD5A2',
-  green = '#BCD19C',
-  aqua = '#A1CFAD',
-  skye = '#9ECEC3',
-  snow = '#9ECAD0',
-  blue = '#9BB5CF',
-  purple = '#C8AFE0',
-  pink = '#EBB9DD',
-  cherry = '#F0C9DF',
+  red = '#F58688',
+  orange = '#FAA88A',
+  yellow = '#FAD690',
+  lime = '#E9F5BA',
+  green = '#D8F0B3',
+  aqua = '#B8EDC6',
+  skye = '#B6EDE0',
+  snow = '#B4EBEC',
+  blue = '#B2CFED',
+  purple = '#D7BCF1',
+  pink = '#F3C0E5',
+  cherry = '#F6CEE5',
 }
 
 ---@type evergarden.types.colors
 M.fall = {
-  text = '#DDDECF',
+  text = '#F8F9E8',
   subtext1 = '#ADC9BC',
   subtext0 = '#96B4AA',
   overlay2 = '#839E9A',
