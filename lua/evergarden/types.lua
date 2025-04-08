@@ -59,7 +59,7 @@
 ---@field test boolean
 ---@field trailspace boolean
 
----@alias evergarden.types.colors.enum 'crust'|'softbase'|'mantle'|'base'|'surface0'|'surface1'|'surface2'|'overlay0'|'overlay1'|'overlay2'|'subtext0'|'subtext1'|'text'|'red'|'orange'|'yellow'|'lime'|'green'|'aqua'|'blue'|'skye'|'purple'|'pink'|'cherry'
+---@alias evergarden.types.colors.enum 'crust'|'softbase'|'mantle'|'base'|'surface0'|'surface1'|'surface2'|'overlay0'|'overlay1'|'overlay2'|'subtext0'|'subtext1'|'text'|'red'|'orange'|'yellow'|'lime'|'green'|'aqua'|'snow'|'blue'|'skye'|'purple'|'pink'|'cherry'
 ---@alias evergarden.types.colors { [evergarden.types.colors.enum]: string }
 
 ---@class evergarden.types.colorspec

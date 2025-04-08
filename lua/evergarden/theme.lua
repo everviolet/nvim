@@ -28,6 +28,7 @@
 ---@field green string
 ---@field aqua string
 ---@field skye string
+---@field snow string
 ---@field blue string
 ---@field purple string
 ---@field pink string
