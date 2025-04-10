@@ -132,7 +132,7 @@ return function(theme, config)
     diffChanged = { link = '@diff.change' },
     diffFile = { theme.syntax.identifier },
     diffNewFile = { theme.syntax.identifier },
-    diffLine = { theme.syntax.context },
+    diffLine = { theme.text },
     Added = { link = '@diff.add' },
     Removed = { link = '@diff.delete' },
     Changed = { link = '@diff.change' },
