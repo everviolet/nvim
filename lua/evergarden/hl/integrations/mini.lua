@@ -133,12 +133,9 @@ M.get = function(theme, config)
   if cfg.jump2d then
     table.insert(hlgroups, {
       MiniJump2dDim = { theme.overlay0 },
-      MiniJump2dSpot = {
-        theme.orange,
-        style = { 'bold', 'underline' },
-      },
-      MiniJump2dSpotAhead = { theme.aqua },
-      MiniJump2dSpotUnique = { theme.skye, style = { 'bold' } },
+      MiniJump2dSpot = { link = 'IncSearch' },
+      MiniJump2dSpotAhead = { theme.subtext0 },
+      MiniJump2dSpotUnique = { theme.aqua, style = config.style.incsearch },
     })
   end
 
