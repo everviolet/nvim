@@ -28,6 +28,11 @@ require('evergarden').setup {
   --   mantle = '#181825',
   --   crust = '#11111b',
   -- },
+  -- color_overrides = { -- twilight
+  --   base = '#151A1D',
+  --   mantle = '#13171A',
+  --   crust = '#0F1214',
+  -- },
 }
 
 require('evergarden').load()
