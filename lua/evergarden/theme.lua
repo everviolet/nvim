@@ -93,7 +93,7 @@ function M.setup(config, colors)
     constant = theme.pink,
     func = theme.green,
     string = theme.lime,
-    macro = theme.orange,
+    macro = theme.cherry,
     annotation = theme.cherry,
   }
   theme.diagnostic = {
