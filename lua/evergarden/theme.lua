@@ -53,6 +53,7 @@
 ---@field property string
 ---@field type string
 ---@field context string
+---@field operator string
 ---@field constant string
 ---@field func string
 ---@field string string
@@ -88,6 +89,7 @@ function M.setup(config, colors)
     property = theme.skye,
     type = theme.yellow,
     context = theme.overlay2,
+    operator = theme.subtext0,
     constant = theme.pink,
     func = theme.green,
     string = theme.lime,

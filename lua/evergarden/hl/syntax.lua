@@ -54,7 +54,7 @@ return function(theme, config)
     -- TODO:
     ['@module'] = { link = '@constant' },
 
-    ['@operator'] = { theme.syntax.context },
+    ['@operator'] = { theme.syntax.operator },
 
     -- delimiters
     ['@delimiter'] = { theme.syntax.context },
