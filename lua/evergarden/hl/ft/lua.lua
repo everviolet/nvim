@@ -3,6 +3,6 @@
 ---@return evergarden.types.hlgroups
 return function(theme, config)
   return {
-    ['@constructor.lua'] = { theme.syntax.context },
+    ['@constructor.lua'] = { link = '@delimiter' },
   }
 end
