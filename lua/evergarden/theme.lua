@@ -88,7 +88,7 @@ function M.setup(config, colors)
     identifier = theme.text,
     property = theme.skye,
     type = theme.yellow,
-    context = theme.overlay2,
+    context = theme.overlay1,
     operator = theme.subtext0,
     constant = theme.pink,
     func = theme.green,
