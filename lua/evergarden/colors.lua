@@ -2,16 +2,16 @@ local M = {}
 
 ---@type evergarden.types.colors
 M.colors = {
-  red = '#F58688',
-  orange = '#FAA88A',
-  yellow = '#FAD690',
-  lime = '#DEE9B1',
-  green = '#CEE5AB',
-  aqua = '#B2E5C0',
-  skye = '#B3E9DD',
-  snow = '#B4EBEC',
+  red = '#F57F82',
+  orange = '#F7A182',
+  yellow = '#F5D098',
+  lime = '#DBE6AF',
+  green = '#CAE0A7',
+  aqua = '#ADDEB9',
+  skye = '#ACE0D4',
+  snow = '#AFDFE6',
   blue = '#B2CFED',
-  purple = '#D7BCF1',
+  purple = '#D0BBF0',
   pink = '#F3C0E5',
   cherry = '#F6CEE5',
 }
