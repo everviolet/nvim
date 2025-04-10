@@ -5,7 +5,7 @@ local M = {}
 M.get = function(theme, _)
   return {
     BlinkCmpLabel = { theme.text },
-    BlinkCmpLabelMatch = { link = 'Search' },
+    BlinkCmpLabelMatch = { theme.editor.search },
 
     BlinkCmpLabelDeprecated = { theme.overlay0, style = { 'strikethrough' } },
     BlinkCmpLabelDetail = { theme.overlay1 },
