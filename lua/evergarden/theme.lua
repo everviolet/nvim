@@ -79,7 +79,7 @@ function M.setup(config, colors)
   theme.comment = theme.overlay2
 
   theme.editor = {
-    search = theme.skye,
+    search = theme.snow,
     float = theme.colors[config.editor.float.color] or theme.none,
     completion = theme.colors[config.editor.completion.color] or theme.none,
   }
