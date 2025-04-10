@@ -29,7 +29,7 @@ return function(theme, config)
       style = config.style.keyword,
     },
     ['@keyword.function'] = { link = '@keyword' },
-    ['@keyword.operator'] = { link = '@operator' },
+    ['@keyword.operator'] = { theme.orange },
     ['@keyword.modifier'] = { link = 'Keyword' }, -- construct modifiers: `const` `static` `mut` `public`
     ['@keyword.type'] = { link = 'Keyword' }, -- composite types: `struct` `enum`
     ['@keyword.coroutine'] = { theme.overlay1 }, -- e.g., `go` in Go, `async`/`await`
