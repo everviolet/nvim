@@ -144,8 +144,8 @@ return function(theme, config)
     ['@comment.error'] = { theme.diagnostic.error },
 
     ['@markup'] = { theme.text },
-    ['@markup.strong'] = { theme.orange, style = { 'bold' } },
-    ['@markup.italic'] = { theme.orange, style = { 'italic' } },
+    ['@markup.strong'] = { theme.aqua, style = { 'bold' } },
+    ['@markup.italic'] = { theme.aqua, style = { 'italic' } },
     ['@markup.quote'] = { link = '@comment' }, -- block quotes
     ['@markup.math'] = { link = '@markup.quote' }, -- math environments (e.g. `$ ... $` in LaTeX)
     ['@markup.environment'] = { link = '@markup.quote' }, -- environments (e.g. in LaTeX)
