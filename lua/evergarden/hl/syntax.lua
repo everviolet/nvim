@@ -16,7 +16,7 @@ return function(theme, config)
     ['@function'] = { theme.syntax.func },
     ['@function.call'] = { link = '@function' },
     ['@function.builtin'] = { link = '@constant' },
-    ['@function.macro'] = { theme.syntax.macro },
+    ['@function.macro'] = { theme.aqua },
     ['@constructor'] = { link = '@function' },
 
     -- methods
