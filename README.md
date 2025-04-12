@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/preview.webp"/>
+	<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/preview.webp"/>
 </p>
 
 evergarden is a comfy neovim colorscheme for cozy morning coding.
@@ -27,25 +27,25 @@ comfort.
 
 <details>
 <summary>Winter</summary>
-<img alt="winter variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/hard.webp"/>
+<img alt="winter variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/winter.webp"/>
 </details>
 <details>
 <summary>Fall</summary>
-<img alt="fall variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/medium.webp"/>
+<img alt="fall variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/fall.webp"/>
 </details>
 <details>
 <summary>Spring</summary>
-<img alt="spring variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/soft.webp"/>
+<img alt="spring variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/spring.webp"/>
 </details>
 <details>
 <summary>Summer</summary>
-<img alt="summer variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/summer.webp"/>
+<img alt="summer variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/summer.webp"/>
 </details>
 
 <details>
 <summary>more screenshots</summary>
-<img alt="preview__rust" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.rust.png"/>
-<img alt="preview__lua" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/images/asset.lua.png"/>
+<img alt="preview__rust" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/rust.webp"/>
+<img alt="preview__lua" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/lua.webp"/>
 </details>
 
 ###### font in screenshots is [maple mono](https://github.com/subframe7536/maple-font)
