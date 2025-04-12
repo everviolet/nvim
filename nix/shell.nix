@@ -17,7 +17,7 @@ let
       libwebp
     ];
     text = ''
-      for item in $(fd --exact-depth 2 -t file ".png" images/); do
+      for item in $(fd -t file ".png" assets/previews/); do
         filename="''${item%.png}.webp"
         cwebp -q 100 "$item" -o "$filename"
       done
@@ -32,7 +32,7 @@ let
     ];
     text = ''
       >&2 echo "creating preview"
-      catwalk -C "images/" winter.webp fall.webp fall.webp spring.webp --output preview.webp
+      catwalk -C "assets/previews/" winter.webp fall.webp fall.webp spring.webp --output preview.webp
     '';
   };
 in
