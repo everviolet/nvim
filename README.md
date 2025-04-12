@@ -56,7 +56,7 @@ using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 return {
-  'everviolet/nvim',
+  'everviolet/nvim', name = 'evergarden',
   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
   opts = {
     theme = {
@@ -81,7 +81,7 @@ return {
 using [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```Vim
-Plug 'everviolet/nvim'
+Plug 'everviolet/nvim', { 'as': 'evergarden' }
 ```
 
 ## Configuration
