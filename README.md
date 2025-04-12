@@ -4,13 +4,13 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/comfysage/evergarden/stargazers"><img src="https://img.shields.io/github/stars/comfysage/evergarden?style=for-the-badge&colorA=313B40&colorB=DBBC7F"></a>
-	<a href="https://github.com/comfysage/evergarden/issues"><img src="https://img.shields.io/github/issues/comfysage/evergarden?style=for-the-badge&colorA=313B40&colorB=E69875"></a>
-	<a href="https://github.com/comfysage/evergarden/contributors"><img src="https://img.shields.io/github/contributors/comfysage/evergarden?style=for-the-badge&colorA=313B40&colorB=97C9C3"></a>
+	<a href="https://github.com/everviolet/nvim/stargazers"><img src="https://img.shields.io/github/stars/everviolet/nvim?style=for-the-badge&colorA=313B40&colorB=DBBC7F"></a>
+	<a href="https://github.com/everviolet/nvim/issues"><img src="https://img.shields.io/github/issues/everviolet/nvim?style=for-the-badge&colorA=313B40&colorB=E69875"></a>
+	<a href="https://github.com/everviolet/nvim/contributors"><img src="https://img.shields.io/github/contributors/everviolet/nvim?style=for-the-badge&colorA=313B40&colorB=97C9C3"></a>
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/preview.webp"/>
+	<img src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/preview.webp"/>
 </p>
 
 evergarden is a comfy neovim colorscheme for cozy morning coding.
@@ -27,25 +27,25 @@ comfort.
 
 <details>
 <summary>Winter</summary>
-<img alt="winter variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/winter.webp"/>
+<img alt="winter variant preview" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/winter.webp"/>
 </details>
 <details>
 <summary>Fall</summary>
-<img alt="fall variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/fall.webp"/>
+<img alt="fall variant preview" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/fall.webp"/>
 </details>
 <details>
 <summary>Spring</summary>
-<img alt="spring variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/spring.webp"/>
+<img alt="spring variant preview" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/spring.webp"/>
 </details>
 <details>
 <summary>Summer</summary>
-<img alt="summer variant preview" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/summer.webp"/>
+<img alt="summer variant preview" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/summer.webp"/>
 </details>
 
 <details>
 <summary>more screenshots</summary>
-<img alt="preview__rust" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/rust.webp"/>
-<img alt="preview__lua" src="https://raw.githubusercontent.com/comfysage/evergarden/mega/assets/previews/lua.webp"/>
+<img alt="preview__rust" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/rust.webp"/>
+<img alt="preview__lua" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/lua.webp"/>
 </details>
 
 ###### font in screenshots is [maple mono](https://github.com/subframe7536/maple-font)
@@ -56,7 +56,7 @@ using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 return {
-  'comfysage/evergarden',
+  'everviolet/nvim',
   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
   opts = {
     theme = {
@@ -81,7 +81,7 @@ return {
 using [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```Vim
-Plug 'comfysage/evergarden'
+Plug 'everviolet/nvim'
 ```
 
 ## Configuration
@@ -219,14 +219,12 @@ require 'evergarden'.setup {
 
 ## :sparkles: Extras
 
-- [alacritty](https://github.com/everviolet/ports/tree/main/ports/alacritty)
-- [base16-scheme](https://github.com/everviolet/ports/tree/main/ports/base16)
-- [iterm](https://github.com/everviolet/ports/tree/main/ports/iterm)
-- [kitty theme](https://github.com/everviolet/ports/tree/main/ports/kitty)
-- [scss](https://github.com/everviolet/ports/tree/main/ports/scss/evergarden.scss)
-- [tmux](https://github.com/everviolet/ports/tree/main/ports/tmux)
-- [discord theme](https://github.com/comfysage/evg-discord)
-- [userstyles](https://github.com/comfysage/userstyles)
+- [alacritty](https://github.com/everviolet/alacritty)
+- [iterm](https://github.com/everviolet/iterm)
+- [kitty](https://github.com/everviolet/kitty)
+- [tmux](https://github.com/everviolet/tmux)
+- [discord](https://github.com/everviolet/discord)
+- [home-manager](https://github.com/everviolet/nix)
 
 ## License
 
