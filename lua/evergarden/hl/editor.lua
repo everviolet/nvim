@@ -26,7 +26,12 @@ return function(theme, config)
       config.editor.transparent_background and theme.mantle or theme.surface0,
     },
     VertSplit = { link = 'WinSeparator' },
-    TabLineSel = { theme.accent, style = config.style.tabline },
+    TabLineSel = utils.vary_reverse(
+      theme.accent,
+      theme.none,
+      config.style.tabline,
+      theme.crust
+    ),
     TabLine = { theme.overlay1 },
     TabLineFill = { link = 'TabLine' },
     Title = { theme.subtext0 },
