@@ -32,6 +32,7 @@ M.default = {
     fzf_lua = true,
     gitsigns = true,
     indent_blankline = { enable = true, scope_color = 'green' },
+    lualine = true,
     mini = {
       enable = true,
       animate = true,
