@@ -163,8 +163,6 @@ function M.make_hl_loader(hls, theme, config)
         if type(result) == 'table' then
           if result.get and type(result.get) == 'function' then
             cb = result.get
-          else
-            return result
           end
         elseif type(result) == 'function' then
           cb = result
