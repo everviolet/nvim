@@ -10,7 +10,6 @@ M.reload = function()
   end
 
   plenary.reload_module 'evergarden'
-  plenary.reload_module('lualine.themes.evergarden', true)
 end
 
 M.run = function(testname)
@@ -29,10 +28,15 @@ M.run = function(testname)
 end
 
 M.fixup = function()
+  local ok, plenary = pcall(require, 'plenary.reload')
+  if ok then
+    plenary.reload_module('lualine.themes.evergarden', true)
+  end
   local ok, lualine = pcall(require, 'lualine')
   if ok then
     lualine.setup {}
   end
+
   local ok, ibl = pcall(require, 'ibl')
   if ok then
     ibl.initialized = false
