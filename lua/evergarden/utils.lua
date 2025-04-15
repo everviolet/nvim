@@ -57,6 +57,15 @@ function M.set_highlights(hlgroups)
   require('evergarden.overlay'):new(hlgroups):set()
 end
 
+---@param style evergarden.types.styleopt
+---@return integer
+function M.is_reverse(style)
+  local index, _ = vim.iter(ipairs(style)):find(function(_, v)
+    return v == 'reverse'
+  end)
+  return index
+end
+
 ---@generic T
 ---@param config evergarden.types.config
 ---@param props { [evergarden.types.variant]: T }
@@ -77,9 +86,7 @@ end
 ---@param rbg? T
 ---@return evergarden.types.colorspec
 function M.vary_reverse(fg, bg, style, rfg, rbg)
-  local index, _ = vim.iter(ipairs(style)):find(function(_, v)
-    return v == 'reverse'
-  end)
+  local index = M.is_reverse(style)
   if index then
     style = vim.deepcopy(style)
     table.remove(style, index)
