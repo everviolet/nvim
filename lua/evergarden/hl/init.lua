@@ -7,10 +7,7 @@ function M.setup(theme, config)
   ---@type evergarden.types.hlgroups.OL
   local hl_groups = {}
 
-  local load_hl = require('evergarden.utils').make_hl_loader(
-    hl_groups,
-    { theme = theme, config = config }
-  )
+  local load_hl = require('evergarden.utils').make_hl_loader(hl_groups, theme, config)
 
   load_hl(
     'evergarden.hl.%s',

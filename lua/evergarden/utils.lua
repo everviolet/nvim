@@ -129,10 +129,10 @@ function M.blend(fg, bg, alpha)
 end
 
 ---@param hls evergarden.types.hlgroups.OL
----@param props { theme: evergarden.types.theme, config: evergarden.types.config }
+---@param theme evergarden.types.theme
+---@param config evergarden.types.config }
 ---@return fun(modbase: string, lst: string[])
-function M.make_hl_loader(hls, props)
-  local theme, config = props.theme, props.config
+function M.make_hl_loader(hls, theme, config)
   if not theme or type(theme) ~= 'table' then
     error 'property of theme passed to make_hl_loader() was expected to be a table of theme options'
   end
