@@ -31,6 +31,9 @@ M.get = function(theme, config)
     NvimTreeSpecialFile = { fg = theme.pink },
     NvimTreeImageFile = { fg = theme.subtext1 },
     NvimTreeOpenedFile = { fg = theme.pink },
+
+    NvimTreeLiveFilterPrefix = { fg = theme.pink },
+    NvimTreeLiveFilterValue = { fg = theme.subtext1 },
   }
 end
 
