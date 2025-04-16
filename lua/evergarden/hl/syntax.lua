@@ -150,7 +150,7 @@ return function(theme, config)
     ['@markup.quote'] = { link = '@comment' }, -- block quotes
     ['@markup.math'] = { link = '@markup.quote' }, -- math environments (e.g. `$ ... $` in LaTeX)
     ['@markup.environment'] = { link = '@markup.quote' }, -- environments (e.g. in LaTeX)
-    ['@markup.link'] = { link = '@constant' }, -- text references, footnotes, citations, etc.
+    ['@markup.link'] = { link = '@uri' }, -- text references, footnotes, citations, etc.
     ['@markup.link.label'] = { link = '@markup.italic' }, -- link, reference descriptions
     ['@markup.link.url'] = { link = '@uri' }, -- URL-style links
     ['@markup.raw'] = { theme.overlay1 }, -- literal or verbatim text (e.g. inline code)
