@@ -53,6 +53,7 @@ return function(theme, config)
 
     -- TODO:
     ['@module'] = { link = '@constant' },
+    ['@module.builtin'] = { link = '@constant.builtin' },
 
     ['@operator'] = { theme.syntax.operator },
 
