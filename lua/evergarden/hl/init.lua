@@ -13,18 +13,6 @@ function M.setup(theme, config)
     'evergarden.hl.%s',
     { 'editor', 'syntax', 'treesitter', 'diagnostics' }
   )
-  load_hl('evergarden.hl.ft.%s', {
-    'lua',
-    'html',
-    'bash',
-    'css',
-    'help',
-    'markdown',
-    'nix',
-    'rust',
-    'typescript',
-  })
-
   load_hl(
     'evergarden.hl.integrations.%s',
     vim
@@ -42,6 +30,18 @@ function M.setup(theme, config)
       end)
       :totable()
   )
+
+  load_hl('evergarden.hl.ft.%s', {
+    'lua',
+    'html',
+    'bash',
+    'css',
+    'help',
+    'markdown',
+    'nix',
+    'rust',
+    'typescript',
+  })
 
   if config.editor.override_terminal then
     require 'evergarden.hl.terminal'(theme)
