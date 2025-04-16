@@ -171,6 +171,7 @@ function M.make_hl_loader(hls, theme, config)
         ---@diagnostic disable-next-line: redefined-local
         local ok, result = pcall(cb, theme, config)
         if not ok then
+          vim.notify(('could not get hls for %s'):format(mod_path), vim.log.levels.WARN)
           return
         end
         return result
