@@ -13,7 +13,7 @@ M.get = function(theme, _)
     WhichKeyTitle = { link = 'FloatTitle' }, -- Title of the which-key window
     WhichKeyBorder = { link = 'FloatBorder' }, -- Border of the which-key window
     WhichKeyValue = { theme.overlay0 }, -- values by plugins (like marks, registers, etc)
-    WhichKeyIcon = { link = '@markup.link' }, -- icons
+    WhichKeyIcon = { theme.overlay2 }, -- icons
     WhichKeyIconAzure = { theme.skye },
     WhichKeyIconBlue = { theme.blue },
     WhichKeyIconCyan = { theme.aqua },
