@@ -74,15 +74,29 @@ M.default = {
 ---@diagnostic disable-next-line: missing-fields
 M.config = {}
 
+---@param t1 evergarden.types.config
+---@param t2 evergarden.types.config
+---@return evergarden.types.config
+function M.merge(t1, t2)
+  local t = vim.tbl_deep_extend('force', t1, t2)
+
+  t.style = vim.iter(pairs(t2.style or {})):fold(t1.style, function(style, k, v)
+    style[k] = v
+    return style
+  end)
+
+  return t
+end
+
 ---@return evergarden.types.config
 function M.get()
-  return vim.tbl_deep_extend('force', M.default, M.config)
+  return M.merge(M.default, M.config)
 end
 
 ---@param cfg evergarden.types.config
 ---@return evergarden.types.config
 function M.override(cfg)
-  return vim.tbl_deep_extend('force', M.default, cfg)
+  return M.merge( M.default, cfg)
 end
 
 ---@param cfg evergarden.types.config
