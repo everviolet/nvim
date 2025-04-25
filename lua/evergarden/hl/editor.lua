@@ -79,18 +79,21 @@ return function(theme, config)
 
     Search = utils.vary_reverse(
       utils.blend(theme.editor.search, theme.base, 0.4),
-      utils.vary_color(config, { summer = theme.text }, theme.crust),
-      config.style.search
+      theme.none,
+      config.style.search,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
     CurSearch = utils.vary_reverse(
       theme.editor.search,
-      utils.vary_color(config, { summer = theme.text }, theme.crust),
-      config.style.search
+      theme.none,
+      config.style.search,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
     IncSearch = utils.vary_reverse(
       theme.editor.search,
-      utils.vary_color(config, { summer = theme.text }, theme.crust),
-      config.style.incsearch
+      theme.none,
+      config.style.incsearch,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
 
     Error = { theme.diagnostic.error },
