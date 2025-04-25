@@ -27,13 +27,14 @@ return function(theme, config)
     },
     VertSplit = { link = 'WinSeparator' },
     TabLineSel = utils.vary_reverse(
-      theme.accent,
-      theme.none,
+      theme.subtext1,
+      theme.surface0,
       config.style.tabline,
-      theme.crust
+      theme.crust,
+      theme.accent
     ),
-    TabLine = { theme.overlay1 },
-    TabLineFill = { link = 'TabLine' },
+    TabLine = { theme.overlay1, theme.surface0 },
+    TabLineFill = { theme.overlay1 },
     Title = { theme.subtext0 },
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
