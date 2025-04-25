@@ -88,7 +88,7 @@ return function(theme, config)
       config.style.search
     ),
     IncSearch = utils.vary_reverse(
-      theme.orange,
+      theme.editor.search,
       utils.vary_color(config, { summer = theme.text }, theme.crust),
       config.style.incsearch
     ),

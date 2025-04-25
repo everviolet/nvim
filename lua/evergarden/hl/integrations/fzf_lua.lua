@@ -14,7 +14,7 @@ M.get = function(theme, _)
     FzfLuaTabTitle = { link = 'Title' },
     FzfLuaTabMarker = { link = '@attribute' },
 
-    FzfLuaFzfMatch = { link = 'IncSearch' },
+    FzfLuaFzfMatch = { theme.editor.search },
     FzfLuaFzfPointer = { theme.accent },
     FzfLuaFzfMarker = { theme.yellow },
     FzfLuaFzfPrompt = { theme.pink },
