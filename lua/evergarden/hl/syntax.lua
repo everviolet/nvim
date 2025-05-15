@@ -51,9 +51,9 @@ return function(theme, config)
     ['@keyword.export'] = { theme.overlay1 },
     ['@attribute'] = { theme.cherry },
 
-    -- TODO:
-    ['@module'] = { link = '@constant' },
-    ['@module.builtin'] = { link = '@constant.builtin' },
+    -- modules
+    ['@module'] = { theme.snow },
+    ['@module.builtin'] = { link = '@module' },
 
     ['@operator'] = { theme.syntax.operator },
 
