@@ -1,9 +1,229 @@
 
 ------------------------------------------------------------------------------
+                                                             *evergarden.config*
+for default options see |evergarden.config.default|
+Class ~
+{evergarden.types.config}
+Fields ~
+{theme} evergarden.types.config.theme -- |evergarden.config.theme|
+{editor} evergarden.types.config.editor -- |evergarden.config.editor|
+{style} `(optional)` evergarden.types.styleconfig -- |evergarden.styleconfig|
+{integrations} `(optional)` evergarden.types.config.integrations -- |evergarden.integrations|
+{color_overrides} `(optional)` evergarden.types.colors
+Usage ~
+
+twilight variant:
+>lua
+ color_overrides = {
+   base = '#151A1D',
+   mantle = '#13171A',
+   crust = '#0F1214',
+ },
+<
+{overrides} `(optional)` `(evergarden.types.hlgroups|fun(colors: evergarden.types.colors): evergarden.types.hlgroups)`
+Usage ~
+
+>lua
+ overrides = {
+   Normal = {
+     '#fddce3',
+     '#1d2021',
+
+     -- Additional highlight options can be included here
+     style = { 'bold', 'italic' }
+   },
+   Keyword = {
+     fg = '#ce96de',
+     bg = '#ae45be',
+   },
+ },
+<
+or use a function to gain access to the theme colors:
+>lua
+ overrides = function(colors)
+   return {
+     Normal = {
+       fg = colors.text,
+       bg = colors.crust,
+     },
+     Keyword = {
+       fg = colors.purple,
+     },
+   }
+ end
+<
+------------------------------------------------------------------------------
+                                                       *evergarden.config.theme*
+Class ~
+{evergarden.types.config.theme}
+Fields ~
+{variant} `(optional)` evergarden.types.variant
+{accent} `(optional)` evergarden.types.colors.enum
+
+------------------------------------------------------------------------------
+                                                      *evergarden.config.editor*
+Class ~
+{evergarden.types.config.editor}
+Fields ~
+{transparent_background} `(optional)` `(boolean)`
+{override_terminal} `(optional)` `(boolean)`
+{sign} `(optional)` { color: evergarden.types.colors.enum|'none' }
+{float} `(optional)` { color: evergarden.types.colors.enum|'none', invert_border: `(boolean)` }
+{completion} `(optional)` { color: evergarden.types.colors.enum|'none' }
+
+------------------------------------------------------------------------------
+                                                        *evergarden.styleconfig*
+Class ~
+{evergarden.types.styleconfig}
+Fields ~
+{tabline} evergarden.types.styleopt
+{search} evergarden.types.styleopt
+{incsearch} evergarden.types.styleopt
+{types} evergarden.types.styleopt
+{keyword} evergarden.types.styleopt
+{comment} evergarden.types.styleopt
+{spell} evergarden.types.styleopt
+Usage ~
+
+>lua
+ style = {
+   tabline = { 'reverse' },
+   search = { 'italic', 'reverse' },
+   incsearch = { },
+   types = { 'italic' },
+   keyword = { 'italic' },
+   comment = { 'italic' },
+   spell = { 'underdotted' },
+ },
+<
+------------------------------------------------------------------------------
+                                                       *evergarden.integrations*
+Class ~
+{evergarden.types.config.integrations}
+Fields ~
+{blink_cmp} `(optional)` `(boolean)` Saghen/blink.cmp
+{cmp} `(optional)` `(boolean)` hrsh7th/nvim-cmp
+{fzf_lua} `(optional)` `(boolean)` ibhagwan/fzf-lua
+{gitsigns} `(optional)` `(boolean)` lewis6991/gitsigns.nvim
+{indent_blankline} `(optional)` { enable: `(boolean,)` scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
+{lualine} `(optional)` `(boolean)` nvim-lualine/lualine.nvim
+{mini} `(optional)` evergarden.types.config.integrations.mini echasnovski/mini.nvim
+{neotree} `(optional)` `(boolean)` nvim-neo-tree/neo-tree.nvim
+{nvimtree} `(optional)` `(boolean)` nvim-tree/nvim-tree.lua
+{rainbow_delimiters} `(optional)` `(boolean)` hiphish/rainbow-delimiters.nvim
+{semantic_tokens} `(optional)` `(boolean)`
+{symbols_outline} `(optional)` `(boolean)` simrat39/symbols-outline.nvim
+{telescope} `(optional)` `(boolean)` nvim-telescope/telescope.nvim
+{which_key} `(optional)` `(boolean)` folke/which-key.nvim
+
+------------------------------------------------------------------------------
+allows enabling integrations for different mini plugins
+Class ~
+{evergarden.types.config.integrations.mini}
+Fields ~
+{enable} `(boolean)`
+{animate} `(boolean)`
+{clue} `(boolean)`
+{completion} `(boolean)`
+{cursorword} `(boolean)`
+{deps} `(boolean)`
+{diff} `(boolean)`
+{files} `(boolean)`
+{hipatterns} `(boolean)`
+{icons} `(boolean)`
+{indentscope} `(boolean)`
+{jump} `(boolean)`
+{jump2d} `(boolean)`
+{map} `(boolean)`
+{notify} `(boolean)`
+{operators} `(boolean)`
+{pick} `(boolean)`
+{starters} `(boolean)`
+{statusline} `(boolean)`
+{surround} `(boolean)`
+{tabline} `(boolean)`
+{test} `(boolean)`
+{trailspace} `(boolean)`
+
+------------------------------------------------------------------------------
                                                      *evergarden.config.default*
                           `evergarden.config.default`
 Type ~
 evergarden.types.config
+>lua
+  M.default = {
+    theme = {
+      variant = 'winter'|'fall'|'spring'|'summer'
+      accent = 'green',
+    },
+    editor = {
+      transparent_background = false,
+      override_terminal = true,
+      sign = { color = 'none' },
+      float = {
+        --- background color used for floating windows
+        color = 'mantle',
+        invert_border = false,
+      },
+      completion = {
+        --- background color used for completion windows
+        color = 'surface0',
+      },
+    },
+    style = {
+      tabline = { 'reverse' },
+      search = { 'italic', 'reverse' },
+      incsearch = { },
+      types = { 'italic' },
+      keyword = { 'italic' },
+      comment = { 'italic' },
+      spell = { 'underdotted' },
+    },
+    integrations = {
+      blink_cmp = true,
+      cmp = true,
+      fzf_lua = true,
+      gitsigns = true,
+      indent_blankline = { enable = true, scope_color = 'green' },
+      lualine = true,
+      mini = {
+        enable = true,
+        animate = true,
+        clue = true,
+        completion = true,
+        cursorword = true,
+        deps = true,
+        diff = true,
+        files = true,
+        hipatterns = true,
+        icons = true,
+        indentscope = true,
+        jump = true,
+        jump2d = true,
+        map = true,
+        notify = true,
+        operators = true,
+        pick = true,
+        starters = true,
+        statusline = true,
+        surround = true,
+        tabline = true,
+        test = true,
+        trailspace = true,
+      },
+      neotree = true,
+      nvimtree = true,
+      rainbow_delimiters = true,
+      semantic_tokens = true,
+      symbols_outline = true,
+      telescope = true,
+      which_key = true,
+    },
+    overrides = {},
+    color_overrides = {},
+  }
+<
+# Default ~
 
 ------------------------------------------------------------------------------
                                                       *evergarden.config.config*

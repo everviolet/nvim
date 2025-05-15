@@ -1,4 +1,5 @@
 clamp()	evergarden-utils.txt	/*clamp()*
+evergarden	evergarden-init.txt	/*evergarden*
 evergarden.colors.colors	evergarden-colors.txt	/*evergarden.colors.colors*
 evergarden.colors.fall	evergarden-colors.txt	/*evergarden.colors.fall*
 evergarden.colors.get()	evergarden-colors.txt	/*evergarden.colors.get()*
@@ -6,14 +7,19 @@ evergarden.colors.get_shades()	evergarden-colors.txt	/*evergarden.colors.get_sha
 evergarden.colors.spring	evergarden-colors.txt	/*evergarden.colors.spring*
 evergarden.colors.summer	evergarden-colors.txt	/*evergarden.colors.summer*
 evergarden.colors.winter	evergarden-colors.txt	/*evergarden.colors.winter*
+evergarden.config	evergarden-config.txt	/*evergarden.config*
 evergarden.config.config	evergarden-config.txt	/*evergarden.config.config*
 evergarden.config.default	evergarden-config.txt	/*evergarden.config.default*
+evergarden.config.editor	evergarden-config.txt	/*evergarden.config.editor*
 evergarden.config.get()	evergarden-config.txt	/*evergarden.config.get()*
 evergarden.config.merge()	evergarden-config.txt	/*evergarden.config.merge()*
 evergarden.config.override()	evergarden-config.txt	/*evergarden.config.override()*
 evergarden.config.set()	evergarden-config.txt	/*evergarden.config.set()*
+evergarden.config.theme	evergarden-config.txt	/*evergarden.config.theme*
+evergarden.integrations	evergarden-config.txt	/*evergarden.integrations*
 evergarden.load()	evergarden-init.txt	/*evergarden.load()*
 evergarden.setup()	evergarden-init.txt	/*evergarden.setup()*
+evergarden.styleconfig	evergarden-config.txt	/*evergarden.styleconfig*
 evergarden.theme.setup()	evergarden-theme.txt	/*evergarden.theme.setup()*
 evergarden.utils.blend()	evergarden-utils.txt	/*evergarden.utils.blend()*
 evergarden.utils.is_reverse()	evergarden-utils.txt	/*evergarden.utils.is_reverse()*

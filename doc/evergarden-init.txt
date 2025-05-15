@@ -1,7 +1,12 @@
+*evergarden*
+cozy evergarden theme for neovim
+
+for configuration see |evergarden.config|
 
 ------------------------------------------------------------------------------
                                                             *evergarden.setup()*
                            `evergarden.setup`({cfg})
+for configuration see |evergarden.config|
 Parameters ~
 {cfg} `(optional)` `(evergarden.types.config|table)`
 

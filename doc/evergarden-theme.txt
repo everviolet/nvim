@@ -1,22 +1,10 @@
 
 ------------------------------------------------------------------------------
 Class ~
-{evergarden.types.styleconfig}
-Fields ~
-{tabline} evergarden.types.styleopt
-{search} evergarden.types.styleopt
-{incsearch} evergarden.types.styleopt
-{types} evergarden.types.styleopt
-{keyword} evergarden.types.styleopt
-{comment} evergarden.types.styleopt
-{spell} evergarden.types.styleopt
-
-------------------------------------------------------------------------------
-Class ~
 {evergarden.types.theme}
 Fields ~
-{none} `(string)`
-{colors} evergarden.types.colors
+{none} `(string)` -- 'NONE'
+{colors} evergarden.types.colors -- copy of colors
 {text} `(string)`
 {subtext1} `(string)`
 {subtext0} `(string)`
@@ -51,6 +39,7 @@ Fields ~
 {comment} `(string)`
 
 ------------------------------------------------------------------------------
+colors for different ui elements in the editor
 Class ~
 {evergarden.types.editor}
 Fields ~
@@ -59,6 +48,7 @@ Fields ~
 {completion} `(string)`
 
 ------------------------------------------------------------------------------
+color definitions for syntax groups
 Class ~
 {evergarden.types.syntax}
 Fields ~
