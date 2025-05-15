@@ -1,3 +1,5 @@
+---@module 'evergarden.types'
+
 ---@alias evergarden.types.variant 'winter'|'fall'|'spring'|'summer'
 
 ---@class evergarden.types.config

@@ -1,3 +1,5 @@
+---@module 'evergarden.overlay'
+
 ---@class evergarden.types.overlay
 ---@field __index evergarden.types.overlay
 ---@field value evergarden.types.hlgroups.OL

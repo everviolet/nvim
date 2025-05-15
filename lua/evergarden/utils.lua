@@ -1,3 +1,5 @@
+---@module 'evergarden.utils'
+
 local M = {}
 
 ---@param min number

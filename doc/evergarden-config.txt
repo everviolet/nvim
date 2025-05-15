@@ -1,0 +1,44 @@
+
+------------------------------------------------------------------------------
+                                                     *evergarden.config.default*
+                          `evergarden.config.default`
+Type ~
+evergarden.types.config
+
+------------------------------------------------------------------------------
+                                                      *evergarden.config.config*
+                           `evergarden.config.config`
+Type ~
+evergarden.types.config
+
+------------------------------------------------------------------------------
+                                                     *evergarden.config.merge()*
+                     `evergarden.config.merge`({t1}, {t2})
+Parameters ~
+{t1} evergarden.types.config
+{t2} evergarden.types.config
+Return ~
+evergarden.types.config
+
+------------------------------------------------------------------------------
+                                                       *evergarden.config.get()*
+                           `evergarden.config.get`()
+Return ~
+evergarden.types.config
+
+------------------------------------------------------------------------------
+                                                  *evergarden.config.override()*
+                      `evergarden.config.override`({cfg})
+Parameters ~
+{cfg} evergarden.types.config
+Return ~
+evergarden.types.config
+
+------------------------------------------------------------------------------
+                                                       *evergarden.config.set()*
+                         `evergarden.config.set`({cfg})
+Parameters ~
+{cfg} evergarden.types.config
+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

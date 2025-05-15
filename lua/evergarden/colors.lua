@@ -1,3 +1,5 @@
+---@module 'evergarden.colors'
+
 local M = {}
 
 ---@type evergarden.types.colors

@@ -1,3 +1,5 @@
+---@module 'evergarden.config'
+
 local M = {}
 
 ---@type evergarden.types.config

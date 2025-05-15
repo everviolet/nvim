@@ -1,3 +1,5 @@
+---@module 'evergarden'
+
 local config = require 'evergarden.config'
 
 local evergarden = {}

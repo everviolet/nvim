@@ -1,0 +1,18 @@
+
+------------------------------------------------------------------------------
+                                                                       *overlay*
+                                   `overlay`
+Class ~
+{evergarden.types.overlay}
+Fields ~
+{__index} evergarden.types.overlay
+{value} evergarden.types.hlgroups.OL
+
+------------------------------------------------------------------------------
+                                                                *overlay:fold()*
+                                `overlay:fold`()
+Return ~
+evergarden.types.hlgroups
+
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

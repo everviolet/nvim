@@ -1,3 +1,5 @@
+---@module 'evergarden.theme'
+
 ---@class evergarden.types.styleconfig
 ---@field tabline evergarden.types.styleopt
 ---@field search evergarden.types.styleopt

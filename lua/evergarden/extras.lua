@@ -1,3 +1,5 @@
+---@module 'evergarden.extra'
+
 local M = {}
 
 local name = 'evergarden'
