@@ -1,17 +1,8 @@
 ---@module 'evergarden.theme'
 
----@class evergarden.types.styleconfig
----@field tabline evergarden.types.styleopt
----@field search evergarden.types.styleopt
----@field incsearch evergarden.types.styleopt
----@field types evergarden.types.styleopt
----@field keyword evergarden.types.styleopt
----@field comment evergarden.types.styleopt
----@field spell evergarden.types.styleopt
-
 ---@class evergarden.types.theme
----@field none string
----@field colors evergarden.types.colors
+---@field none string -- 'NONE'
+---@field colors evergarden.types.colors -- copy of colors
 ---@field text string
 ---@field subtext1 string
 ---@field subtext0 string
@@ -45,11 +36,13 @@
 ---@field sign string
 ---@field comment string
 
+--- colors for different ui elements in the editor
 ---@class evergarden.types.editor
 ---@field search string
 ---@field float string
 ---@field completion string
 
+--- color definitions for syntax groups
 ---@class evergarden.types.syntax
 ---@field keyword string
 ---@field identifier string

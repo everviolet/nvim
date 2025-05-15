@@ -1,11 +1,142 @@
 ---@module 'evergarden.config'
 
+--- for default options see |evergarden.config.default|
+---@tag evergarden.config
+---@class evergarden.types.config
+---@field theme evergarden.types.config.theme -- |evergarden.config.theme|
+---@field editor evergarden.types.config.editor -- |evergarden.config.editor|
+---@field style? evergarden.types.styleconfig -- |evergarden.styleconfig|
+---@field integrations? evergarden.types.config.integrations -- |evergarden.integrations|
+---@field color_overrides? evergarden.types.colors
+---@usage
+--- twilight variant:
+--- >lua
+---  color_overrides = {
+---    base = '#151A1D',
+---    mantle = '#13171A',
+---    crust = '#0F1214',
+---  },
+--- <
+---@field overrides? evergarden.types.hlgroups|fun(colors: evergarden.types.colors): evergarden.types.hlgroups
+---@usage
+--- >lua
+---  overrides = {
+---    Normal = {
+---      '#fddce3',
+---      '#1d2021',
+---
+---      -- Additional highlight options can be included here
+---      style = { 'bold', 'italic' }
+---    },
+---    Keyword = {
+---      fg = '#ce96de',
+---      bg = '#ae45be',
+---    },
+---  },
+--- <
+--- or use a function to gain access to the theme colors:
+--- >lua
+---  overrides = function(colors)
+---    return {
+---      Normal = {
+---        fg = colors.text,
+---        bg = colors.crust,
+---      },
+---      Keyword = {
+---        fg = colors.purple,
+---      },
+---    }
+---  end
+--- <
+
+---@tag evergarden.config.theme
+---@class evergarden.types.config.theme
+---@field variant? evergarden.types.variant
+---@field accent? evergarden.types.colors.enum
+
+---@tag evergarden.config.editor
+---@class evergarden.types.config.editor
+---@field transparent_background? boolean
+---@field override_terminal? boolean
+---@field sign? { color: evergarden.types.colors.enum|'none' }
+---@field float? { color: evergarden.types.colors.enum|'none', invert_border: boolean }
+---@field completion? { color: evergarden.types.colors.enum|'none' }
+
+---@tag evergarden.styleconfig
+---@class evergarden.types.styleconfig
+---@field tabline evergarden.types.styleopt
+---@field search evergarden.types.styleopt
+---@field incsearch evergarden.types.styleopt
+---@field types evergarden.types.styleopt
+---@field keyword evergarden.types.styleopt
+---@field comment evergarden.types.styleopt
+---@field spell evergarden.types.styleopt
+---@usage
+--- >lua
+---  style = {
+---    tabline = { 'reverse' },
+---    search = { 'italic', 'reverse' },
+---    incsearch = { },
+---    types = { 'italic' },
+---    keyword = { 'italic' },
+---    comment = { 'italic' },
+---    spell = { 'underdotted' },
+---  },
+--- <
+
+---@tag evergarden.integrations
+---@class evergarden.types.config.integrations
+---@field blink_cmp? boolean Saghen/blink.cmp
+---@field cmp? boolean hrsh7th/nvim-cmp
+---@field fzf_lua? boolean ibhagwan/fzf-lua
+---@field gitsigns? boolean lewis6991/gitsigns.nvim
+---@field indent_blankline? { enable: boolean, scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
+---@field lualine? boolean nvim-lualine/lualine.nvim
+---@field mini? evergarden.types.config.integrations.mini echasnovski/mini.nvim
+---@field neotree? boolean nvim-neo-tree/neo-tree.nvim
+---@field nvimtree? boolean nvim-tree/nvim-tree.lua
+---@field rainbow_delimiters? boolean hiphish/rainbow-delimiters.nvim
+---@field semantic_tokens? boolean
+---@field symbols_outline? boolean simrat39/symbols-outline.nvim
+---@field telescope? boolean nvim-telescope/telescope.nvim
+---@field which_key? boolean folke/which-key.nvim
+
+--- allows enabling integrations for different mini plugins
+---@class evergarden.types.config.integrations.mini
+---@field enable boolean
+---@field animate boolean
+---@field clue boolean
+---@field completion boolean
+---@field cursorword boolean
+---@field deps boolean
+---@field diff boolean
+---@field files boolean
+---@field hipatterns boolean
+---@field icons boolean
+---@field indentscope boolean
+---@field jump boolean
+---@field jump2d boolean
+---@field map boolean
+---@field notify boolean
+---@field operators boolean
+---@field pick boolean
+---@field starters boolean
+---@field statusline boolean
+---@field surround boolean
+---@field tabline boolean
+---@field test boolean
+---@field trailspace boolean
+
 local M = {}
 
 ---@type evergarden.types.config
+---@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
+---@text # Default ~
 M.default = {
   theme = {
+    --minidoc_replace_start variant = 'winter'|'fall'|'spring'|'summer'
     variant = 'fall',
+    --minidoc_replace_end
     accent = 'green',
   },
   editor = {
@@ -13,10 +144,12 @@ M.default = {
     override_terminal = true,
     sign = { color = 'none' },
     float = {
+      --- background color used for floating windows
       color = 'mantle',
       invert_border = false,
     },
     completion = {
+      --- background color used for completion windows
       color = 'surface0',
     },
   },
@@ -72,6 +205,7 @@ M.default = {
   overrides = {},
   color_overrides = {},
 }
+--minidoc_afterlines_end
 
 ---@type evergarden.types.config
 ---@diagnostic disable-next-line: missing-fields

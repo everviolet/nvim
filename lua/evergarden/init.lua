@@ -1,9 +1,14 @@
+--- *evergarden*
+--- cozy evergarden theme for neovim
+---
+--- for configuration see |evergarden.config|
 ---@module 'evergarden'
 
 local config = require 'evergarden.config'
 
 local evergarden = {}
 
+--- for configuration see |evergarden.config|
 ---@param cfg? evergarden.types.config|table
 function evergarden.setup(cfg)
   cfg = cfg or {}
