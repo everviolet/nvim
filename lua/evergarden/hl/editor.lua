@@ -142,10 +142,10 @@ return function(theme, config)
     Changed = { link = '@diff.change' },
 
     -- Spell
-    SpellBad = { theme.red, style = { 'italic' } },
-    SpellCap = { theme.aqua, style = { 'italic' } },
-    SpellLocal = { theme.aqua, style = { 'italic' } },
-    SpellRare = { theme.aqua, style = { 'italic' } },
+    SpellBad = { theme.red, style = config.style.spell },
+    SpellCap = { theme.aqua, style = config.style.spell },
+    SpellLocal = { theme.aqua, style = config.style.spell },
+    SpellRare = { theme.aqua, style = config.style.spell },
 
     -- WinBar
     WinBar = { theme.subtext0 },

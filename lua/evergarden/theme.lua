@@ -5,6 +5,7 @@
 ---@field types evergarden.types.styleopt
 ---@field keyword evergarden.types.styleopt
 ---@field comment evergarden.types.styleopt
+---@field spell evergarden.types.styleopt
 
 ---@class evergarden.types.theme
 ---@field none string

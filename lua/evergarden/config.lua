@@ -25,6 +25,7 @@ M.default = {
     types = { 'italic' },
     keyword = { 'italic' },
     comment = { 'italic' },
+    spell = { 'underdotted' },
   },
   integrations = {
     blink_cmp = true,
