@@ -9,7 +9,7 @@ return function(theme, config)
       config.editor.transparent_background and theme.none or theme.base,
     },
 
-    Cursor = { theme.yellow },
+    Cursor = { theme.accent },
     CursorLine = { theme.none, theme.surface0 },
     CursorColumn = { theme.none, theme.surface0 },
     QuickFixLine = { theme.none, theme.surface0 },
