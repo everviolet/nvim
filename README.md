@@ -222,6 +222,7 @@ require 'evergarden'.setup {
 - [alacritty](https://github.com/everviolet/alacritty)
 - [iterm](https://github.com/everviolet/iterm)
 - [kitty](https://github.com/everviolet/kitty)
+- [ghostty](https://github.com/everviolet/ghostty)
 - [tmux](https://github.com/everviolet/tmux)
 - [discord](https://github.com/everviolet/discord)
 - [home-manager](https://github.com/everviolet/nix)
