@@ -219,12 +219,10 @@ require 'evergarden'.setup {
 
 ## :sparkles: Extras
 
-- [alacritty](https://github.com/everviolet/alacritty)
-- [iterm](https://github.com/everviolet/iterm)
-- [kitty](https://github.com/everviolet/kitty)
-- [tmux](https://github.com/everviolet/tmux)
-- [discord](https://github.com/everviolet/discord)
-- [home-manager](https://github.com/everviolet/nix)
+evergarden has been brought to many tools and editors by kind contributors you
+can explore them on the [ports page of the official site](https://everviolet.xyz/ports).
+
+new ports are always welcome - if you’ve made one, feel free to reach out!
 
 ## License
 
