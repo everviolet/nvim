@@ -48,7 +48,7 @@ function evergarden.load(cfg)
     require('evergarden.cache').clear()
   end
 
-  require('evergarden.utils').set_highlights(hlgroups, cache)
+  require('evergarden.utils').set_highlights(hlgroups)
 
   if cache then
     require('evergarden.cache').write(cfg)
