@@ -103,7 +103,7 @@ return function(theme, config)
     ['@uri'] = { link = '@string.special.url' },
 
     -- tags
-    ['@tag'] = { link = '@punctuation.delimiter' }, -- XML-style tag names (e.g. in XML, HTML, etc.)
+    ['@tag'] = { theme.syntax.property }, -- XML-style tag names (e.g. in XML, HTML, etc.)
     ['@tag.builtin'] = { link = '@tag' }, -- JSX tags
     ['@tag.attribute'] = { link = '@attribute' }, -- XML-style tag attributes
     ['@tag.delimiter'] = { link = '@punctuation.delimiter' }, -- XML-style tag delimiters
