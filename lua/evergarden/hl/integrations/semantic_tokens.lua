@@ -30,7 +30,7 @@ M.get = function(theme, config)
     ['@lsp.type.variable'] = { link = '@variable' }, -- Identifiers that declare or reference a local or global variable
 
     ['@lsp.mod.abstract'] = {}, -- Types and member functions that are abstract
-    ['@lsp.mod.async'] = { link = '@keyword.coroutine' }, -- Functions that are marked async
+    ['@lsp.mod.async'] = {}, -- Functions that are marked async
     ['@lsp.mod.declaration'] = {}, -- Declarations of symbols
     ['@lsp.mod.defaultLibrary'] = {}, -- Symbols that are part of the standard library
     ['@lsp.mod.definition'] = {}, -- Definitions of symbols, for example, in header files
