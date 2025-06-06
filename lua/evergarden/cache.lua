@@ -14,10 +14,22 @@ cache.path = {
 cache.colors = {}
 
 ---@param cfg? evergarden.types.config
----@return number
+---@return string
 function cache.cached_cfg(cfg)
+  local git_path = vim.fs.joinpath(debug.getinfo(1).source:sub(2, -(#("/lua/evergarden/cache.lua"))) .. ".git", "HEAD")
+
+  local git_ref = nil
+  local git_file = io.open(git_path, 'rb')
+  if not git_file then
+    git_ref = 0
+  else
+    git_ref = git_file:read 'l'
+    git_file:close()
+  end
+
   cfg = cfg or require('evergarden.config').get()
-  return require('evergarden.utils').hash(cfg)
+
+  return git_ref .. tostring(require('evergarden.utils').hash(cfg))
 end
 
 ---@param cfg? evergarden.types.config
