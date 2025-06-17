@@ -19,8 +19,8 @@ return function(theme, config)
       utils.vary_color(config, { summer = theme.surface0 }, theme.surface1),
     },
 
-    LineNr = { theme.surface1 },
-    CursorLineNr = { theme.overlay1 },
+    LineNr = { theme.surface2 },
+    CursorLineNr = { theme.overlay2 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
       config.editor.transparent_background and theme.mantle or theme.surface0,
