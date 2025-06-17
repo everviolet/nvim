@@ -27,8 +27,8 @@ M.fall = {
   overlay1 = '#6F8788',
   overlay0 = '#58686D',
   surface2 = '#4A585C',
-  surface1 = '#3D494D',
-  surface0 = '#313B40',
+  surface1 = '#374145',
+  surface0 = '#2B3337',
   base = '#232A2E',
   mantle = '#1C2225',
   crust = '#171C1F',
@@ -36,14 +36,16 @@ M.fall = {
 
 ---@type evergarden.types.colors
 M.winter = {
-  surface0 = '#2D393D',
-  base = '#1D2428',
+  surface0 = '#262F33',
+  base = '#1E2528',
   mantle = '#191E21',
 }
 
 ---@type evergarden.types.colors
 M.spring = {
-  base = '#2B3538',
+  surface1 = '#3E4A4F',
+  surface0 = '#343E43',
+  base = '#2B3438',
   mantle = M.fall.base,
   crust = M.fall.mantle,
 }
