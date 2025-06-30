@@ -73,9 +73,9 @@ M.summer = {
   surface2 = '#9CB2B8',
   surface1 = '#B4C6CC',
   surface0 = '#CED9E0',
-  base = '#D5DFE8',
-  mantle = '#D1DCE6',
-  crust = '#C6D3E1',
+  base = '#D7E1EB',
+  mantle = '#C8D5E1',
+  crust = '#BDCBDB',
 }
 
 ---@param cfg? evergarden.types.config
