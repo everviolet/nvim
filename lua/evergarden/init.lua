@@ -8,6 +8,7 @@ local config = require 'evergarden.config'
 
 local evergarden = {}
 
+--- override the global config with custom options.
 --- for configuration see |evergarden.config|
 ---@param cfg? evergarden.types.config|table
 function evergarden.setup(cfg)
@@ -15,6 +16,8 @@ function evergarden.setup(cfg)
   config.set(config.override(cfg))
 end
 
+--- setup highlights using `cfg`.
+--- can be used to temporarily override the global config.
 ---@param cfg? evergarden.types.config|table
 function evergarden.load(cfg)
   if vim.g.colors_name then
@@ -55,6 +58,8 @@ function evergarden.load(cfg)
   end
 end
 
+--- returns a table of colors based on the global config.
+--- alias for |evergarden.colors.get()|.
 function evergarden.colors()
   return require('evergarden.colors').get()
 end
