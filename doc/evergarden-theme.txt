@@ -4,7 +4,7 @@ Class ~
 {evergarden.types.theme}
 Fields ~
 {none} `(string)` -- 'NONE'
-{colors} evergarden.types.colors -- copy of colors
+{colors} `(evergarden.types.colors)` -- copy of colors
 {text} `(string)`
 {subtext1} `(string)`
 {subtext0} `(string)`
@@ -30,11 +30,11 @@ Fields ~
 {pink} `(string)`
 {cherry} `(string)`
 {accent} `(string)`
-{editor} evergarden.types.editor
-{syntax} evergarden.types.syntax
-{diagnostic} { ['ok'|'error'|'warn'|'info'|'hint']: `(string)` }
-{diff} { ['add'|'delete'|'change']: `(string)` }
-{git} { ['staged'|'unstaged'|'ignored'|'untracked']: `(string)` }
+{editor} `(evergarden.types.editor)`
+{syntax} `(evergarden.types.syntax)`
+{diagnostic} `({ ['ok'|'error'|'warn'|'info'|'hint']: string })`
+{diff} `({ ['add'|'delete'|'change']: string })`
+{git} `({ ['staged'|'unstaged'|'ignored'|'untracked']: string })`
 {sign} `(string)`
 {comment} `(string)`
 
@@ -68,10 +68,10 @@ Fields ~
                                                       *evergarden.theme.setup()*
                   `evergarden.theme.setup`({config}, {colors})
 Parameters ~
-{config} `(optional)` evergarden.types.config
-{colors} `(optional)` evergarden.types.colors
+{config} `(optional)` `(evergarden.types.config)`
+{colors} `(optional)` `(evergarden.types.colors)`
 Return ~
-evergarden.types.theme
+`(evergarden.types.theme)`
 
 
  vim:tw=78:ts=8:noet:ft=help:norl:

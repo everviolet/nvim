@@ -14,19 +14,19 @@ Return ~
                   `evergarden.utils.set_hl`({group}, {colors})
 Parameters ~
 {group} `(string)`
-{colors} evergarden.types.colorspec
+{colors} `(evergarden.types.colorspec)`
 
 ------------------------------------------------------------------------------
                                              *evergarden.utils.set_highlights()*
                  `evergarden.utils.set_highlights`({hlgroups})
 Parameters ~
-{hlgroups} evergarden.types.hlgroups.OL
+{hlgroups} `(evergarden.types.hlgroups.OL)`
 
 ------------------------------------------------------------------------------
                                                  *evergarden.utils.is_reverse()*
                      `evergarden.utils.is_reverse`({style})
 Parameters ~
-{style} evergarden.types.styleopt
+{style} `(evergarden.types.styleopt)`
 Return ~
 `(integer)`
 
@@ -35,24 +35,24 @@ Return ~
           `evergarden.utils.vary_color`({config}, {props}, {default})
 T
 Parameters ~
-{config} evergarden.types.config
-{props} { [evergarden.types.variant]: T }
-{default} T
+{config} `(evergarden.types.config)`
+{props} `({ [evergarden.types.variant]: T })`
+{default} `(T)`
 Return ~
-T `(optional)`
+`(T)` `(optional)`
 
 ------------------------------------------------------------------------------
                                                *evergarden.utils.vary_reverse()*
        `evergarden.utils.vary_reverse`({fg}, {bg}, {style}, {rfg}, {rbg})
 T
 Parameters ~
-{fg} T
-{bg} T
-{style} evergarden.types.styleopt
-{rfg} `(optional)` T
-{rbg} `(optional)` T
+{fg} `(T)`
+{bg} `(T)`
+{style} `(evergarden.types.styleopt)`
+{rfg} `(optional)` `(T)`
+{rbg} `(optional)` `(T)`
 Return ~
-evergarden.types.colorspec
+`(evergarden.types.colorspec)`
 
 ------------------------------------------------------------------------------
                                                                   *hex_to_rgb()*
@@ -75,11 +75,27 @@ Return ~
                                              *evergarden.utils.make_hl_loader()*
           `evergarden.utils.make_hl_loader`({hls}, {theme}, {config})
 Parameters ~
-{hls} evergarden.types.hlgroups.OL
-{theme} evergarden.types.theme
-{config} evergarden.types.config }
+{hls} `(evergarden.types.hlgroups.OL)`
+{theme} `(evergarden.types.theme)`
+{config} `(evergarden.types.config)` }
 Return ~
 `(fun(modbase: string, lst: string[]))`
+
+------------------------------------------------------------------------------
+                                                                    *hash_str()*
+                                `hash_str`({s})
+Parameters ~
+{s} `(string)`
+Return ~
+`(number)`
+
+------------------------------------------------------------------------------
+                                                       *evergarden.utils.hash()*
+                          `evergarden.utils.hash`({v})
+Parameters ~
+{v} `(any)`
+Return ~
+`(number|any)`
 
 
  vim:tw=78:ts=8:noet:ft=help:norl:

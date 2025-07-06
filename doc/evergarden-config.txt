@@ -5,11 +5,12 @@ for default options see |evergarden.config.default|
 Class ~
 {evergarden.types.config}
 Fields ~
-{theme} evergarden.types.config.theme -- |evergarden.config.theme|
-{editor} evergarden.types.config.editor -- |evergarden.config.editor|
-{style} `(optional)` evergarden.types.styleconfig -- |evergarden.styleconfig|
-{integrations} `(optional)` evergarden.types.config.integrations -- |evergarden.integrations|
-{color_overrides} `(optional)` evergarden.types.colors
+{theme} `(evergarden.types.config.theme)` -- |evergarden.config.theme|
+{editor} `(evergarden.types.config.editor)` -- |evergarden.config.editor|
+{cache} `(optional)` `(boolean)` -- |evergarden.cache|
+{style} `(optional)` `(evergarden.types.styleconfig)` -- |evergarden.styleconfig|
+{integrations} `(optional)` `(evergarden.types.config.integrations)` -- |evergarden.integrations|
+{color_overrides} `(optional)` `(evergarden.types.colors)`
 Usage ~
 
 twilight variant:
@@ -57,8 +58,8 @@ or use a function to gain access to the theme colors:
 Class ~
 {evergarden.types.config.theme}
 Fields ~
-{variant} `(optional)` evergarden.types.variant
-{accent} `(optional)` evergarden.types.colors.enum
+{variant} `(optional)` `(evergarden.types.variant)`
+{accent} `(optional)` `(evergarden.types.colors.enum)`
 
 ------------------------------------------------------------------------------
                                                       *evergarden.config.editor*
@@ -67,22 +68,22 @@ Class ~
 Fields ~
 {transparent_background} `(optional)` `(boolean)`
 {override_terminal} `(optional)` `(boolean)`
-{sign} `(optional)` { color: evergarden.types.colors.enum|'none' }
-{float} `(optional)` { color: evergarden.types.colors.enum|'none', invert_border: `(boolean)` }
-{completion} `(optional)` { color: evergarden.types.colors.enum|'none' }
+{sign} `(optional)` `({ color: evergarden.types.colors.enum|'none' })`
+{float} `(optional)` `({ color: evergarden.types.colors.enum|'none', invert_border: boolean })`
+{completion} `(optional)` `({ color: evergarden.types.colors.enum|'none' })`
 
 ------------------------------------------------------------------------------
                                                         *evergarden.styleconfig*
 Class ~
 {evergarden.types.styleconfig}
 Fields ~
-{tabline} evergarden.types.styleopt
-{search} evergarden.types.styleopt
-{incsearch} evergarden.types.styleopt
-{types} evergarden.types.styleopt
-{keyword} evergarden.types.styleopt
-{comment} evergarden.types.styleopt
-{spell} evergarden.types.styleopt
+{tabline} `(evergarden.types.styleopt)`
+{search} `(evergarden.types.styleopt)`
+{incsearch} `(evergarden.types.styleopt)`
+{types} `(evergarden.types.styleopt)`
+{keyword} `(evergarden.types.styleopt)`
+{comment} `(evergarden.types.styleopt)`
+{spell} `(evergarden.types.styleopt)`
 Usage ~
 
 >lua
@@ -105,9 +106,10 @@ Fields ~
 {cmp} `(optional)` `(boolean)` hrsh7th/nvim-cmp
 {fzf_lua} `(optional)` `(boolean)` ibhagwan/fzf-lua
 {gitsigns} `(optional)` `(boolean)` lewis6991/gitsigns.nvim
-{indent_blankline} `(optional)` { enable: `(boolean,)` scope_color: evergarden.types.colors.enum } lukas-reineke/indent-blankline.nvim
+{indent_blankline} `(optional)` `({ enable: boolean, scope_color: evergarden.types.colors.enum })` lukas-reineke/indent-blankline.nvim
 {lualine} `(optional)` `(boolean)` nvim-lualine/lualine.nvim
-{mini} `(optional)` evergarden.types.config.integrations.mini echasnovski/mini.nvim
+{markit} `(optional)` `(boolean)`
+{mini} `(optional)` `(evergarden.types.config.integrations.mini)` echasnovski/mini.nvim
 {neotree} `(optional)` `(boolean)` nvim-neo-tree/neo-tree.nvim
 {nvimtree} `(optional)` `(boolean)` nvim-tree/nvim-tree.lua
 {rainbow_delimiters} `(optional)` `(boolean)` hiphish/rainbow-delimiters.nvim
@@ -149,7 +151,7 @@ Fields ~
                                                      *evergarden.config.default*
                           `evergarden.config.default`
 Type ~
-evergarden.types.config
+`(evergarden.types.config)`
 >lua
   M.default = {
     theme = {
@@ -186,6 +188,7 @@ evergarden.types.config
       gitsigns = true,
       indent_blankline = { enable = true, scope_color = 'green' },
       lualine = true,
+      markit = true,
       mini = {
         enable = true,
         animate = true,
@@ -221,6 +224,7 @@ evergarden.types.config
     },
     overrides = {},
     color_overrides = {},
+    cache = true,
   }
 <
 # Default ~
@@ -229,36 +233,36 @@ evergarden.types.config
                                                       *evergarden.config.config*
                            `evergarden.config.config`
 Type ~
-evergarden.types.config
+`(evergarden.types.config)`
 
 ------------------------------------------------------------------------------
                                                      *evergarden.config.merge()*
                      `evergarden.config.merge`({t1}, {t2})
 Parameters ~
-{t1} evergarden.types.config
-{t2} evergarden.types.config
+{t1} `(evergarden.types.config)`
+{t2} `(evergarden.types.config)`
 Return ~
-evergarden.types.config
+`(evergarden.types.config)`
 
 ------------------------------------------------------------------------------
                                                        *evergarden.config.get()*
                            `evergarden.config.get`()
 Return ~
-evergarden.types.config
+`(evergarden.types.config)`
 
 ------------------------------------------------------------------------------
                                                   *evergarden.config.override()*
                       `evergarden.config.override`({cfg})
 Parameters ~
-{cfg} evergarden.types.config
+{cfg} `(evergarden.types.config)`
 Return ~
-evergarden.types.config
+`(evergarden.types.config)`
 
 ------------------------------------------------------------------------------
                                                        *evergarden.config.set()*
                          `evergarden.config.set`({cfg})
 Parameters ~
-{cfg} evergarden.types.config
+{cfg} `(evergarden.types.config)`
 
 
  vim:tw=78:ts=8:noet:ft=help:norl:

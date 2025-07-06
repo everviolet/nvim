@@ -3,47 +3,47 @@
                                                       *evergarden.colors.colors*
                            `evergarden.colors.colors`
 Type ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 ------------------------------------------------------------------------------
                                                         *evergarden.colors.fall*
                             `evergarden.colors.fall`
 Type ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 ------------------------------------------------------------------------------
                                                       *evergarden.colors.winter*
                            `evergarden.colors.winter`
 Type ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 ------------------------------------------------------------------------------
                                                       *evergarden.colors.spring*
                            `evergarden.colors.spring`
 Type ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 ------------------------------------------------------------------------------
                                                       *evergarden.colors.summer*
                            `evergarden.colors.summer`
 Type ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 ------------------------------------------------------------------------------
                                                 *evergarden.colors.get_shades()*
                      `evergarden.colors.get_shades`({cfg})
 Parameters ~
-{cfg} `(optional)` evergarden.types.config
+{cfg} `(optional)` `(evergarden.types.config)`
 Return ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 ------------------------------------------------------------------------------
                                                        *evergarden.colors.get()*
                          `evergarden.colors.get`({cfg})
 Parameters ~
-{cfg} `(optional)` evergarden.types.config
+{cfg} `(optional)` `(evergarden.types.config)`
 Return ~
-evergarden.types.colors
+`(evergarden.types.colors)`
 
 
  vim:tw=78:ts=8:noet:ft=help:norl:
