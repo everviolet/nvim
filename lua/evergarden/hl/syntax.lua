@@ -146,7 +146,7 @@ return function(theme, config)
 
     ['@markup'] = { theme.text },
     ['@markup.strong'] = { theme.aqua, style = { 'bold' } },
-    ['@markup.italic'] = { theme.aqua, style = { 'italic' } },
+    ['@markup.italic'] = { theme.skye, style = { 'italic' } },
     ['@markup.quote'] = { link = '@comment' }, -- block quotes
     ['@markup.math'] = { link = '@markup.quote' }, -- math environments (e.g. `$ ... $` in LaTeX)
     ['@markup.environment'] = { link = '@markup.quote' }, -- environments (e.g. in LaTeX)
