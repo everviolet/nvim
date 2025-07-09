@@ -215,18 +215,41 @@ M.default = {
 ---@diagnostic disable-next-line: missing-fields
 M.config = {}
 
----@param t1 evergarden.types.config
----@param t2 evergarden.types.config
----@return evergarden.types.config
-function M.merge(t1, t2)
-  local t = vim.tbl_deep_extend('force', t1, t2)
+---@generic T: table|any[]
+---@param tdefault T
+---@param toverride T
+---@return T
+local function tmerge(tdefault, toverride)
+  if toverride == nil then
+    return tdefault
+  end
 
-  t.style = vim.iter(pairs(t2.style or {})):fold(t1.style, function(style, k, v)
-    style[k] = v
-    return style
+  if vim.islist(tdefault) then
+    return toverride
+  end
+  if vim.tbl_isempty(tdefault) then
+    return toverride
+  end
+
+  return vim.iter(pairs(tdefault)):fold({}, function(tnew, k, v)
+    if toverride[k] == nil or type(v) ~= type(toverride[k]) then
+      tnew[k] = v
+    end
+    if type(v) == 'table' then
+      tnew[k] = tmerge(v, toverride[k])
+    else
+      tnew[k] = toverride[k]
+    end
+
+    return tnew
   end)
+end
 
-  return t
+---@param tdefault evergarden.types.config
+---@param toverride evergarden.types.config
+---@return evergarden.types.config
+function M.merge(tdefault, toverride)
+  return tmerge(tdefault, toverride)
 end
 
 ---@return evergarden.types.config
