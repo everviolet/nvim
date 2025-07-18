@@ -9,7 +9,7 @@ M.get = function(theme, _)
     CmpItemKind = { theme.text },
     CmpItemMenu = { theme.syntax.constant, style = { 'italic' } },
 
-    CmpItemAbbrMatch = { theme.editor.search },
+    CmpItemAbbrMatch = { link = "PmenuMatch" },
     CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' },
 
     CmpItemKindText = { theme.text },
