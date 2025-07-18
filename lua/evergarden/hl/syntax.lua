@@ -67,8 +67,8 @@ return function(theme, config)
     ['@variable'] = { theme.syntax.identifier },
     ['@variable.builtin'] = { link = '@constant' },
     ['@variable.parameter'] = { link = '@variable' },
-    ['@variable.member'] = { theme.syntax.property },
-    ['@property'] = { link = '@variable.member' },
+    ['@variable.member'] = { link = '@property' },
+    ['@property'] = { theme.syntax.property },
 
     -- types
     ['@type'] = {
@@ -103,7 +103,7 @@ return function(theme, config)
     ['@uri'] = { link = '@string.special.url' },
 
     -- tags
-    ['@tag'] = { theme.syntax.property }, -- XML-style tag names (e.g. in XML, HTML, etc.)
+    ['@tag'] = { link = '@property' }, -- XML-style tag names (e.g. in XML, HTML, etc.)
     ['@tag.builtin'] = { link = '@tag' }, -- JSX tags
     ['@tag.attribute'] = { link = '@attribute' }, -- XML-style tag attributes
     ['@tag.delimiter'] = { link = '@punctuation.delimiter' }, -- XML-style tag delimiters

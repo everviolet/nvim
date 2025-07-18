@@ -5,9 +5,9 @@ return function(theme, config)
   return {
     ['@property.css'] = { theme.blue },
     -- tag
-    ['@tag.css'] = { theme.syntax.keyword },
+    ['@tag.css'] = { link = "@keyword" },
     -- #id
-    ['@constant.css'] = { theme.syntax.constant },
+    ['@constant.css'] = { link = "@constant" },
     -- .class
     ['@type.css'] = { link = '@type' },
     -- % or literals

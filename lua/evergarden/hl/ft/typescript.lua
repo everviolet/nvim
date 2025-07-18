@@ -3,6 +3,6 @@
 ---@return evergarden.types.hlgroups
 return function(theme, config)
   return {
-    ['@include.typescript'] = { theme.syntax.keyword },
+    ['@include.typescript'] = { link = '@keyword' },
   }
 end
