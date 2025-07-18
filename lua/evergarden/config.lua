@@ -68,6 +68,7 @@
 ---@field tabline evergarden.types.styleopt
 ---@field search evergarden.types.styleopt
 ---@field incsearch evergarden.types.styleopt
+---@field diagnostics evergarden.types.styleopt
 ---@field types evergarden.types.styleopt
 ---@field keyword evergarden.types.styleopt
 ---@field comment evergarden.types.styleopt
@@ -78,6 +79,7 @@
 ---    tabline = { 'reverse' },
 ---    search = { 'italic', 'reverse' },
 ---    incsearch = { },
+---    diagnostics = { 'undercurl' },
 ---    types = { 'italic' },
 ---    keyword = { 'italic' },
 ---    comment = { 'italic' },
@@ -160,6 +162,7 @@ M.default = {
     tabline = { 'reverse' },
     search = { 'italic', 'reverse' },
     incsearch = { },
+    diagnostics = { 'undercurl' },
     types = { 'italic' },
     keyword = { 'italic' },
     comment = { 'italic' },

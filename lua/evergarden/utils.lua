@@ -35,6 +35,7 @@ function M.set_hl(group, colors)
     bg = colors.bg,
     link = colors.link,
     blend = colors.blend,
+    sp = colors.sp,
   }
 
   local styles = vim
