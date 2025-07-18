@@ -113,7 +113,7 @@ return function(theme, config)
     Underlined = { theme.none, theme.none },
 
     -- Completion Menu
-    Pmenu = { theme.overlay2, theme.editor.completion },
+    Pmenu = { theme.subtext1, theme.editor.completion },
     PmenuBorder = utils.vary_reverse(
       theme.surface0,
       theme.editor.completion,
@@ -124,9 +124,13 @@ return function(theme, config)
     PmenuKind = { theme.subtext0, theme.surface0 },
     PmenuExtra = { theme.pink, theme.surface0 },
     PmenuSel = {
-      theme.crust,
-      theme.accent,
+      bg = theme.surface1,
+      style = { 'bold' },
     },
+    PmenuMatch = { theme.editor.incsearch },
+
+    ComplMatchIns = { link = 'NonText' },
+
     PmenuSbar = { theme.none, theme.surface1 },
     PmenuThumb = { theme.none, theme.overlay0 },
 
