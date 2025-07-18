@@ -17,7 +17,7 @@ return function(theme, config)
 
     Visual = {
       theme.none,
-      utils.vary_color(config, { summer = theme.surface0 }, theme.surface1),
+      theme.surface1,
     },
 
     LineNr = { theme.surface2 },
