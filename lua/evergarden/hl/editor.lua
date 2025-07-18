@@ -121,8 +121,8 @@ return function(theme, config)
       theme.editor.completion,
       theme.none
     ),
-    PmenuKind = { theme.subtext0, theme.surface0 },
-    PmenuExtra = { theme.pink, theme.surface0 },
+    PmenuKind = { theme.subtext0 },
+    PmenuExtra = { theme.pink },
     PmenuSel = {
       bg = theme.surface1,
       style = { 'bold' },
