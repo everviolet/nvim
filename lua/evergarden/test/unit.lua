@@ -7,6 +7,7 @@ end
 
 assert = result
 
+---@private
 local function get_hl(name)
   return vim.api.nvim_get_hl(
     0,
@@ -29,6 +30,7 @@ local hex_to_int = function(hex_str)
   return tonumber(hex_v, 16)
 end
 
+---@private
 ---@param name? string
 ---@param attr 'fg'|'bg'|string
 ---@param value string

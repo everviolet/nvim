@@ -2,6 +2,7 @@
 
 local M = {}
 
+---@private
 ---@param min number
 ---@param max number
 ---@param v number
@@ -186,6 +187,7 @@ function M.make_hl_loader(hls, theme, config)
   end
 end
 
+---@private
 ---@param s string
 ---@return number
 local function hash_str(s)

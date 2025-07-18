@@ -215,6 +215,7 @@ M.default = {
 ---@diagnostic disable-next-line: missing-fields
 M.config = {}
 
+---@private
 ---@generic T: table|any[]
 ---@param tdefault T
 ---@param toverride T
