@@ -14,7 +14,6 @@ return function(theme, config)
     CursorIM = { link = 'Cursor' },
     CursorLine = { theme.none, theme.surface0 },
     CursorColumn = { theme.none, theme.surface0 },
-    QuickFixLine = { theme.none, theme.surface0 },
 
     Visual = {
       theme.none,
@@ -23,6 +22,7 @@ return function(theme, config)
 
     LineNr = { theme.surface2 },
     CursorLineNr = { theme.overlay2 },
+    QuickFixLine = { theme.none, theme.surface0 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
       config.editor.transparent_background and theme.mantle or theme.surface0,
