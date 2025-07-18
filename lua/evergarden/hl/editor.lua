@@ -124,8 +124,9 @@ return function(theme, config)
     PmenuKind = { theme.subtext0 },
     PmenuExtra = { theme.pink },
     PmenuSel = {
-      bg = theme.surface1,
-      style = { 'bold' },
+      bg = theme.colors[config.editor.completion.selected.color]
+        or theme.surface1,
+      style = config.editor.completion.selected.style or { 'bold' },
     },
     PmenuMatch = { theme.editor.incsearch },
 

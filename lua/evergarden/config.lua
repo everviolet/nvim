@@ -61,7 +61,7 @@
 ---@field override_terminal? boolean
 ---@field sign? { color: evergarden.types.colors.enum|'none' }
 ---@field float? { color: evergarden.types.colors.enum|'none', solid_border: boolean }
----@field completion? { color: evergarden.types.colors.enum|'none' }
+---@field completion? { color: evergarden.types.colors.enum|'none', selected: { color: evergarden.types.colors.enum|'none', style: evergarden.types.styleopt } }
 
 ---@tag evergarden.styleconfig
 ---@class evergarden.types.styleconfig
@@ -155,7 +155,11 @@ M.default = {
     },
     completion = {
       --- background color used for completion windows
-      color = 'surface0',
+      color = 'mantle',
+      selected = {
+        color = 'surface0',
+        style = { 'bold' },
+      },
     },
   },
   style = {
