@@ -64,8 +64,8 @@ return function(theme, config)
     ),
     StatusLine = { theme.overlay2, theme.none },
     StatusLineNC = { theme.overlay1, theme.surface0 },
-    FloatShadow = { theme.none, theme.none },
-    FloatShadowThrough = { theme.none, theme.none },
+    FloatShadow = { bg = theme.crust, blend = 80 },
+    FloatShadowThrough = { bg = theme.crust, blend = 100 },
 
     OkText = { theme.diagnostic.ok },
     ErrorText = { theme.diagnostic.error },
