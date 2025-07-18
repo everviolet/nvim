@@ -4,11 +4,12 @@ local M = {}
 ---@param _ evergarden.types.config
 M.get = function(theme, _)
   return {
-    FzfLuaNormal = { link = 'NormalFloat' },
-    FzfLuaBorder = { link = 'FloatBorder' },
-    FzfLuaTitle = { link = 'FloatTitle' },
-    FzfLuaTitleFlags = { link = '@attribute' },
-    FzfLuaBackdrop = { theme.crust },
+    FzfLuaNormal = { link = 'PickNormal' },
+    FzfLuaBorder = { link = 'PickBorder' },
+    FzfLuaTitle = { link = 'PickTitle' },
+    FzfLuaTitleFlags = { link = 'PickTitle' },
+    FzfLuaBackdrop = { link = 'FloatShadow' },
+
     FzfLuaBufName = { link = 'Title' },
     FzfLuaBufId = { link = '@number' },
     FzfLuaBufNr = { link = '@number' },
@@ -21,10 +22,11 @@ M.get = function(theme, _)
     FzfLuaPathLineNr = { link = '@number' },
     FzfLuaPathColNr = { link = '@number' },
 
-    FzfLuaFzfMatch = { theme.editor.search },
-    FzfLuaFzfPointer = { theme.accent },
-    FzfLuaFzfMarker = { theme.yellow },
-    FzfLuaFzfPrompt = { theme.pink },
+    FzfLuaFzfCursorLine = { link = 'PickSel' },
+    FzfLuaFzfMatch = { link = 'PickMatch' },
+    FzfLuaFzfPointer = { link = 'PickPointer' },
+    FzfLuaFzfMarker = { link = 'PickMarker' },
+    FzfLuaFzfPrompt = { link = 'PickPrompt' },
   }
 end
 

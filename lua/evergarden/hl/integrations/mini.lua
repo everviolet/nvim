@@ -164,20 +164,20 @@ M.get = function(theme, config)
 
   if cfg.pick then
     table.insert(hlgroups, {
-      MiniPickBorder = { link = 'FloatBorder' }, -- window border.
+      MiniPickBorder = { link = 'PickBorder' }, -- window border.
       MiniPickBorderBusy = { theme.diagnostic.warn }, -- window border while picker is busy processing.
       MiniPickBorderText = { theme.subtext0 }, -- non-prompt on border.
-      MiniPickCursor = { theme.accent }, -- cursor during active picker (hidden by default).
+      MiniPickCursor = { link = "PickPointer" }, -- cursor during active picker (hidden by default).
       MiniPickIconDirectory = { theme.overlay2 }, -- default icon for directory.
       MiniPickIconFile = { theme.subtext1 }, -- default icon for file.
       MiniPickHeader = { theme.subtext0 }, -- headers in info buffer and previews.
-      MiniPickMatchCurrent = { theme.none, theme.surface0 }, -- current matched item.
-      MiniPickMatchMarked = { theme.yellow, theme.surface0 }, -- marked matched items.
-      MiniPickMatchRanges = { link = 'IncSearch' }, -- ranges matching query elements.
-      MiniPickNormal = { link = 'NormalFloat' }, -- basic foreground/background highlighting.
+      MiniPickMatchCurrent = { link = "PickSel" }, -- current matched item.
+      MiniPickMatchMarked = { link = "PickMarker" }, -- marked matched items.
+      MiniPickMatchRanges = { link = "PickMatch" }, -- ranges matching query elements.
+      MiniPickNormal = { link = 'PickNormal' }, -- basic foreground/background highlighting.
       MiniPickPreviewLine = { theme.none, theme.surface0 }, -- target line in preview.
       MiniPickPreviewRegion = { theme.none, theme.surface0 }, -- target region in preview.
-      MiniPickPrompt = { theme.pink }, -- prompt.
+      MiniPickPrompt = { link = "PickPrompt" }, -- prompt.
     })
   end
 

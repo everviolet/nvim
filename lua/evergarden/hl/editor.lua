@@ -134,6 +134,16 @@ return function(theme, config)
     PmenuSbar = { theme.none, theme.surface1 },
     PmenuThumb = { theme.none, theme.overlay0 },
 
+    -- Picker
+    PickNormal = { link = 'NormalFloat' },
+    PickBorder = { link = 'FloatBorder' },
+    PickTitle = { link = 'FloatTitle' },
+    PickSel = { theme.accent, theme.surface0, style = { 'bold' } },
+    PickMatch = { link = 'PmenuMatch' },
+    PickPointer = { theme.accent },
+    PickMarker = { theme.yellow },
+    PickPrompt = { theme.pink },
+
     -- Diffs
     DiffAdd = { theme.diff.add, theme.none },
     DiffDelete = { theme.diff.delete, theme.none },
