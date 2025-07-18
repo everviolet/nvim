@@ -39,6 +39,7 @@
 --- colors for different ui elements in the editor
 ---@class evergarden.types.editor
 ---@field search string
+---@field incsearch string
 ---@field float string
 ---@field completion string
 
@@ -76,6 +77,7 @@ function M.setup(config, colors)
 
   theme.editor = {
     search = theme.snow,
+    incsearch = theme.orange,
     float = theme.colors[config.editor.float.color] or theme.none,
     completion = theme.colors[config.editor.completion.color] or theme.none,
   }

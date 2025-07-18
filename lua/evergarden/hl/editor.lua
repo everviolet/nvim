@@ -90,11 +90,12 @@ return function(theme, config)
       utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
     IncSearch = utils.vary_reverse(
-      theme.editor.search,
+      theme.editor.incsearch,
       theme.none,
       config.style.incsearch,
       utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
+    Substitute = { link = "IncSearch" },
 
     Error = { theme.diagnostic.error },
     ErrorMsg = { link = 'Error' },
