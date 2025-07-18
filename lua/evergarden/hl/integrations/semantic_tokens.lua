@@ -27,7 +27,7 @@ M.get = function(theme, config)
     ['@lsp.type.struct'] = {}, -- Identifiers that declare or reference a struct type
     ['@lsp.type.type'] = { link = '@type' }, -- Identifiers that declare or reference a type that is not covered above
     ['@lsp.type.typeParameter'] = {}, -- Identifiers that declare or reference a type parameter
-    ['@lsp.type.variable'] = { link = '@variable' }, -- Identifiers that declare or reference a local or global variable
+    ['@lsp.type.variable'] = { link = '@lsp' }, -- Identifiers that declare or reference a local or global variable
 
     ['@lsp.mod.abstract'] = {}, -- Types and member functions that are abstract
     ['@lsp.mod.async'] = {}, -- Functions that are marked async
