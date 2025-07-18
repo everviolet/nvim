@@ -178,7 +178,10 @@ function M.make_hl_loader(hls, theme, config)
         ---@diagnostic disable-next-line: redefined-local
         local ok, result = pcall(cb, theme, config)
         if not ok then
-          vim.notify(('could not get hls for %s'):format(mod_path), vim.log.levels.WARN)
+          vim.notify(
+            ('could not get hls for %s'):format(mod_path),
+            vim.log.levels.WARN
+          )
           return
         end
         return result
@@ -192,7 +195,7 @@ end
 ---@param s string
 ---@return number
 local function hash_str(s)
-  return vim.iter(ipairs(vim.split(s, ''))):fold(5381, function (hash, _, char )
+  return vim.iter(ipairs(vim.split(s, ''))):fold(5381, function(hash, _, char)
     return bit.lshift(hash, 5) + hash + string.byte(char)
   end)
 end
@@ -201,7 +204,7 @@ end
 ---@return number|any
 function M.hash(v)
   if type(v) == 'table' then
-    return vim.iter(pairs(v)):fold(0, function (hash , k, vv)
+    return vim.iter(pairs(v)):fold(0, function(hash, k, vv)
       return bit.bxor(hash, hash_str(k .. tostring(M.hash(vv))))
     end)
   end

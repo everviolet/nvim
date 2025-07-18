@@ -161,7 +161,7 @@ M.default = {
   style = {
     tabline = { 'reverse' },
     search = { 'italic', 'reverse' },
-    incsearch = { },
+    incsearch = {},
     diagnostics = { 'undercurl' },
     types = { 'italic' },
     keyword = { 'italic' },
@@ -256,8 +256,12 @@ end
 ---@param toverride evergarden.types.config
 ---@return evergarden.types.config
 function M.merge(tdefault, toverride)
-  if vim.fn.has('nvim-0.11.0') == 1 then
-    toverride = vim.tbl_deep_extend('keep', toverride, { editor = { float = { solid_border = vim.o.winborder == 'solid' } } })
+  if vim.fn.has 'nvim-0.11.0' == 1 then
+    toverride = vim.tbl_deep_extend(
+      'keep',
+      toverride,
+      { editor = { float = { solid_border = vim.o.winborder == 'solid' } } }
+    )
   end
   return tmerge(tdefault, toverride)
 end
@@ -270,7 +274,7 @@ end
 ---@param cfg evergarden.types.config
 ---@return evergarden.types.config
 function M.override(cfg)
-  return M.merge( M.default, cfg)
+  return M.merge(M.default, cfg)
 end
 
 ---@param cfg evergarden.types.config
