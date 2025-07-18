@@ -47,14 +47,14 @@ return function(theme, config)
     },
     FloatBorder = utils.vary_reverse(
       theme.overlay0,
-      theme.none,
+      theme.editor.float,
       config.editor.float.solid_border and { 'reverse' } or {},
       theme.editor.float,
       theme.editor.float
     ),
     FloatTitle = utils.vary_reverse(
       theme.overlay2,
-      theme.none,
+      theme.editor.float,
       config.editor.float.solid_border and { 'reverse' } or {},
       theme.crust,
       theme.accent
