@@ -42,18 +42,19 @@ end
 function overlay:set()
   local hlgroups = self:get()
 
-  vim.iter(pairs(hlgroups)):filter(function (group, hl)
-    return type(group) == 'string' and type(hl) == 'table'
-  end):each(require('evergarden.utils').set_hl)
-
   vim
-    .iter(ipairs(hlgroups))
-    :each(function(_, groups)
-      if not type(groups) == 'table' then
-        return
-      end
-      self:new(groups):set()
+    .iter(pairs(hlgroups))
+    :filter(function(group, hl)
+      return type(group) == 'string' and type(hl) == 'table'
     end)
+    :each(require('evergarden.utils').set_hl)
+
+  vim.iter(ipairs(hlgroups)):each(function(_, groups)
+    if not type(groups) == 'table' then
+      return
+    end
+    self:new(groups):set()
+  end)
 end
 
 return overlay

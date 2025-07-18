@@ -98,7 +98,7 @@ return function(theme, config)
       config.style.incsearch,
       utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
-    Substitute = { link = "IncSearch" },
+    Substitute = { link = 'IncSearch' },
 
     Error = { theme.diagnostic.error },
     ErrorMsg = { link = 'Error' },

@@ -167,17 +167,17 @@ M.get = function(theme, config)
       MiniPickBorder = { link = 'PickBorder' }, -- window border.
       MiniPickBorderBusy = { theme.diagnostic.warn }, -- window border while picker is busy processing.
       MiniPickBorderText = { theme.subtext0 }, -- non-prompt on border.
-      MiniPickCursor = { link = "PickPointer" }, -- cursor during active picker (hidden by default).
+      MiniPickCursor = { link = 'PickPointer' }, -- cursor during active picker (hidden by default).
       MiniPickIconDirectory = { theme.overlay2 }, -- default icon for directory.
       MiniPickIconFile = { theme.subtext1 }, -- default icon for file.
       MiniPickHeader = { theme.subtext0 }, -- headers in info buffer and previews.
-      MiniPickMatchCurrent = { link = "PickSel" }, -- current matched item.
-      MiniPickMatchMarked = { link = "PickMarker" }, -- marked matched items.
-      MiniPickMatchRanges = { link = "PickMatch" }, -- ranges matching query elements.
+      MiniPickMatchCurrent = { link = 'PickSel' }, -- current matched item.
+      MiniPickMatchMarked = { link = 'PickMarker' }, -- marked matched items.
+      MiniPickMatchRanges = { link = 'PickMatch' }, -- ranges matching query elements.
       MiniPickNormal = { link = 'PickNormal' }, -- basic foreground/background highlighting.
       MiniPickPreviewLine = { theme.none, theme.surface0 }, -- target line in preview.
       MiniPickPreviewRegion = { theme.none, theme.surface0 }, -- target region in preview.
-      MiniPickPrompt = { link = "PickPrompt" }, -- prompt.
+      MiniPickPrompt = { link = 'PickPrompt' }, -- prompt.
     })
   end
 
