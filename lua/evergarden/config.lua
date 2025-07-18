@@ -60,7 +60,7 @@
 ---@field transparent_background? boolean
 ---@field override_terminal? boolean
 ---@field sign? { color: evergarden.types.colors.enum|'none' }
----@field float? { color: evergarden.types.colors.enum|'none', invert_border: boolean }
+---@field float? { color: evergarden.types.colors.enum|'none', solid_border: boolean }
 ---@field completion? { color: evergarden.types.colors.enum|'none' }
 
 ---@tag evergarden.styleconfig
@@ -148,7 +148,7 @@ M.default = {
     float = {
       --- background color used for floating windows
       color = 'mantle',
-      invert_border = false,
+      solid_border = false,
     },
     completion = {
       --- background color used for completion windows
@@ -235,13 +235,14 @@ local function tmerge(tdefault, toverride)
   return vim.iter(pairs(tdefault)):fold({}, function(tnew, k, v)
     if toverride[k] == nil or type(v) ~= type(toverride[k]) then
       tnew[k] = v
+      return tnew
     end
     if type(v) == 'table' then
       tnew[k] = tmerge(v, toverride[k])
-    else
-      tnew[k] = toverride[k]
+      return tnew
     end
 
+    tnew[k] = toverride[k]
     return tnew
   end)
 end
@@ -250,6 +251,9 @@ end
 ---@param toverride evergarden.types.config
 ---@return evergarden.types.config
 function M.merge(tdefault, toverride)
+  if vim.fn.has('nvim-0.11.0') == 1 then
+    toverride = vim.tbl_deep_extend('keep', toverride, { editor = { float = { solid_border = vim.o.winborder == 'solid' } } })
+  end
   return tmerge(tdefault, toverride)
 end
 

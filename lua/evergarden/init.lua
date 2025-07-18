@@ -13,7 +13,7 @@ local evergarden = {}
 ---@param cfg? evergarden.types.config|table
 function evergarden.setup(cfg)
   cfg = cfg or {}
-  config.set(config.override(cfg))
+  config.set(cfg)
 end
 
 --- setup highlights using `cfg`.

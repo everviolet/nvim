@@ -68,7 +68,7 @@ return {
       sign = { color = 'none' },
       float = {
         color = 'mantle',
-        invert_border = false,
+        solid_border = false,
       },
       completion = {
         color = 'surface0',
@@ -98,7 +98,7 @@ require 'evergarden'.setup {
     sign = { color = 'none' },
     float = {
       color = 'mantle',
-      invert_border = false,
+      solid_border = false,
     },
     completion = {
       color = 'surface0',

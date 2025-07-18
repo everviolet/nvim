@@ -46,18 +46,18 @@ return function(theme, config)
       theme.editor.float,
     },
     FloatBorder = utils.vary_reverse(
-      theme.surface0,
+      theme.overlay0,
+      theme.none,
+      config.editor.float.solid_border and { 'reverse' } or {},
       theme.editor.float,
-      config.editor.float.invert_border and { 'reverse' } or {},
-      theme.editor.float,
-      theme.none
+      theme.editor.float
     ),
     FloatTitle = utils.vary_reverse(
       theme.overlay2,
-      theme.editor.float,
-      config.editor.float.invert_border and { 'reverse' } or {},
-      theme.overlay2,
-      theme.none
+      theme.none,
+      config.editor.float.solid_border and { 'reverse' } or {},
+      theme.crust,
+      theme.accent
     ),
     StatusLine = { theme.overlay2, theme.none },
     StatusLineNC = { theme.overlay1, theme.surface0 },
@@ -113,7 +113,7 @@ return function(theme, config)
     PmenuBorder = utils.vary_reverse(
       theme.surface0,
       theme.editor.completion,
-      config.editor.float.invert_border and { 'reverse' } or {},
+      config.editor.float.solid_border and { 'reverse' } or {},
       theme.editor.completion,
       theme.none
     ),
