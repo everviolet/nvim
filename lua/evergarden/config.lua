@@ -88,6 +88,7 @@
 ---@tag evergarden.integrations
 ---@class evergarden.types.config.integrations
 ---@field blink_cmp? boolean Saghen/blink.cmp
+---@field bqf? boolean kevinhwang91/nvim-bqf
 ---@field cmp? boolean hrsh7th/nvim-cmp
 ---@field fzf_lua? boolean ibhagwan/fzf-lua
 ---@field gitsigns? boolean lewis6991/gitsigns.nvim
@@ -166,6 +167,7 @@ M.default = {
   },
   integrations = {
     blink_cmp = true,
+    bqf = true,
     cmp = true,
     fzf_lua = true,
     gitsigns = true,
