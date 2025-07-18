@@ -11,8 +11,15 @@ M.get = function(theme, _)
     FzfLuaBackdrop = { theme.crust },
     FzfLuaBufName = { link = 'Title' },
     FzfLuaBufId = { link = '@number' },
+    FzfLuaBufNr = { link = '@number' },
+    FzfLuaBufFlagCur = { link = 'Special' },
+    FzfLuaBufFlagAlt = { link = 'Special' },
+
     FzfLuaTabTitle = { link = 'Title' },
     FzfLuaTabMarker = { link = '@attribute' },
+
+    FzfLuaPathLineNr = { link = '@number' },
+    FzfLuaPathColNr = { link = '@number' },
 
     FzfLuaFzfMatch = { theme.editor.search },
     FzfLuaFzfPointer = { theme.accent },
