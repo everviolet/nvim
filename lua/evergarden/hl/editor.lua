@@ -25,7 +25,7 @@ return function(theme, config)
     QuickFixLine = { theme.none, theme.surface0 },
     SignColumn = { theme.none, theme.sign },
     WinSeparator = {
-      config.editor.transparent_background and theme.mantle or theme.surface0,
+      config.editor.transparent_background and theme.surface0 or theme.surface1,
     },
     VertSplit = { link = 'WinSeparator' },
 
