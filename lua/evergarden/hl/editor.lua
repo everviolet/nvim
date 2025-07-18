@@ -23,7 +23,7 @@ return function(theme, config)
     LineNr = { theme.surface2 },
     CursorLineNr = { theme.overlay2 },
     QuickFixLine = { theme.none, theme.surface0 },
-    SignColumn = { theme.none, theme.sign },
+    SignColumn = { theme.overlay1, theme.sign },
     WinSeparator = {
       config.editor.transparent_background and theme.surface0 or theme.surface1,
     },
@@ -42,7 +42,7 @@ return function(theme, config)
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
     Folded = { bg = theme.surface2 },
-    FoldColumn = { theme.surface0 },
+    FoldColumn = { link = 'SignColumn' },
 
     NormalFloat = {
       theme.text,
