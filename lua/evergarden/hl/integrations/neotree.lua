@@ -60,12 +60,8 @@ M.get = function(theme, config)
       fg = config.editor.transparent_background and theme.none or theme.crust,
       bg = config.editor.transparent_background and theme.none or theme.crust,
     },
-    NeoTreeVertSplit = { fg = theme.overlay0 },
-    NeoTreeWinSeparator = {
-      fg = config.editor.transparent_background and theme.surface1
-        or theme.base,
-      bg = config.editor.transparent_background and theme.none or theme.base,
-    },
+    NeoTreeVertSplit = { link = "VertSplit" },
+    NeoTreeWinSeparator = { link = "WinSeparator" },
     NeoTreeStatusLineNC = { fg = theme.mantle, bg = theme.mantle },
   }
 end
