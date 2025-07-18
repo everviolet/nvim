@@ -39,9 +39,6 @@ function evergarden.load(cfg)
     vim.go.background = 'dark'
   end
 
-  local theme = require('evergarden.theme').setup(cfg)
-  local hlgroups = require('evergarden.hl').setup(theme, cfg)
-
   local cache = cfg.cache or false
   if cache then
     local needs_compile = require('evergarden.cache').needs_compile(cfg)
@@ -51,6 +48,8 @@ function evergarden.load(cfg)
     require('evergarden.cache').clear()
   end
 
+  local theme = require('evergarden.theme').setup(cfg)
+  local hlgroups = require('evergarden.hl').setup(theme, cfg)
   require('evergarden.utils').set_highlights(hlgroups)
 
   if cache then
