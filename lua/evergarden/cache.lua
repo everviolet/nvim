@@ -107,19 +107,29 @@ end
 ---@return any? error
 function cache.load()
   local fn = loadfile(cache.path.colors)
-  ---@diagnostic disable-next-line: param-type-mismatch
-  local ok_loadfile, result_loadfile = pcall(fn)
-  if not ok_loadfile then
-    return error(string.format('error while loading cache: %s', result_loadfile))
+  local lfile
+  do
+    ---@diagnostic disable-next-line: param-type-mismatch
+    local ok, result = pcall(fn)
+    if not ok then
+      return error(string.format('error while loading cache: %s', result))
+    end
+    lfile = result
   end
-  local ok_loadstring, result_loadstring = pcall(loadstring, result_loadfile)
-  if not ok_loadstring then
-    return error(string.format('error while loading cache: %s', result_loadstring))
+  local lstr
+  do
+    local ok, result = pcall(loadstring, lfile)
+    if not ok then
+      return error(string.format('error while loading cache: %s', result))
+    end
+    lstr = result
   end
-  ---@diagnostic disable-next-line: param-type-mismatch
-  local ok_loadhl, result = pcall(result_loadstring)
-  if not ok_loadhl then
-    return error(string.format('error while loading cache: %s', result))
+  do
+    ---@diagnostic disable-next-line: param-type-mismatch
+    local ok, result = pcall(lstr)
+    if not ok then
+      return error(string.format('error while loading cache: %s', result))
+    end
   end
 end
 
