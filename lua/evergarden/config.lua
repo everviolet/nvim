@@ -18,7 +18,7 @@
 ---    crust = '#0F1214',
 ---  },
 --- <
----@field overrides? evergarden.types.hlgroups|fun(colors: evergarden.types.colors): evergarden.types.hlgroups
+---@field overrides? evergarden.types.hlgroups|fun(theme: evergarden.types.theme): evergarden.types.hlgroups
 ---@usage
 --- >lua
 ---  overrides = {

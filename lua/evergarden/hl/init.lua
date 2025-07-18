@@ -48,7 +48,7 @@ function M.setup(theme, config)
 
   local overrides = config.overrides or {}
   if type(overrides) == 'function' then
-    overrides = overrides(theme.colors) --[[@as evergarden.types.hlgroups.OL]]
+    overrides = overrides(theme) --[[@as evergarden.types.hlgroups.OL]]
   end
   table.insert(hl_groups, overrides)
 
