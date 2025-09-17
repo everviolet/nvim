@@ -6,7 +6,7 @@ local M = {}
 M.get = function(theme, config)
   return {
     ['@lsp.type.class'] = {}, -- Identifiers that declare or reference a class type
-    ['@lsp.type.comment'] = { link = '@comment' }, -- Tokens that represent a comment
+    ['@lsp.type.comment'] = { link = '@lsp' }, -- Tokens that represent a comment
     ['@lsp.type.decorator'] = {}, -- Identifiers that declare or reference decorators and annotations
     ['@lsp.type.enum'] = { link = '@type' }, -- Identifiers that declare or reference an enumeration type
     ['@lsp.type.enumMember'] = { link = '@constant' }, -- Identifiers that declare or reference an enumeration property, constant, or member

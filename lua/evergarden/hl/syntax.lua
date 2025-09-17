@@ -1,3 +1,5 @@
+local utils = require 'evergarden.utils'
+
 ---@param theme evergarden.types.theme
 ---@param config evergarden.types.config
 return function(theme, config)
@@ -138,11 +140,36 @@ return function(theme, config)
     Include = { link = '@keyword.import' },
 
     -- text
-    ['@comment.todo'] = { theme.aqua },
-    ['@comment.note'] = { theme.blue },
-    ['@comment.fix'] = { theme.diagnostic.warn },
-    ['@comment.warning'] = { theme.diagnostic.warn },
-    ['@comment.error'] = { theme.diagnostic.error },
+    ['@comment.todo'] = utils.vary_reverse(
+      theme.aqua,
+      theme.none,
+      config.style.notes,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
+    ),
+    ['@comment.note'] = utils.vary_reverse(
+      theme.blue,
+      theme.none,
+      config.style.notes,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
+    ),
+    ['@comment.fix'] = utils.vary_reverse(
+      theme.diagnostic.warn,
+      theme.none,
+      config.style.notes,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
+    ),
+    ['@comment.warning'] = utils.vary_reverse(
+      theme.diagnostic.warn,
+      theme.none,
+      config.style.notes,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
+    ),
+    ['@comment.error'] = utils.vary_reverse(
+      theme.diagnostic.error,
+      theme.none,
+      config.style.notes,
+      utils.vary_color(config, { summer = theme.text }, theme.crust)
+    ),
 
     ['@markup'] = { theme.text },
     ['@markup.strong'] = { theme.aqua, style = { 'bold' } },

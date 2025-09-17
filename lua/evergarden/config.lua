@@ -73,6 +73,7 @@
 ---@field keyword evergarden.types.styleopt
 ---@field comment evergarden.types.styleopt
 ---@field spell evergarden.types.styleopt
+---@field notes evergarden.types.styleopt
 ---@field disable_styles evergarden.types.styleopt
 ---@usage
 --- >lua
@@ -85,6 +86,7 @@
 ---    keyword = { 'italic' },
 ---    comment = { 'italic' },
 ---    spell = { 'underdotted' },
+---    notes = { 'bold', 'reverse' },
 ---    disable_styles = { 'bold' }, -- disables bold for all highlight groups
 ---  },
 --- <
@@ -174,6 +176,7 @@ M.default = {
     keyword = { 'italic' },
     comment = { 'italic' },
     spell = { 'underdotted' },
+    notes = { 'bold', 'reverse' },
     disable_styles = {},
   },
   integrations = {
