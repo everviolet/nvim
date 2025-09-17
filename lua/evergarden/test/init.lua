@@ -48,7 +48,6 @@ end
 
 M.hotreload = function(testname)
   vim.api.nvim_create_autocmd('BufWritePost', {
-    pattern = 'lua/evergarden/*.lua',
     group = vim.api.nvim_create_augroup(
       'evergarden:hotreload',
       { clear = true }
