@@ -65,10 +65,13 @@ function M.set_highlights(hlgroups)
 end
 
 ---@param style evergarden.types.styleopt
----@return integer
+---@return integer?
 function M.is_reverse(style)
-  local index, _ = vim.iter(ipairs(style)):find(function(_, v)
-    return v == 'reverse'
+  if not vim.islist(style) then
+    return
+  end
+  local index = vim.iter(ipairs(style)):find(function(_, s)
+    return s == 'reverse'
   end)
   return index
 end
