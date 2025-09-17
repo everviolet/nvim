@@ -62,8 +62,8 @@ return function(theme, config)
       theme.crust,
       theme.accent
     ),
-    StatusLine = { theme.subtext0, theme.none },
-    StatusLineNC = { theme.overlay1, theme.none },
+    StatusLine = { theme.subtext0, theme.mantle },
+    StatusLineNC = { theme.overlay1, theme.mantle },
     FloatShadow = { bg = theme.crust, blend = 80 },
     FloatShadowThrough = { bg = theme.crust, blend = 100 },
 
