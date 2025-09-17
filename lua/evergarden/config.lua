@@ -89,6 +89,7 @@
 
 ---@tag evergarden.integrations
 ---@class evergarden.types.config.integrations
+---@field artio? boolean comfysage/artio.nvim
 ---@field blink_cmp? boolean Saghen/blink.cmp
 ---@field bqf? boolean kevinhwang91/nvim-bqf
 ---@field cmp? boolean hrsh7th/nvim-cmp
@@ -173,6 +174,7 @@ M.default = {
     spell = { 'underdotted' },
   },
   integrations = {
+    artio = true,
     blink_cmp = true,
     bqf = true,
     cmp = true,
