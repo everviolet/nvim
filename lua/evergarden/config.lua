@@ -244,8 +244,12 @@ local function tmerge(tdefault, toverride)
   end
 
   return vim.iter(pairs(tdefault)):fold({}, function(tnew, k, v)
-    if toverride[k] == nil or type(v) ~= type(toverride[k]) then
+    if toverride[k] == nil then
       tnew[k] = v
+      return tnew
+    end
+    if type(v) ~= type(toverride[k]) then
+      tnew[k] = toverride[k]
       return tnew
     end
     if type(v) == 'table' then
