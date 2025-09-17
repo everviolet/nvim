@@ -106,6 +106,10 @@ return function(theme, config)
     ),
     Substitute = { link = 'IncSearch' },
 
+    MsgArea = {
+      theme.subtext1,
+      config.editor.transparent_background and theme.none or theme.mantle,
+    },
     Error = { theme.diagnostic.error },
     ErrorMsg = { link = 'Error' },
     WarningMsg = { theme.diagnostic.warn },
