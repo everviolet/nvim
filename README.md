@@ -52,7 +52,32 @@ comfort.
 
 ## Installation
 
-using [lazy.nvim](https://github.com/folke/lazy.nvim):
+using `vim.pack`:
+
+```lua
+vim.pack.add({ { src = "https://codeberg.org/evergarden/nvim.git", name = "evergarden" } })
+
+require('evergarden').setup({
+  theme = {
+    variant = 'fall', -- 'winter'|'fall'|'spring'|'summer'
+    accent = 'green',
+  },
+  editor = {
+    transparent_background = false,
+    sign = { color = 'none' },
+    float = {
+      color = 'mantle',
+      solid_border = false,
+    },
+    completion = {
+      color = 'surface0',
+    },
+  },
+})
+```
+
+<details>
+<summary> using [lazy.nvim](https://github.com/folke/lazy.nvim) </summary>
 
 ```lua
 return {
@@ -78,10 +103,12 @@ return {
 }
 ```
 
+</details>
+
 using [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```Vim
-Plug 'everviolet/nvim', { 'as': 'evergarden' }
+Plug 'https://codeberg.org/evergarden/nvim.git', { 'as': 'evergarden' }
 ```
 
 ## Configuration
