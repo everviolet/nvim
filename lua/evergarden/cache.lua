@@ -24,6 +24,7 @@ function cache.cached_cfg(cfg)
   local git_ref = nil
   local git_file = io.open(git_path, 'rb')
   if not git_file then
+    vim.notify('could not open file: ' .. git_path, vim.log.levels.WARN)
     git_ref = 0
   else
     git_ref = git_file:read 'l'
