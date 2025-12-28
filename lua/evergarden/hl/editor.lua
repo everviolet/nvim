@@ -110,6 +110,7 @@ return function(theme, config)
       theme.subtext1,
       config.editor.transparent_background and theme.none or theme.mantle,
     },
+    OkMsg = { theme.diagnostic.ok },
     Error = { theme.diagnostic.error },
     ErrorMsg = { link = 'Error' },
     WarningMsg = { theme.diagnostic.warn },
