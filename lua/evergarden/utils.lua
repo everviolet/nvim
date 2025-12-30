@@ -13,7 +13,10 @@ end
 
 ---@param group string
 ---@param colors evergarden.types.colorspec
-function M.set_hl(group, colors)
+---@param config? evergarden.types.config
+function M.set_hl(group, colors, config)
+  config = config or require('evergarden.config').get()
+
   if type(colors) ~= 'table' or vim.tbl_isempty(colors) then
     return
   end
@@ -41,7 +44,7 @@ function M.set_hl(group, colors)
   local styles = vim
     .iter(ipairs(colors.style or {}))
     :fold({}, function(acc, _, style)
-      acc[style] = true
+      acc[style] = not vim.tbl_contains(config.style.disable_styles, style)
       return acc
     end)
 
@@ -60,8 +63,10 @@ function M.set_hl(group, colors)
 end
 
 ---@param hlgroups evergarden.types.hlgroups.OL
-function M.set_highlights(hlgroups)
-  require('evergarden.overlay'):new(hlgroups):set()
+---@param config? evergarden.types.config
+function M.set_highlights(hlgroups, config)
+  config = config or require('evergarden.config').get()
+  require('evergarden.overlay'):new(hlgroups, config):set()
 end
 
 ---@param style evergarden.types.styleopt
