@@ -157,10 +157,18 @@ return function(theme, config)
     PickPrompt = { theme.pink },
 
     -- Diffs
-    DiffAdd = { theme.diff.add, theme.none },
-    DiffDelete = { theme.diff.delete, theme.none },
-    DiffChange = { theme.diff.change, theme.none },
-    DiffText = { theme.subtext0, theme.none },
+    DiffAdd = {
+      bg = utils.blend(theme.diff.add, theme.base, 0.16),
+    },
+    DiffDelete = {
+      bg = utils.blend(theme.diff.delete, theme.base, 0.16),
+    },
+    DiffChange = {
+      bg = utils.blend(theme.diff.change, theme.base, 0.08),
+    },
+    DiffText = {
+      bg = utils.blend(theme.diff.change, theme.base, 0.16),
+    },
     diffAdded = { link = '@diff.add' },
     diffRemoved = { link = '@diff.delete' },
     diffChanged = { link = '@diff.change' },
