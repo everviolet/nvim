@@ -138,6 +138,7 @@
 ---@field trailspace boolean
 
 local M = {}
+local H = {}
 
 ---@type evergarden.types.config
 ---@eval return MiniDoc.afterlines_to_code(MiniDoc.current.eval_section)
@@ -232,17 +233,50 @@ M.default = {
 ---@diagnostic disable-next-line: missing-fields
 M.config = {}
 
+---@return evergarden.types.config
+function M.get()
+  return H.merge(M.default, M.config)
+end
+
+---@param cfg evergarden.types.config
+---@return evergarden.types.config
+function M.override(cfg)
+  return H.merge(M.default, cfg)
+end
+
+---@param cfg evergarden.types.config
+function M.set(cfg)
+  M.config = cfg
+end
+
+-- helpers ====================================================================
+
+---@param tdefault evergarden.types.config
+---@param toverride evergarden.types.config
+---@return evergarden.types.config
+function H.merge(tdefault, toverride)
+  if vim.fn.has 'nvim-0.11.0' == 1 then
+    toverride = vim.tbl_deep_extend(
+      'keep',
+      toverride,
+      { editor = { float = { solid_border = vim.o.winborder == 'solid' } } }
+    )
+  end
+  return H.tmerge(tdefault, toverride)
+end
+
 ---@private
 ---@generic T: table|any[]
 ---@param tdefault T
 ---@param toverride T
 ---@return T
-local function tmerge(tdefault, toverride)
+H.tmerge = function(tdefault, toverride)
   if toverride == nil then
     return tdefault
   end
 
-  if vim.islist(tdefault) then
+  -- do not merge lists
+  if H.islist(tdefault) then
     return toverride
   end
   if vim.tbl_isempty(tdefault) then
@@ -259,7 +293,7 @@ local function tmerge(tdefault, toverride)
       return tnew
     end
     if type(v) == 'table' then
-      tnew[k] = tmerge(v, toverride[k])
+      tnew[k] = H.tmerge(v, toverride[k])
       return tnew
     end
 
@@ -268,34 +302,24 @@ local function tmerge(tdefault, toverride)
   end)
 end
 
----@param tdefault evergarden.types.config
----@param toverride evergarden.types.config
----@return evergarden.types.config
-function M.merge(tdefault, toverride)
-  if vim.fn.has 'nvim-0.11.0' == 1 then
-    toverride = vim.tbl_deep_extend(
-      'keep',
-      toverride,
-      { editor = { float = { solid_border = vim.o.winborder == 'solid' } } }
-    )
+---@param t table
+---@return boolean
+H.islist = function(t)
+  if type(t) ~= 'table' then
+    return false
   end
-  return tmerge(tdefault, toverride)
+
+  for k, _ in ipairs(t) do
+    return type(k) == 'number'
+  end
+
+  -- non-numeric keys
+  for _, _ in pairs(t) do
+    return false
+  end
+
+  -- empty table
+  return true
 end
 
----@return evergarden.types.config
-function M.get()
-  return M.merge(M.default, M.config)
-end
-
----@param cfg evergarden.types.config
----@return evergarden.types.config
-function M.override(cfg)
-  return M.merge(M.default, cfg)
-end
-
----@param cfg evergarden.types.config
-function M.set(cfg)
-  M.config = cfg
-end
-
-return M
+return M, H
