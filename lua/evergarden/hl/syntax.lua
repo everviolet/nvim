@@ -40,6 +40,7 @@ return function(theme, config)
     ['@keyword.return'] = { link = '@keyword' },
     ['@keyword.exception'] = { link = '@keyword' },
     ['@keyword.debug'] = { link = '@keyword.exception' },
+    ['@keyword.luadoc'] = { theme.cherry },
 
     ['@label'] = { link = '@keyword' },
 
@@ -147,7 +148,7 @@ return function(theme, config)
       utils.vary_color(config, { summer = theme.text }, theme.crust)
     ),
     ['@comment.note'] = utils.vary_reverse(
-      theme.blue,
+      theme.cherry,
       theme.none,
       config.style.notes,
       utils.vary_color(config, { summer = theme.text }, theme.crust)

@@ -38,7 +38,7 @@ return function(theme, config)
       theme.accent
     ),
     TabLineFill = { theme.overlay1 },
-    Title = { theme.subtext0 },
+    Title = { theme.cherry },
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
     Folded = { bg = theme.surface2 },
@@ -133,7 +133,7 @@ return function(theme, config)
       theme.none
     ),
     PmenuKind = { theme.subtext0 },
-    PmenuExtra = { theme.pink },
+    PmenuExtra = { theme.cherry },
     PmenuSel = {
       bg = theme.colors[config.editor.completion.selected.color]
         or theme.surface1,
@@ -154,7 +154,7 @@ return function(theme, config)
     PickMatch = { link = 'PmenuMatch' },
     PickPointer = { theme.accent },
     PickMarker = { theme.yellow },
-    PickPrompt = { theme.pink },
+    PickPrompt = { theme.cherry },
 
     -- Diffs
     DiffAdd = {
