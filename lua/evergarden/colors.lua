@@ -15,7 +15,7 @@ M.colors = {
   blue = '#B2CAED',
   purple = '#D2BDF3',
   pink = '#F3C0E5',
-  cherry = '#F6CEE5',
+  cherry = '#FAE6EF',
 }
 
 ---@type evergarden.types.colors
