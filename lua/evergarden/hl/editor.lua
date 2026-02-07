@@ -133,7 +133,7 @@ return function(theme, config)
       theme.none
     ),
     PmenuKind = { theme.subtext0 },
-    PmenuExtra = { theme.cherry },
+    PmenuExtra = { theme.syntax.annotation },
     PmenuSel = {
       bg = theme.colors[config.editor.completion.selected.color]
         or theme.surface1,

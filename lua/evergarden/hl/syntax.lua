@@ -40,7 +40,7 @@ return function(theme, config)
     ['@keyword.return'] = { link = '@keyword' },
     ['@keyword.exception'] = { link = '@keyword' },
     ['@keyword.debug'] = { link = '@keyword.exception' },
-    ['@keyword.luadoc'] = { theme.cherry },
+    ['@keyword.luadoc'] = { theme.syntax.annotation },
 
     ['@label'] = { link = '@keyword' },
 
