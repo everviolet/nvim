@@ -124,7 +124,7 @@ return function(theme, config)
     Underlined = { theme.none, theme.none },
 
     -- Completion Menu
-    Pmenu = { theme.subtext1, theme.editor.completion },
+    Pmenu = { theme.text, theme.editor.completion },
     PmenuBorder = utils.vary_reverse(
       theme.surface0,
       theme.editor.completion,
