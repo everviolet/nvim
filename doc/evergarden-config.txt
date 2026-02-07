@@ -94,7 +94,7 @@ Usage ~
    types = { 'italic' },
    keyword = { 'italic' },
    comment = { 'italic' },
-   spell = { 'underdotted' },
+   spell = { 'undercurl' },
  },
 <
 ------------------------------------------------------------------------------
@@ -179,7 +179,7 @@ Type ~
       types = { 'italic' },
       keyword = { 'italic' },
       comment = { 'italic' },
-      spell = { 'underdotted' },
+      spell = { 'undercurl' },
     },
     integrations = {
       blink_cmp = true,

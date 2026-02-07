@@ -180,10 +180,10 @@ return function(theme, config)
     Changed = { link = '@diff.change' },
 
     -- Spell
-    SpellBad = { theme.red, style = config.style.spell },
-    SpellCap = { theme.aqua, style = config.style.spell },
-    SpellLocal = { theme.aqua, style = config.style.spell },
-    SpellRare = { theme.aqua, style = config.style.spell },
+    SpellBad = { sp = theme.red, style = config.style.spell },
+    SpellCap = { sp = theme.aqua, style = config.style.spell },
+    SpellLocal = { sp = theme.aqua, style = config.style.spell },
+    SpellRare = { sp = theme.aqua, style = config.style.spell },
 
     -- WinBar
     WinBar = { theme.subtext0 },

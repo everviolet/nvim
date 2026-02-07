@@ -85,7 +85,7 @@
 ---    types = { 'italic' },
 ---    keyword = { 'italic' },
 ---    comment = { 'italic' },
----    spell = { 'underdotted' },
+---    spell = { 'undercurl' },
 ---    notes = { 'bold', 'reverse' },
 ---    disable_styles = { 'bold' }, -- disables bold for all highlight groups
 ---  },
@@ -176,7 +176,7 @@ M.default = {
     types = { 'italic' },
     keyword = { 'italic' },
     comment = { 'italic' },
-    spell = { 'underdotted' },
+    spell = { 'undercurl' },
     notes = { 'bold', 'reverse' },
     disable_styles = {},
   },
