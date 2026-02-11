@@ -46,7 +46,7 @@ function cache.needs_compile(cfg)
   if not file then
     cached = 0
   else
-    cached = file:read 'n'
+    cached = file:read '*a'
     file:close()
   end
 
