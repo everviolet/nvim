@@ -34,12 +34,20 @@ function M.set_hl(group, colors, config)
 
   ---@type vim.api.keyset.highlight
   local color = {
-    fg = colors.fg,
-    bg = colors.bg,
     link = colors.link,
     blend = colors.blend,
     sp = colors.sp,
   }
+  if type(colors.fg) == 'string' then
+    color.fg = colors.fg
+  elseif type(colors.fg) == 'number' then
+    color.ctermfg = colors.fg
+  end
+  if type(colors.bg) == 'string' then
+    color.bg = colors.bg
+  elseif type(colors.bg) == 'number' then
+    color.ctermbg = colors.bg
+  end
 
   local styles = vim
     .iter(ipairs(colors.style or {}))
@@ -127,11 +135,14 @@ local hex_to_rgb = function(hex_str)
 end
 
 --- adapted from @catppuccin/nvim https://github.com/catppuccin/nvim/blob/5b5e3aef9ad7af84f463d17b5479f06b87d5c429/lua/catppuccin/utils/colors.lua#L24
----@param fg string
----@param bg string
+---@param fg string|integer
+---@param bg string|integer
 ---@param alpha number amount of fg to mix in (0.0 is only bg)
----@return string
+---@return string|integer
 function M.blend(fg, bg, alpha)
+  if type(fg) == 'number' or type(bg) == 'number' then
+    return fg
+  end
   ---@diagnostic disable-next-line: cast-local-type
   bg = hex_to_rgb(bg)
   ---@diagnostic disable-next-line: cast-local-type

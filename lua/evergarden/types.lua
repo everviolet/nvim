@@ -31,7 +31,7 @@
 ---|'base'
 ---|'mantle'
 ---|'crust'
----@alias evergarden.types.colors { [evergarden.types.colors.enum]: string }
+---@alias evergarden.types.colors { [evergarden.types.colors.enum]: string|integer }
 
 ---@class evergarden.types.colorspec
 ---@field fg? string

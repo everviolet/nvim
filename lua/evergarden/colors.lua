@@ -82,13 +82,18 @@ M.summer = {
 ---@return evergarden.types.colors
 function M.get_shades(cfg)
   cfg = cfg or require('evergarden.config').get()
-  local shades = M.fall
+  local t = M
+  if cfg.theme.ansi then
+    t = require 'evergarden.ansi'
+  end
+
+  local shades = t.fall
   if cfg.theme.variant == 'winter' then
-    shades = vim.tbl_extend('force', shades, M.winter)
+    shades = vim.tbl_extend('force', shades, t.winter)
   elseif cfg.theme.variant == 'spring' then
-    shades = vim.tbl_extend('force', shades, M.spring)
+    shades = vim.tbl_extend('force', shades, t.spring)
   elseif cfg.theme.variant == 'summer' then
-    shades = vim.tbl_extend('force', shades, M.summer)
+    shades = vim.tbl_extend('force', shades, t.summer)
   end
   return shades
 end
@@ -98,8 +103,12 @@ end
 function M.get(cfg)
   cfg = cfg or require('evergarden.config').get()
   local shades = M.get_shades(cfg)
-  local colors = vim.tbl_extend('force', M.colors, shades)
-  return vim.tbl_deep_extend('force', colors, cfg.color_overrides)
+  local colors = M.colors
+  if cfg.theme.ansi then
+    colors = require('evergarden.ansi').colors
+  end
+  local palette = vim.tbl_extend('force', colors, shades)
+  return vim.tbl_deep_extend('force', palette, cfg.color_overrides)
 end
 
 return M

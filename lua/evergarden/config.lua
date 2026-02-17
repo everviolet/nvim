@@ -54,6 +54,7 @@
 ---@class evergarden.types.config.theme
 ---@field variant? evergarden.types.variant
 ---@field accent? evergarden.types.colors.enum
+---@field ansi? boolean
 
 ---@tag evergarden.config.editor
 ---@class evergarden.types.config.editor

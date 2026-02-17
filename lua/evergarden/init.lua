@@ -24,20 +24,21 @@ function evergarden.load(cfg)
     vim.cmd 'hi clear'
   end
 
-  vim.g.colors_name = 'evergarden'
-  vim.o.termguicolors = true
-
   if cfg then
     cfg = config.override(cfg or {})
   else
     cfg = config.get()
   end
 
+  vim.g.colors_name = 'evergarden'
+
   if cfg.theme.variant == 'summer' then
     vim.go.background = 'light'
   else
     vim.go.background = 'dark'
   end
+
+  cfg.theme.ansi = vim.F.if_nil(cfg.theme.ansi, not vim.o.termguicolors)
 
   local cache = cfg.cache or false
   if cache then
