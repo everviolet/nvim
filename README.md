@@ -44,8 +44,8 @@ comfort.
 
 <details>
 <summary>more screenshots</summary>
-<img alt="preview__rust" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/rust.webp"/>
-<img alt="preview__lua" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/lua.webp"/>
+<img alt="preview image of zig code" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/zig.webp"/>
+<img alt="preview image of nix code" src="https://raw.githubusercontent.com/everviolet/nvim/mega/assets/previews/nix.webp"/>
 </details>
 
 ###### font in screenshots is [maple mono](https://github.com/subframe7536/maple-font)
