@@ -150,6 +150,7 @@ M.default = {
     variant = 'fall',
     --minidoc_replace_end
     accent = 'green',
+    ansi = false,
   },
   editor = {
     transparent_background = false,
