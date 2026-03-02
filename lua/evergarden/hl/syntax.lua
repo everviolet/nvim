@@ -187,7 +187,7 @@ return function(theme, config)
     ['@markup.list.unchecked'] = { link = '@punctuation.delimiter' }, -- unchecked todo-style list markers
 
     -- headings, titles (including markers)
-    ['@markup.heading'] = { link = '@markup.heading.1' },
+    ['@markup.heading'] = { link = 'Title' },
     ['@markup.heading.1'] = { link = 'rainbow.1' },
     ['@markup.heading.2'] = { link = 'rainbow.2' },
     ['@markup.heading.3'] = { link = 'rainbow.3' },
