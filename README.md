@@ -77,7 +77,7 @@ require('evergarden').setup({
 ```
 
 <details>
-<summary> using [lazy.nvim](https://github.com/folke/lazy.nvim) </summary>
+<summary> using <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> </summary>
 
 ```lua
 return {
