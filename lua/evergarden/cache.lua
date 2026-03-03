@@ -21,19 +21,12 @@ function cache.cached_cfg(cfg)
     'HEAD'
   )
 
-  local git_ref = nil
-  local git_file = io.open(git_path, 'rb')
-  if not git_file then
-    vim.notify('could not open file: ' .. git_path, vim.log.levels.WARN)
-    git_ref = 0
-  else
-    git_ref = git_file:read 'l'
-    git_file:close()
-  end
-
+  local ftime = vim.fn.getftime(git_path)
   cfg = cfg or require('evergarden.config').get()
 
-  return git_ref .. tostring(require('evergarden.utils').hash(cfg))
+  -- if .git/HEAD is not found, assume the file path is a nix store derivation
+  return tostring(ftime == -1 and git_path or ftime)
+    .. tostring(require('evergarden.utils').hash(cfg))
 end
 
 ---@param cfg? evergarden.types.config
