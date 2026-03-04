@@ -78,6 +78,34 @@ M.summer = {
   crust = '#E8DED5',
 }
 
+---@type evergarden.types.colors
+M.lunar = {
+  red = '#EB7F86',
+  orange = '#F5A58D',
+  yellow = '#F7DDAF',
+  lime = '#DBE3C7',
+  green = '#C5D9B5',
+  aqua = '#ACD1B6',
+  skye = '#AAD0C9',
+  snow = '#ADD1D8',
+  blue = '#99B3D5',
+  purple = '#A69FD5',
+  pink = '#D6ABC3',
+  cherry = '#E0C5D0',
+  text = '#F7F1E6',
+  subtext1 = '#CBD7F2',
+  subtext0 = '#B4C0DB',
+  overlay2 = '#9EA5C1',
+  overlay1 = '#9096B1',
+  overlay0 = '#757A93',
+  surface2 = '#4C4F61',
+  surface1 = '#353847',
+  surface0 = '#21232E',
+  base = '#1C1D29',
+  mantle = '#171923',
+  crust = '#11121A',
+}
+
 ---@param cfg? evergarden.types.config
 ---@return evergarden.types.colors
 function M.get_shades(cfg)
@@ -94,6 +122,8 @@ function M.get_shades(cfg)
     shades = vim.tbl_extend('force', shades, t.spring)
   elseif cfg.theme.variant == 'summer' then
     shades = vim.tbl_extend('force', shades, t.summer)
+  elseif cfg.theme.variant == 'lunar' then
+    shades = vim.tbl_extend('force', shades, t.lunar)
   end
   return shades
 end

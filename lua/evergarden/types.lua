@@ -5,6 +5,7 @@
 ---|'fall'
 ---|'spring'
 ---|'summer'
+---|'lunar'
 
 ---@alias evergarden.types.colors.enum
 ---|'red'
