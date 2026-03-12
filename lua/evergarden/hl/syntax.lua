@@ -34,7 +34,7 @@ return function(theme, config)
     ['@keyword.operator'] = { theme.orange },
     ['@keyword.modifier'] = { link = 'Keyword' }, -- construct modifiers: `const` `static` `mut` `public`
     ['@keyword.type'] = { link = 'Keyword' }, -- composite types: `struct` `enum`
-    ['@keyword.coroutine'] = { theme.subtext1 }, -- e.g., `go` in Go, `async`/`await`
+    ['@keyword.coroutine'] = { link = '@keyword.modifier' }, -- e.g., `go` in Go, `async`/`await`
     ['@keyword.import'] = { link = '@annotation' }, -- e.g., `#include` in c, `use` or `extern crate` in rust, or `require` in Lua
     ['@keyword.repeat'] = { link = '@keyword' }, -- e.g., loops
     ['@keyword.return'] = { link = '@keyword' },
