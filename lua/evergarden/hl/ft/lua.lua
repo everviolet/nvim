@@ -4,5 +4,10 @@
 return function(theme, config)
   return {
     ['@constructor.lua'] = { link = '@delimiter' },
+
+    ['@keyword.luadoc'] = { theme.syntax.annotation },
+    ['@keyword.return.luadoc'] = { link = '@keyword.luadoc' },
+
+    ['@lsp.type.keyword'] = { link = '@lsp' },
   }
 end
