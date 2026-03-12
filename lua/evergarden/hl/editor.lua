@@ -87,10 +87,10 @@ return function(theme, config)
     Question = { theme.subtext0 },
 
     Search = utils.vary_reverse(
-      utils.blend(theme.editor.search, theme.base, 0.4),
+      theme.surface1,
       theme.none,
       config.style.search,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      theme.subtext1
     ),
     CurSearch = utils.vary_reverse(
       theme.editor.search,
