@@ -3,7 +3,7 @@
 local M = {}
 
 ---@type evergarden.types.colors
-M.colors = {
+M.palette = {
   red = 210,
   orange = 216,
   yellow = 222,
@@ -16,10 +16,6 @@ M.colors = {
   purple = 183,
   pink = 218,
   cherry = 224,
-}
-
----@type evergarden.types.colors
-M.fall = {
   text = 255,
   subtext1 = 152,
   subtext0 = 109,
@@ -32,22 +28,6 @@ M.fall = {
   base = 235,
   mantle = 232,
   crust = 0,
-}
-
----@type evergarden.types.colors
-M.winter = {
-  -- surface0 = '#262F33',
-  -- base = '#1E2528',
-  -- mantle = '#191E21',
-}
-
----@type evergarden.types.colors
-M.spring = {
-  -- surface1 = '#3E4A4F',
-  -- surface0 = '#343E43',
-  -- base = '#2B3438',
-  -- mantle = M.fall.base,
-  -- crust = M.fall.mantle,
 }
 
 ---@type evergarden.types.colors
