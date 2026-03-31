@@ -33,6 +33,7 @@
 ---@field diagnostic { ['ok'|'error'|'warn'|'info'|'hint']: string }
 ---@field diff { ['add'|'delete'|'change']: string }
 ---@field git { ['staged'|'unstaged'|'ignored'|'untracked']: string }
+---@field cursor string
 ---@field sign string
 ---@field comment string
 
@@ -72,6 +73,7 @@ function M.setup(config, colors)
   theme.colors = colors
 
   theme.accent = theme.colors[config.theme.accent] or theme.green
+  theme.cursor = theme[config.editor.cursor.color] or theme.accent
   theme.sign = theme.colors[config.editor.sign.color] or theme.none
   theme.comment = theme.overlay2
 

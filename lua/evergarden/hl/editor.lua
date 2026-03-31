@@ -9,7 +9,7 @@ return function(theme, config)
       config.editor.transparent_background and theme.none or theme.base,
     },
 
-    Cursor = { bg = theme.accent, fg = theme.crust },
+    Cursor = { bg = theme.cursor },
     lCursor = { link = 'Cursor' },
     CursorIM = { link = 'Cursor' },
     CursorLine = { theme.none, theme.surface0 },

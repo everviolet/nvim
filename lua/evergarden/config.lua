@@ -60,6 +60,7 @@
 ---@class evergarden.types.config.editor
 ---@field transparent_background? boolean
 ---@field override_terminal? boolean
+---@field cursor { color: evergarden.types.colors.enum|'accent'|'none' }
 ---@field sign? { color: evergarden.types.colors.enum|'none' }
 ---@field float? { color: evergarden.types.colors.enum|'none', solid_border: boolean }
 ---@field completion? { color: evergarden.types.colors.enum|'none', selected: { color: evergarden.types.colors.enum|'none', style: evergarden.types.styleopt } }
@@ -155,6 +156,7 @@ M.default = {
   editor = {
     transparent_background = false,
     override_terminal = true,
+    cursor = { color = 'accent' },
     sign = { color = 'none' },
     float = {
       --- background color used for floating windows
