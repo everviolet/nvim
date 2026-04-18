@@ -89,33 +89,39 @@ function M.is_reverse(style)
   return index
 end
 
+---@param t table
+---@param default any
+---@param ... string
+function M.vary(t, default, ...)
+  return vim.F.if_nil(vim.tbl_get(t, ...), default)
+end
+
 ---@generic T
 ---@param config evergarden.types.config
 ---@param props { [evergarden.types.variant]: T }
 ---@param default T
 ---@return T?
 function M.vary_color(config, props, default)
-  if not config or not props then
-    return
-  end
-  return props[config.theme.variant] or default
+  return M.vary(props, default, config.theme.variant)
 end
 
----@generic T
----@param fg T
----@param bg T
----@param style evergarden.types.styleopt
----@param rfg? T
----@param rbg? T
+---@param normal evergarden.types.colorspec
+---@param reverse evergarden.types.colorspec
 ---@return evergarden.types.colorspec
-function M.vary_reverse(fg, bg, style, rfg, rbg)
+function M.vary_reverse(normal, reverse)
+  local style = normal.style
+  if not style then
+    return normal
+  end
+  style = vim.deepcopy(style)
   local index = M.is_reverse(style)
   if index then
-    style = vim.deepcopy(style)
     table.remove(style, index)
-    return { rfg or bg, rbg or fg, style = style }
+    local hl = vim.tbl_extend('force', normal, reverse)
+    hl.style = style
+    return hl
   else
-    return { fg, bg, style = style }
+    return normal
   end
 end
 

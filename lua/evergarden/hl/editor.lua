@@ -31,11 +31,8 @@ return function(theme, config)
 
     TabLine = { theme.overlay1, theme.surface0 },
     TabLineSel = utils.vary_reverse(
-      theme.subtext1,
-      theme.surface0,
-      config.style.tabline,
-      theme.crust,
-      theme.accent
+      { theme.subtext1, theme.surface0, style = config.style.tabline },
+      { fg = theme.crust, bg = theme.accent }
     ),
     TabLineFill = { theme.overlay1 },
     Title = { theme.cherry },
@@ -48,20 +45,16 @@ return function(theme, config)
       theme.text,
       theme.editor.float,
     },
-    FloatBorder = utils.vary_reverse(
+    FloatBorder = utils.vary_reverse({
       theme.overlay0,
       theme.editor.float,
-      config.editor.float.solid_border and { 'reverse' } or {},
-      theme.editor.float,
-      theme.editor.float
-    ),
-    FloatTitle = utils.vary_reverse(
+      style = config.editor.float.solid_border and { 'reverse' } or {},
+    }, { fg = theme.editor.float, bg = theme.editor.float }),
+    FloatTitle = utils.vary_reverse({
       theme.overlay2,
       theme.editor.float,
-      config.editor.float.solid_border and { 'reverse' } or {},
-      theme.crust,
-      theme.accent
-    ),
+      style = config.editor.float.solid_border and { 'reverse' } or {},
+    }, { fg = theme.crust, bg = theme.accent }),
     StatusLine = {
       theme.subtext0,
       config.editor.transparent_background and theme.none or theme.mantle,
@@ -87,22 +80,22 @@ return function(theme, config)
     Question = { theme.subtext0 },
 
     Search = utils.vary_reverse(
-      theme.surface1,
-      theme.none,
-      config.style.search,
-      theme.subtext1
+      { theme.surface1, theme.none, style = config.style.search },
+      { fg = theme.subtext1, bg = theme.surface1 }
     ),
     CurSearch = utils.vary_reverse(
-      theme.editor.search,
-      theme.none,
-      config.style.search,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      { theme.editor.search, style = config.style.search },
+      {
+        fg = utils.vary_color(config, { summer = theme.text }, theme.crust),
+        bg = theme.editor.search,
+      }
     ),
     IncSearch = utils.vary_reverse(
-      theme.editor.incsearch,
-      theme.none,
-      config.style.incsearch,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      { theme.editor.incsearch, style = config.style.incsearch },
+      {
+        fg = utils.vary_color(config, { summer = theme.text }, theme.crust),
+        bg = theme.editor.incsearch,
+      }
     ),
     Substitute = { link = 'IncSearch' },
 
@@ -125,13 +118,11 @@ return function(theme, config)
 
     -- Completion Menu
     Pmenu = { theme.text, theme.editor.completion },
-    PmenuBorder = utils.vary_reverse(
+    PmenuBorder = utils.vary_reverse({
       theme.surface0,
       theme.editor.completion,
-      config.editor.float.solid_border and { 'reverse' } or {},
-      theme.editor.completion,
-      theme.none
-    ),
+      style = config.editor.float.solid_border and { 'reverse' } or {},
+    }, { fg = theme.editor.completion, bg = theme.editor.completion }),
     PmenuKind = { theme.subtext0 },
     PmenuExtra = { theme.syntax.annotation },
     PmenuSel = {

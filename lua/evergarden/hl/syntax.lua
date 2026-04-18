@@ -141,34 +141,33 @@ return function(theme, config)
 
     -- text
     ['@comment.todo'] = utils.vary_reverse(
-      theme.aqua,
-      theme.none,
-      config.style.notes,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      { theme.aqua, theme.none, style = config.style.notes },
+      {
+        fg = utils.vary_color(config, { summer = theme.text }, theme.crust),
+        bg = theme.aqua,
+      }
     ),
     ['@comment.note'] = utils.vary_reverse(
-      theme.cherry,
-      theme.none,
-      config.style.notes,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      { theme.cherry, theme.none, style = config.style.notes },
+      {
+        fg = utils.vary_color(config, { summer = theme.text }, theme.crust),
+        bg = theme.cherry,
+      }
     ),
     ['@comment.fix'] = utils.vary_reverse(
-      theme.diagnostic.warn,
-      theme.none,
-      config.style.notes,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      { theme.diagnostic.warn, theme.none, style = config.style.notes },
+      {
+        fg = utils.vary_color(config, { summer = theme.text }, theme.crust),
+        bg = theme.diagnostic.warn,
+      }
     ),
-    ['@comment.warning'] = utils.vary_reverse(
-      theme.diagnostic.warn,
-      theme.none,
-      config.style.notes,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
-    ),
+    ['@comment.warning'] = { link = '@comment.fix' },
     ['@comment.error'] = utils.vary_reverse(
-      theme.diagnostic.error,
-      theme.none,
-      config.style.notes,
-      utils.vary_color(config, { summer = theme.text }, theme.crust)
+      { theme.diagnostic.error, theme.none, style = config.style.notes },
+      {
+        fg = utils.vary_color(config, { summer = theme.text }, theme.crust),
+        bg = theme.diagnostic.error,
+      }
     ),
 
     ['@markup'] = { theme.text },
