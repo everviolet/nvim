@@ -187,12 +187,12 @@ return function(theme, config)
 
     -- headings, titles (including markers)
     ['@markup.heading'] = { link = 'Title' },
-    ['@markup.heading.1'] = { link = 'rainbow.1' },
-    ['@markup.heading.2'] = { link = 'rainbow.2' },
-    ['@markup.heading.3'] = { link = 'rainbow.3' },
-    ['@markup.heading.4'] = { link = 'rainbow.4' },
-    ['@markup.heading.5'] = { link = 'rainbow.5' },
-    ['@markup.heading.6'] = { link = 'rainbow.6' },
+    ['@markup.heading.1'] = { link = 'rainbow1' },
+    ['@markup.heading.2'] = { link = 'rainbow2' },
+    ['@markup.heading.3'] = { link = 'rainbow3' },
+    ['@markup.heading.4'] = { link = 'rainbow4' },
+    ['@markup.heading.5'] = { link = 'rainbow5' },
+    ['@markup.heading.6'] = { link = 'rainbow6' },
 
     -- diffs
     ['@diff.add'] = { theme.diff.add },
@@ -202,12 +202,12 @@ return function(theme, config)
     ['@diff.minus'] = { link = '@diff.delete' },
     ['@diff.delta'] = { link = '@diff.change' },
 
-    ['rainbow.1'] = { theme.red },
-    ['rainbow.2'] = { theme.orange },
-    ['rainbow.3'] = { theme.yellow },
-    ['rainbow.4'] = { theme.green },
-    ['rainbow.5'] = { theme.aqua },
-    ['rainbow.6'] = { theme.blue },
+    ['rainbow1'] = { theme.red },
+    ['rainbow2'] = { theme.orange },
+    ['rainbow3'] = { theme.yellow },
+    ['rainbow4'] = { theme.green },
+    ['rainbow5'] = { theme.aqua },
+    ['rainbow6'] = { theme.blue },
 
     -- legacy
     ['@parameter'] = { link = '@variable.parameter' },
