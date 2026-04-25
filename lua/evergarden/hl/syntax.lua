@@ -41,8 +41,6 @@ return function(theme, config)
     ['@keyword.exception'] = { link = '@keyword' },
     ['@keyword.debug'] = { link = '@keyword.exception' },
 
-    ['@label'] = { link = '@keyword' },
-
     ['@keyword.conditional'] = { link = '@keyword' },
     ['@keyword.conditional.ternary'] = { link = '@operator' },
 
@@ -91,6 +89,8 @@ return function(theme, config)
     ['@string.regexp'] = { link = '@string.escape' },
     ['@character'] = { link = '@string' }, -- char literal
     ['@character.special'] = { link = '@string.special' }, -- wildcards
+
+    ['@label'] = { link = '@string.special' },
 
     -- comments
     ['@comment'] = {
