@@ -9,5 +9,9 @@ return function(theme, config)
     ['@keyword.return.luadoc'] = { link = '@keyword.luadoc' },
 
     ['@lsp.type.keyword.lua'] = { link = '@lsp' },
+
+    -- both luals and emmylua mark way too many nodes as readonly.
+    -- emmylua specifically also marks arguments as readonly.
+    ['@lsp.mod.readonly.lua'] = { link = '@lsp' },
   }
 end
