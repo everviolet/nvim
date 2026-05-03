@@ -135,6 +135,9 @@ return function(theme, config)
     PmenuMatch = { theme.editor.incsearch },
 
     ComplMatchIns = { link = 'NonText' },
+    PreInsert = { link = 'NonText' },
+    ComplHint = { link = 'NonText' },
+    ComplHintMore = { link = 'MoreMsg' },
 
     PmenuSbar = { theme.none, theme.surface1 },
     PmenuThumb = { theme.none, theme.overlay0 },
