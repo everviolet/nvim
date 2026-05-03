@@ -114,7 +114,7 @@ return function(theme, config)
 
     Directory = { theme.overlay2 },
 
-    Underlined = { theme.none, theme.none },
+    Underlined = { style = { 'undercurl' } },
 
     -- Completion Menu
     Pmenu = { theme.text, theme.editor.completion },
