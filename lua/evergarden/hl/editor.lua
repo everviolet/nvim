@@ -33,6 +33,7 @@ return function(theme, config)
     TabLineFill = { theme.overlay1 },
 
     Title = { theme.cherry },
+    Dimmed = { theme.overlay1 },
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
     Folded = { bg = theme.surface2 },
