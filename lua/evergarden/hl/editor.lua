@@ -107,7 +107,7 @@ return function(theme, config)
     ErrorMsg = { link = 'Error' },
     WarningMsg = { theme.diagnostic.warn },
     MoreMsg = { theme.subtext0 },
-    ModeMsg = { theme.overlay1, theme.none },
+    ModeMsg = { theme.subtext1 },
 
     ColorColumn = { theme.none, theme.surface0 },
     CursorColumn = { theme.none, theme.surface0 },
