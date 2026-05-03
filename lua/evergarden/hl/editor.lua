@@ -116,6 +116,8 @@ return function(theme, config)
 
     Underlined = { style = { 'undercurl' } },
 
+    Ignore = { link = 'Conceal' },
+
     -- Completion Menu
     Pmenu = { theme.text, theme.editor.completion },
     PmenuBorder = utils.vary_reverse({
