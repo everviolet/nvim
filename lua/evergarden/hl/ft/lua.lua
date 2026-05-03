@@ -8,6 +8,6 @@ return function(theme, config)
     ['@keyword.luadoc'] = { theme.syntax.annotation },
     ['@keyword.return.luadoc'] = { link = '@keyword.luadoc' },
 
-    ['@lsp.type.keyword'] = { link = '@lsp' },
+    ['@lsp.type.keyword.lua'] = { link = '@lsp' },
   }
 end
