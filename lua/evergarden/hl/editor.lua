@@ -13,17 +13,13 @@ return function(theme, config)
     lCursor = { link = 'Cursor' },
     CursorIM = { link = 'Cursor' },
     CursorLine = { theme.none, theme.surface0 },
-    CursorColumn = { theme.none, theme.surface0 },
 
-    Visual = {
-      theme.none,
-      theme.surface1,
-    },
+    Visual = { theme.none, theme.surface1 },
 
     LineNr = { theme.surface2 },
     CursorLineNr = { theme.overlay2 },
-    QuickFixLine = { theme.none, theme.surface0 },
     SignColumn = { theme.overlay1, theme.sign },
+
     WinSeparator = {
       config.editor.transparent_background and theme.surface0 or theme.surface1,
     },
@@ -35,11 +31,14 @@ return function(theme, config)
       { fg = theme.crust, bg = theme.accent }
     ),
     TabLineFill = { theme.overlay1 },
+
     Title = { theme.cherry },
     Conceal = { theme.overlay1 },
     NonText = { theme.overlay0 },
     Folded = { bg = theme.surface2 },
     FoldColumn = { link = 'SignColumn' },
+
+    QuickFixLine = { theme.none, theme.surface0 },
 
     NormalFloat = {
       theme.text,
@@ -111,6 +110,7 @@ return function(theme, config)
     ModeMsg = { theme.overlay1, theme.none },
 
     ColorColumn = { theme.none, theme.surface0 },
+    CursorColumn = { theme.none, theme.surface0 },
 
     Directory = { theme.overlay2 },
 
