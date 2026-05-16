@@ -280,50 +280,30 @@ H.tmerge = function(tdefault, toverride)
   end
 
   -- do not merge lists
-  if H.islist(tdefault) then
+  if vim.islist(tdefault) then
     return toverride
   end
   if vim.tbl_isempty(tdefault) then
     return toverride
   end
 
-  return vim.iter(pairs(tdefault)):fold({}, function(tnew, k, v)
+  return vim.iter(pairs(tdefault)):fold({}, function(tnew, k, default)
     if toverride[k] == nil then
-      tnew[k] = v
+      tnew[k] = default
       return tnew
     end
-    if type(v) ~= type(toverride[k]) then
+    if type(toverride[k]) ~= type(default) then
       tnew[k] = toverride[k]
       return tnew
     end
-    if type(v) == 'table' then
-      tnew[k] = H.tmerge(v, toverride[k])
+    if type(default) == 'table' then
+      tnew[k] = H.tmerge(default, toverride[k])
       return tnew
     end
 
     tnew[k] = toverride[k]
     return tnew
   end)
-end
-
----@param t table
----@return boolean
-H.islist = function(t)
-  if type(t) ~= 'table' then
-    return false
-  end
-
-  for k, _ in ipairs(t) do
-    return type(k) == 'number'
-  end
-
-  -- non-numeric keys
-  for _, _ in pairs(t) do
-    return false
-  end
-
-  -- empty table
-  return true
 end
 
 return M, H
