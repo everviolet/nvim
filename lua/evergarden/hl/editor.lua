@@ -56,12 +56,16 @@ return function(theme, config)
       style = config.editor.float.solid_border and { 'reverse' } or {},
     }, { fg = theme.crust, bg = theme.accent }),
     StatusLine = {
-      theme.subtext0,
-      config.editor.transparent_background and theme.none or theme.mantle,
+      theme.colors[config.editor.statusline.active.fg] or theme.subtext0,
+      config.editor.transparent_background and theme.none
+        or theme.colors[config.editor.statusline.active.bg]
+        or theme.mantle,
     },
     StatusLineNC = {
-      theme.overlay1,
-      config.editor.transparent_background and theme.none or theme.mantle,
+      theme.colors[config.editor.statusline.inactive.fg] or theme.overlay1,
+      config.editor.transparent_background and theme.none
+        or theme.colors[config.editor.statusline.inactive.bg]
+        or theme.mantle,
     },
     FloatShadow = { bg = theme.crust, blend = 80 },
     FloatShadowThrough = { bg = theme.crust, blend = 100 },

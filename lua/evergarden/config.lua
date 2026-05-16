@@ -64,6 +64,9 @@
 ---@field sign? { color: evergarden.types.colors.enum|'none' }
 ---@field float? { color: evergarden.types.colors.enum|'none', solid_border: boolean }
 ---@field completion? { color: evergarden.types.colors.enum|'none', selected: { color: evergarden.types.colors.enum|'none', style: evergarden.types.styleopt } }
+---@field statusline? { ['active'|'inactive']: evergarden.types.config.editor.statusline.child }
+
+---@alias evergarden.types.config.editor.statusline.child { ['fg'|'bg']: evergarden.types.colors.enum|'none' }
 
 ---@tag evergarden.styleconfig
 ---@class evergarden.types.styleconfig
@@ -169,6 +172,16 @@ M.default = {
       selected = {
         color = 'surface0',
         style = { 'bold' },
+      },
+    },
+    statusline = {
+      active = {
+        fg = 'subtext0',
+        bg = 'mantle',
+      },
+      inactive = {
+        fg = 'overlay1',
+        bg = 'mantle',
       },
     },
   },

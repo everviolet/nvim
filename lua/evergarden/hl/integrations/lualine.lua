@@ -27,8 +27,10 @@ M.get_theme = function()
     a = { fg = theme.crust, bg = colors.normal },
     b = { bg = theme.surface0, fg = colors.normal },
     c = {
-      bg = config.editor.transparent_background and theme.none or theme.base,
-      fg = theme.overlay2,
+      fg = theme.colors[config.editor.statusline.active.fg] or theme.subtext0,
+      bg = config.editor.transparent_background and theme.none
+        or theme.colors[config.editor.statusline.active.bg]
+        or theme.mantle,
     },
   }
 
@@ -46,12 +48,16 @@ M.get_theme = function()
 
   evergarden.replace = evergarden.insert
 
+  local inactive = theme.colors[config.editor.statusline.inactive.fg]
+    or theme.overlay1
   evergarden.inactive = {
-    a = { bg = theme.base, fg = theme.overlay1 },
-    b = { bg = theme.base, fg = theme.overlay1 },
+    a = { bg = theme.base, fg = inactive },
+    b = { bg = theme.base, fg = inactive },
     c = {
-      bg = config.editor.transparent_background and theme.none or theme.base,
-      fg = theme.overlay1,
+      fg = inactive,
+      bg = config.editor.transparent_background and theme.none
+        or theme.colors[config.editor.statusline.inactive.bg]
+        or theme.mantle,
     },
   }
 
