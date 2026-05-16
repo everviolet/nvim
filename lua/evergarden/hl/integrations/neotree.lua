@@ -10,14 +10,8 @@ M.get = function(theme, config)
   return {
     NeoTreeDirectoryName = { fg = colors.folder },
     NeoTreeDirectoryIcon = { fg = colors.folder },
-    NeoTreeNormal = {
-      fg = theme.subtext1,
-      bg = config.editor.transparent_background and theme.none or theme.mantle,
-    },
-    NeoTreeNormalNC = {
-      fg = theme.subtext1,
-      bg = config.editor.transparent_background and theme.none or theme.mantle,
-    },
+    NeoTreeNormal = { link = 'Panel' },
+    NeoTreeNormalNC = { link = 'Panel' },
     NeoTreeExpander = { fg = colors.folder },
     NeoTreeIndentMarker = { fg = theme.overlay0 },
     NeoTreeRootName = { fg = theme.pink },
@@ -60,8 +54,8 @@ M.get = function(theme, config)
       fg = config.editor.transparent_background and theme.none or theme.crust,
       bg = config.editor.transparent_background and theme.none or theme.crust,
     },
-    NeoTreeVertSplit = { link = "VertSplit" },
-    NeoTreeWinSeparator = { link = "WinSeparator" },
+    NeoTreeVertSplit = { link = 'VertSplit' },
+    NeoTreeWinSeparator = { link = 'WinSeparator' },
     NeoTreeStatusLineNC = { fg = theme.mantle, bg = theme.mantle },
   }
 end

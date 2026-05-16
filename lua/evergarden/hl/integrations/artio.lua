@@ -4,10 +4,7 @@ local M = {}
 ---@param config evergarden.types.config
 M.get = function(theme, config)
   return {
-    ['ArtioNormal'] = {
-      theme.text,
-      config.editor.transparent_background and theme.none or theme.mantle,
-    },
+    ['ArtioNormal'] = { link = 'Panel' },
     ['ArtioSel'] = { link = 'PickSel' },
     ['ArtioMatch'] = { link = 'PickMatch' },
     ['ArtioPointer'] = { link = 'PickPointer' },

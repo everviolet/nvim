@@ -69,6 +69,9 @@ return function(theme, config)
     },
     FloatShadow = { bg = theme.crust, blend = 80 },
     FloatShadowThrough = { bg = theme.crust, blend = 100 },
+    Panel = {
+      bg = config.editor.transparent_background and theme.none or theme.mantle,
+    },
 
     OkText = { theme.diagnostic.ok },
     ErrorText = { theme.diagnostic.error },

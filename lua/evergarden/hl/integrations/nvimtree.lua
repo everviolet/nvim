@@ -10,10 +10,7 @@ M.get = function(theme, config)
   return {
     NvimTreeFolderName = { fg = colors.folder },
     NvimTreeFolderIcon = { fg = colors.folder },
-    NvimTreeNormal = {
-      fg = theme.subtext1,
-      bg = config.editor.transparent_background and theme.none or theme.mantle,
-    },
+    NvimTreeNormal = { link = 'Panel' },
     NvimTreeOpenedFolderName = { fg = colors.folder },
     NvimTreeEmptyFolderName = { fg = theme.overlay0 },
     NvimTreeIndentMarker = { fg = theme.overlay0 },
