@@ -65,7 +65,7 @@ function M.set_hl(group, colors, config)
       vim.log.levels.ERROR
     )
   end
-  if require('evergarden.config').get().cache then
+  if config.cache then
     require('evergarden.cache').add(group, color)
   end
 end
